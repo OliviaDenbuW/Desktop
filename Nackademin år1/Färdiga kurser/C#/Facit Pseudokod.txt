@@ -1,0 +1,475 @@
+FACIT PSEUDOKOD UPPGIFTER
+
+
+---------------------------------------------------------
+---Uppgift 1  -------------------------------------------
+---------------------------------------------------------
+Ta emot ett land
+
+OM land är lika med Sverige, Danmark eller Norge
+  Skriv ut "Du bor i Skandinavien"
+	
+ANNARS OM land inte är lika med Sverige, Danmark eller Norge
+  Skriv ut "Du bor inte i Skandinavien"
+
+
+---------------------------------------------------------
+---Uppgift 2  -------------------------------------------
+---------------------------------------------------------
+
+Ta emot personens födelseår
+Ta emot aktuellt datum
+Beräkna ålder genom att ta årtal för aktuellt datum minus födelseår
+
+OM ålder mindre än 18 år 
+  Skriv ut "Du är" + ålder "och är inte myndig"
+
+ANNARS OM ålder större än eller lika med 18 och mindre än 65
+  Skriv ut "Du är inte pensionär"
+
+ANNARS
+  Skriv ut "Du är pensionär"
+
+
+---------------------------------------------------------
+---Uppgift 3  -------------------------------------------
+---------------------------------------------------------
+
+//För att iterationen skall starta måste ett startvärde för talet skapas 
+
+Sätt tal till 0
+
+//En iteration som körs så länge talet inte är rätt
+
+Så länge talet är skillt från 10
+
+   Ta emot ett nytt värde på talet
+
+   //Selektion som styr vilket logiskt beslut som fattas
+   OM talet är mindre än 10
+	Skriv talet är för litet
+
+   ANNARS OM talet är större än 10
+        Skriv talet är för stort
+
+   ANNARS OM talet är lika med 10 
+        Du har matat in rätt tal
+
+
+---------------------------------------------------------
+---Uppgift 4  -------------------------------------------
+---------------------------------------------------------
+
+Sätt värdet på talet till 1
+
+SÅ LÄNGE talet är mindre än eller lika med 100
+
+	OM talet är jämnt
+		Skriv ut talet 
+
+	Öka värde på talet med 1
+
+
+---------------------------------------------------------
+---Uppgift 5  -------------------------------------------
+---------------------------------------------------------
+
+Ta emot namn på produkten
+Ta emot antal som önskas av produkten
+
+Skicka namn och antal till lagret och ta emot en siffra på antal i lager
+
+OM antal i lager är mindre än antal som önskas
+  Meddela kunden att önskat antal inte finns i lager
+  Beräkna antal som måste beställas genom att ta antal 
+  som önskas minus antal i  lager
+
+ANNARS OM antal i lager är störe än eller lika med antal som önskas
+  Meddela kunden om antal som önskas finns i lager
+	
+
+---------------------------------------------------------
+---Uppgift 6  -------------------------------------------
+---------------------------------------------------------
+
+Ta fram en bunke
+
+SÅ LÄNGE det finns flera ägg
+  Knäck ett ägg i bunken 
+
+
+Tillsätt vatten, salt och ev. peppar.
+
+SÅ LÄNGE äggen inte är färdigvispade
+	Vispa med en handvisp eller gaffel
+
+Tillsätt om du vill någon av fyllningarna och blanda i äggsmeten.
+
+Lägg smör i en stekpanna på medelhög värme. 
+
+OM smöret slutat bubbla (är stekpannan lagom varm)
+	Häll äggsmeten i stekpannan.
+
+	Sätt omelett klar är till false
+
+	SÅ LÄNGE omelett klar är false
+	  Stek den på medelvärme 
+	  Skaka pannan
+	
+	  OM Kanten på omeletten går att lyfta lite på med en 
+           stekspade och äggsmeten har stelnat
+	     
+           Omelett klar är true
+
+  	
+
+Vik den dubbelt och lägg den på en tallrik och servera!
+
+
+---------------------------------------------------------
+---Uppgift 7  -------------------------------------------
+---------------------------------------------------------
+
+Gå hemifrån
+
+OM det är mer än 5 min tills bussen går
+   och det inte är stopp i tunnelbanan   
+
+  Ta tunnelbanan röda linjen till Slussen
+
+  OM gröna linjen går från Slussen	
+	Ta gröna linjen till St:Eriksplan
+
+        OM det går bussar till Karolinska
+         Ta bussen till Nackademin
+        ANNARS	
+	 Promenera till Nackademin
+  ANNARS	
+   Ta röda linjen till T-centralen och ta 69:ans buss
+
+ANNARS OM det är mindre än 5 min tills bussen går
+  Ta bussen till Fridhemsplan
+
+  OM gröna linjen går	
+	Ta gröna linjen till St:Eriksplan
+  ANNARS
+        Ta bussen till Karolinska och gå
+        till Nackademin
+  
+---------------------------------------------------------
+---Uppgift 8  -------------------------------------------
+---------------------------------------------------------
+ 
+Sätt totalpris till 0
+Sätt pris på billigaste pizzan till 0
+Sätt räknarvärde antalpizzor till 1
+
+SÅ LÄNGE det finns nya pizzor i listan
+//
+  Ta fram aktuell pizzas pris
+  OM det är första pizzan
+    Sätt pris på billigaste pizzan lika med aktuell pizzas pris
+		
+  Sätt totalpris genom att lägga på aktuell pizzas pris till totalpriset
+
+  OM aktuell pizzas pris är mindre än pris på billigaste pizzan
+   Sätt pris på billigaste pizzan till aktuell pizzas pris	
+
+
+  Öka räknarvärde antalpizzor med 1
+  Välj nästa pizza i listan
+
+
+//Slut iteration
+
+OM räknarvärde antalpizzor större än 2
+  Beräkna totalpris genom att ta totalpris 
+  minus pris på billigaste pizzan 
+
+
+---------------------------------------------------------
+---Uppgift 9  -------------------------------------------
+---------------------------------------------------------
+
+
+Ta fram start tid
+Sätt aktuell tid till start tid
+Ta fram temperatur
+
+SÅ LÄNGE skillnaden mellan start tid och aktuellt tid är 
+         mindre än 10 minuter och temperatur mindre än 60
+	
+	Ta fram temperatur
+	Ta fram aktuell tid
+	
+---------------------------------------------------------
+---Uppgift 10  -------------------------------------------
+---------------------------------------------------------
+
+Sätt totalpris lika med 0
+Sätt högsta pris lika med 0
+
+SÅ LÄNGE det finns böcker i listan
+
+  Ta fram pris på aktuell bok
+  Sätt totalpris lika med totalpriset plus pris på aktuell bok
+	
+  OM aktuellt pris är större än högsta pris
+    Sätt högsta pris till aktuellt pris
+
+  Ta fram nästa bok
+
+
+OM totalpris är mindre än 200
+  Totalpris är lika med totalpris plus 49
+
+ANNARS OM totalpris är större än 700
+  Totalpris är lika med totalpris minus högsta pris / 2
+ 
+	
+---------------------------------------------------------
+---Uppgift 11  ------------------------------------------
+---------------------------------------------------------
+
+
+Sätt största poäng lika med 0
+
+SÅ LÄNGE det finns personer i listan
+
+ Välj nästa person
+
+	
+ OM personen har mer än eller lika med 1 års arbetserfarenhet och 
+    mindre än eller  lika med 3 år
+	Sätt poäng arbetserfarenhet till 40
+
+  ANNARS OM personen har mer än 3 års erfarenhet 
+	Sätt poäng arbetserfarenhet till 50 
+  ANNARS	
+	Sätt poäng arbetserfarenhet till 0 
+
+
+  OM poäng poäng antagningstest är större än poäng arbetserfarenhet
+    Sätt poäng lika med poäng för antagningstest
+  ANNARS
+    Sätt poäng lika med poäng arbetserfarenhet
+
+
+  OM poäng är större än största poäng
+   Sätt största poäng lika med poäng	
+   Sätt namn på student lika med aktuell student
+
+
+//Den student som är kvar när listan gåtts igenom är den med största poäng
+		
+---------------------------------------------------------
+---Uppgift 12  ------------------------------------------
+---------------------------------------------------------
+
+
+Ta emot totalt antal minuter
+
+
+Sätt timmar lika med 0
+Sätt dygn lika med 0
+Sätt minuter lika med 0
+
+//Om det är mindre än en timme dvs bara minuter
+OM antal minuter är mindre än 60
+
+ Sätt minuter lika med totalt antal minuter
+
+
+//Om det är mindre än ett dygn dvs bara timmar och minuter
+ANNARS OM totalt antal minuter större eller lika med 60 och mindre än 24*60 
+(dvs ett dygn i minuter)
+
+ Sätt timmar lika med totalt antal minuter delat med 60
+ Sätt minuter lika med totalt antal minuter minus (timmar * 60)
+
+//OM det både är dygn, timmar och minuter
+ANNARS
+
+ Sätt dygn lika med totalt antal minuter delat med (24*60)  
+ (dvs ett dygn i minuter)
+ 
+ Sätt kvarvarande minuter lika med 
+ totalt antal minuter minus dygn * (24 * 60)
+
+ Sätt timmar lika med kvarvarande minuter delat med 60
+ Sätt minuter lika med kvarvarande minuter minus (timmar * 60)
+
+
+
+---------------------------------------------------------
+---Uppgift 13 a -----------------------------------------
+---------------------------------------------------------
+
+Sätt största talet lika med 0
+Sätt aktuellt tal lika med första talet i listan
+
+SÅ LÄNGE det finns tal i listan
+
+ OM aktuellt tal är större än största talet
+   Sätt största talet lika med aktuellt tal
+
+
+ Välj nästa tal
+	
+//Det största tal som är kvar när alla tal i listan har gåtts igenom är det största talet
+
+---------------------------------------------------------
+---Uppgift 13 b -----------------------------------------
+---------------------------------------------------------
+Sätt största talet lika med 0
+Sätt näst största talet lika med 0
+Sätt aktuellt tal lika med första talet i listan
+
+SÅ LÄNGE det finns tal i listan
+
+  OM aktuellt tal är större än största talet
+	Sätt näst största talet lika med största talet
+	Sätt största talet lika med aktuellt tal
+
+
+  Välj nästa tal
+
+---------------------------------------------------------
+---Uppgift 13 c -----------------------------------------
+---------------------------------------------------------
+
+Sätt aktuellt tal lika med första talet i listan
+Sätt visa tal (boolskt värde sant eller falskt) till sant
+
+SÅ LÄNGE det finns tal i listan
+
+	OM visa tal är sant
+		Skriv ut aktuellt tal
+	ANNARS
+		Sätt visa tal till falskt
+	
+
+	Välj nästa tal
+
+
+
+---------------------------------------------------------
+---Uppgift 14  ------------------------------------------
+---------------------------------------------------------
+
+//****Gå igenom listan och byt plats på talen om det är ett 
+större tal framför ett mindre. Gör detta tills hela 
+listan är sorterad ***//
+
+
+Sätt position lika med 1
+
+//***Så länge hela listan inte är helt sorterad **//
+SÅ LÄNGE sorterad lika med false	
+	
+   Sätt sorterad lika med true
+
+   //Gå igenom alla talen i listan
+   SÅ LÄNGE position mindre än 10
+   
+	Sätt aktuellt tal
+
+	OM aktuellt tal < aktuellt tal 
+			  på nästa position
+		
+		Byt plats på talen
+		Sätt sorterad lika med false
+
+	Öka position med 1
+   
+
+   //När iterationen börjar om skall man 
+     börja på position 1 igen //
+
+   Sätt position lika med 1	
+	
+
+
+---------------------------------------------------------
+---Uppgift 15  ------------------------------------------
+---------------------------------------------------------
+
+Sätt aktuellt tal lika med 1
+Sätt aktuell person lika med 1
+Sätt riktning lika med framåt
+
+SÅ LÄNGE aktuellt tal mindre än eller lika med 100
+
+	OM aktuellt tal är delbart med 7
+			
+	  OM riktning är lika med framåt
+		Sätt riktning lika med bakåt
+	  ANNARS
+		Sätt riktning lika med framåt
+
+        ANNARS OM aktuellt tal är delbart med 11
+	   OM riktning är lika med framåt
+	     Öka aktuell person med 1
+		  		
+	   ANNARS
+	     Minska aktuell person med 1
+		  
+
+			
+	OM riktning är framåt	   
+	   OM aktuell person större än eller lika med 10
+		    Sätt aktuell person lika med 1
+
+	   Öka aktuell person med 1
+		 
+	ANNARS	
+	   OM aktuell person mindre än eller lika med 1
+		    Sätt aktuell person lika med 10   
+		
+	   Minska aktuell person med 1
+
+	Öka aktuellt tal med 1
+
+---------------------------------------------------------
+---Uppgift 16  ------------------------------------------
+---------------------------------------------------------
+
+Ta emot produktnummer
+Välj första produkten
+
+SÅ LÄNGE det finns fler produkter i listan
+
+   OM aktuell produkts produktnummer = valt produktnummer
+     Ta fram namn och pris
+     Avbryt
+
+   ANNARS
+     Välj nästa produkt i listan
+
+---------------------------------------------------------
+---Uppgift 17  ------------------------------------------
+---------------------------------------------------------
+
+Ta emot namn på författare
+Ta emot titel på bok
+Välj första bokhyllan
+
+SÅ LÄNGE det finns fler bokhyllor
+
+   OM bokhyllans bokstav = första bokstav i författarnamnet
+      Välj en bok
+		
+      SÅ LÄNGE det finns fler böcker i bokhyllan
+
+	OM aktuell boks titel = sökt titel OCH
+	   aktuell författares namn = sökt författare
+
+	     Vi har hittat boken 
+	     Avbryt
+
+	ANNARS
+	    Välj nästa bok
+
+
+   Välj nästa bokhylla
+

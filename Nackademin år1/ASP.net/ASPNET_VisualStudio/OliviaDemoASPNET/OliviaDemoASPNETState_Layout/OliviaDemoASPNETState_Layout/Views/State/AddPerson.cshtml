@@ -1,0 +1,22 @@
+﻿@model OliviaDemoASPNETState_Layout.Models.Person
+@{
+    ViewData["Title"] = "AddPerson";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddPerson</h2>
+
+<form asp-controller="State" asp-action="AddPerson" method="post">
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" />
+
+    <br /><br />
+
+    <label asp-for="Email"></label>
+    <input type="text" asp-for="Email" />
+
+    <br /><br />
+
+    <input type="submit" value="Add" />
+</form>
+

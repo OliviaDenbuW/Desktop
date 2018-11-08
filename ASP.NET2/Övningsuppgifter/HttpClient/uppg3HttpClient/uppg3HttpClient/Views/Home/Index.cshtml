@@ -1,0 +1,14 @@
+﻿@model uppg3HttpClient.Models.RootObject
+
+
+<ul>
+    @for (var i = 0; i < Model.results.Count; i++)
+    {
+        <li>
+            <h1>@Model.results[i].title</h1>
+            <p>@Model.results[i].release_date</p>
+            <p>@Model.results[i].director</p>
+        </li>
+    }
+</ul>
+

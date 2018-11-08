@@ -1,0 +1,14 @@
+﻿@model List<OliviaDemoASPNETEntityFramework.Models.Person>
+
+    @{ 
+        Layout = null;
+    }
+
+<ol>
+    @foreach (var person in Model)
+    {
+        <li>@person.PersonName</li>
+    }
+</ol>
+   
+

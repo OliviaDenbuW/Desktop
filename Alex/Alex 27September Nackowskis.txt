@@ -1,0 +1,106 @@
+ATT GÖRA NACKOWSKIS - 27/9 - 2018
+
+**********************************************************************
+1. FELMEDDELANDEN API FÖR BIDS:
+	- I en api ska man kunna:
+		Message i responsen ska kunna säga "nej det finns bud" oc skicka tillbaka hela vägen
+
+	- Gör GetCount/GetBidsForAuction() som returnerar en siffra med if i controller, 
+		if getBidsForAucvtions större än noll så returnerar man counten och gör en 
+		errorStateMessage.
+		
+	- ADMIN (DeleteAuction()): (SKAPA BID-VALIDERING)
+		if som returnerar bool, OM INTE BissService has bids så kan man göra Delete()
+		if result
+		
+
+2. SÖKNING:
+	- Först vanlig sökfuntion som söker på allt, både titel och beskrivning (utan parametrar och sorterar standrard på datum) i start
+	- DropdownLista 
+	- Först vanlig som resulterar vanligt resultat till vyn och ger allt som den matchar på och sen kan man gör ddl med titel/beskrivning
+	- Utan parametrar
+	- DropDownlista med 
+
+	SORTERINGEN AV SÖKRESULTAT:
+		- För att skicka in modell i layouten (på varje sida) så måste jag skcika in samma data, modell i varje vy,
+		  kan jag göra en viewmodel och lägga in i den vm för sökrutan i den vm (kan vara tom, men måste vara med)
+		  lägga sökresultatet och måste
+		  
+3. VIEW COMPONENT:
+	- Nästan som att skapa en egen controller (typ), nästan som en partial, skriver ut den som partial
+	- Skapar en mapp ViewComponent och i den en skapa en cs.fil BidCalculaterViewComponent.cs och måste ärva från viewComponent
+	  Den ska bara ha en klass TaskIViewCompeponentResult som alltid är ??? InvokeAsynk ska den hetea
+		Kna göra db hämtningar, api anrop
+	
+	STRUKTUR:
+
+		- Den returnerar en vy
+		- I View har jag Shared och i den har jag (en mapp??) components och i den finns en mapp med samma namn som min viewcomponetn
+			BidCalculater och i den en fil Default. HÄr har jag min cs html fil och här skrivs ut vad som syns ex förumlär för att bud
+
+	SYFTE:
+		- Ska kunna skicka in data var jag en är utan att vara bunden till en vy eller controller.
+
+Knapp som navigerar till en vy som gör en enkelt sökning på både titel och beskrivning. I den nya vyn skapar jag en partial och skriver ut kontroller
+och nytt formulär som jag har ny sökruta i
+	- Beskrivning/Titel i ddl: Han gör att sorering är standard på slutdatum
+	- Jag gör ett forumlär där alla de här ligger i och med sökknappen blir ny sökning
+
+	3 formulär med ajax, han har ett ajax script som gör att det uppdateras med en OnChangeFunction så gör den en post, skcikar med en header och
+	data.
+
+	Sorteringen ska egentligen inte behöva hämta ny data
+
+	BÖR GÖRA:
+		- 1 formulär
+		- Lägg i partial view
+		- För att kunna lägga till params måste
+		- FindAuctionsWithParams(sökresultat) från navbar o kan inte ha modellen men då måste jag ha modellen i layouten
+		- Kör bara ett formulär med alla tre värdena 
+	
+
+3. BUD (om öppen lägg till bud)
+	- Skapa detaljvy för bud
+	- Listan auctionens alla data, admin kan också se Id
+	- Titel, beskrivning, slutdatum, utropspris, högsta bud: Finns några bud så skriv ut högsta bud
+		- Alex Finns ngt bud, finns inget bud, så skriv ut: Finns inga aktuella bud
+	- Budet, budets siffra, högsta budet högst upp
+
+4. BUD:
+	- Detaljvy lägga bud
+	
+	- VALIDERING:
+		- Budet måste vara högre än det högsta budet
+		- Skicka till controller som har en enkel if sats eller kan ha highest bid som dolt fält eller göra i vyn
+		- VYN: Har ju redan högsta bud i vyn, kan ex göra en egen tagHelper eller if-satser
+		- CONTROLLERN: Skicka till auction och returnera ett meddelande så har jag ett valideringsfält
+
+	- AccountController:
+		Om misslyckas med inloggning så skickar den autimatislt ett meddelande, Modal (öppnar en ruta ovanpå)
+		Modelstate.AddModelError(string.empty vad meddelandet är) och kan skriva ut de i vyn
+		Lägger man ett bud så kommer det inte märka att gå tillbaka till controllern för man får felmeddelander (det han menar med validering på bud)
+
+	- DetaljVY för auktion:
+		- Knapp för att lägga bud
+		- EDIT OCH DELETE knappar
+
+	- VIsa bara det högsta budet och går inte att lägga bud
+
+**********************************************************************
+
+5. SAMMANFATTNING:
+	- Börja med detaljvy för det hör ihop
+	- Liten beståndsdel som möjligt
+	
+	USER STORY: 
+
+	Jag vill ha en detaljvy för bud
+	Där alla info för en auktion ska visas
+
+	TASKS:
+		- Lista alla bud
+		- Visa info om auktionen
+		- Skriva ut knapp för, ska kunna lägga bud
+
+
+**********************************************************************

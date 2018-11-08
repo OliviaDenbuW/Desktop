@@ -1,0 +1,23 @@
+﻿@model WebTomasos.Models.LoginModel
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+@ViewBag.Message
+
+<form asp-controller="WebTomasos" asp-action="Login" method="post">
+    @Html.AntiForgeryToken()
+
+    <input type="text" asp-for="UserName" placeholder="Enter username" />
+    <span asp-validation-for="UserName"></span>
+    <br /><br />
+
+    <input type="password" asp-for="Password" placeholder="Enter password" />
+    <span asp-validation-for="Password"></span>
+    <br /><br />
+
+    <input type="submit" value="Login" />
+</form>
+
+@Html.ActionLink("Register", "RegisterNewCustomer", "WebTomasos")

@@ -1,0 +1,54 @@
+﻿@model List<uppg1FormulärModellEF.Models.UserLogin>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewList</title>
+    <style>
+        table{
+              font-family: Arial, sans-serif;
+              border-collapse: collapse;
+              width: 100px;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align:left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Email</th>
+            <th>Update</th>
+        </tr>
+        @foreach (var user in Model)
+       {
+        <tr>
+            <td>@user.UserId</td>
+            <td>@user.Name</td>
+            <td>@user.City</td>
+            <td>@user.Email</td>
+            <td><a href="Update" >Update</a></td>
+        </tr>
+}
+
+    </table>
+</body>
+</html>
+
+Skicka med användaren när du klickar på länken på ViewList
+Overloada Update med en HttpPost
+Updatera existerande användaren i databasen

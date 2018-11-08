@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoASPNETFormulärForts", "DemoASPNETFormulärForts\DemoASPNETFormulärForts.csproj", "{51B1F94F-70CE-497D-9468-A97E80C95439}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51B1F94F-70CE-497D-9468-A97E80C95439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B1F94F-70CE-497D-9468-A97E80C95439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B1F94F-70CE-497D-9468-A97E80C95439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B1F94F-70CE-497D-9468-A97E80C95439}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EB321C2-A2A2-4B16-AE67-61B290EC4C99}
+	EndGlobalSection
+EndGlobal

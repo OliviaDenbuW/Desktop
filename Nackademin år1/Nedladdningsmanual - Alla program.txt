@@ -1,0 +1,30 @@
+LADDA NER MY-SQL:
+
+	- Inte motorn (andra delen?? Charbel sa ladda ner, behövdes kompleteras med Fredriks nedanstående)
+		https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017
+		
+	- Själva motorn (det som saknades på ASP.NET 2 som Fredrik Dahl visade (developer)):
+		https://www.microsoft.com/sv-se/sql-server/sql-server-downloads
+
+				SQL Server 2017 Visual C++ 2015 rutime error
+	- Vid ovanstående nedladdningen måste Visual Studio C++ ... 
+	  laddas ner/repair (gör först när sql klagar på det)
+		https://support.microsoft.com/en-us/help/4028054/windows-10-repair-or-remove-programs
+
+	- Northwind BAK-fil (länk från Fredrik Dahl)
+		https://www.mikesaysmeh.com/a-northwind-bak-file-for-you/
+
+
+LADDA NER VISUAL STUDIO:
+
+	- https://visualstudio.microsoft.com/vs/
+
+
+LADDA NER GIT HUB:
+
+	- https://desktop.github.com/
+
+
+LADDA NER VISUAL CODE:
+
+	- https://code.visualstudio.com/?wt.mc_id=DX_841432

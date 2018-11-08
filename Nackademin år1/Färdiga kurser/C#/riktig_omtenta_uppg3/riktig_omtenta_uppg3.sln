@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "riktig_omtenta_uppg3", "riktig_omtenta_uppg3\riktig_omtenta_uppg3.csproj", "{164751E1-A61A-47D3-B0E8-595B2D93E127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{164751E1-A61A-47D3-B0E8-595B2D93E127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164751E1-A61A-47D3-B0E8-595B2D93E127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164751E1-A61A-47D3-B0E8-595B2D93E127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164751E1-A61A-47D3-B0E8-595B2D93E127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DC041F9-61BB-4EA8-B059-406FA4268ABF}
+	EndGlobalSection
+EndGlobal

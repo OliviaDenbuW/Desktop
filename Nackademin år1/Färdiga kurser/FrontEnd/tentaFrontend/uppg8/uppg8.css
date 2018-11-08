@@ -1,0 +1,31 @@
+.container
+{
+    width: 600px;
+    height: 500px;
+    margin: auto;
+}
+
+#divBlå
+{
+    background-color: blue;
+    width: 600px;
+    height: 125px;
+}
+
+.rectangle {
+    float: right;
+    width: 200px;
+    height: 295px;
+  }
+
+#divGul{background-color: yellow;}
+#divGrön{background-color: green;}
+#divSvart{background-color: black;}
+
+
+#divGrå
+{
+    background-color: grey;
+    width: 600px;
+    height: 40px;
+}

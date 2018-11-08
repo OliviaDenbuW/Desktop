@@ -1,0 +1,28 @@
+﻿@model uppg1FormulärModellEF.Models.UserLogin
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+    <form asp-controller="User" asp-action="Update" method="post">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" value="@Model.Email" />
+        <br /><br />
+
+        <label asp-for="Name"></label>
+        <input asp-for="Name" value="@Model.Name" />
+        <br /><br />
+
+        <label asp-for="City"></label>
+        <input asp-for="City" value="@Model.City" />
+        <br /><br />
+
+        <input type="submit" value="Update" />
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+
+1. Kolla igenom studentportalen (så jag inte missat ngt där)
+2. Säga vilka power points att kolla igenom
+3. Beta ut större uppgifter till olika delmoment (typ vad som bör göras först)
+4. Vid en inlämning påminna mig om var all information om uppgiften finns så att jag läser igenom det
+   och inte missar något
+5. Påminna mig om att läraren gått igenom ett nytt "verktyg" (ex postman, bootstrap, azure) och lägga
+   in i planeringen att jag sätter mig in lite i det nya verktyget
+6. Säga hur många ex övningsuppgifter som är rimligt att göra per dag (typ som Dahls lektioner)
+7. Planera ungefär hur lång tid jag bör lägga på en uppgift/delmoment/läsa en powerpoint etc
+8. Vid ett nytt ämnetområde säga ungefär hur mycket tid jag bör ta till att endast läsa/lyssna på det
+   och hur mycket tid jag ska lägga på att bara göra olika kodexempel
+9. Påminna om installationer läraren sagt att vi ska göra inför kommande kurser
+
+Exempelvis ASP.NET ett att du planerar hur många timmar/dagar jag gör göra på "viex-", "viewmodel-", "controller-" uppgifter                               
+

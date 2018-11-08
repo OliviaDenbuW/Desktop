@@ -1,0 +1,46 @@
+1. MÅSTE GÖRAS FÖR VARJE NYTT ENTITY FRAMEWORK PROJEKT
+
+	- Högerklicka på references (i sidan)
+	- Tryck på Manage Nuget packages
+	- Sök på Entitiy Framework när du har i Browse
+
+
+2. ADDA MAPPAR
+
+	- DAL (DataAccess Layer)
+	- DataContext
+	- Models
+	- UI
+
+
+3. KOPPLA TILL NORTHWIND
+
+	3.1 Högerklicka på DataContext mappen
+	3.2 Add
+	3.3 New Item
+	3.4 Data (I vänstra hörnet)
+	3.5 ADO.NET
+	3.6 Code First
+	3.7 Lägg till rätt db (Northwind)
+
+4. Gå in i Form1.cs och lägg till en DataGridview
+
+
+5. Dubbelklicka på vita  bakgrunden och så får du upp ny kod i Visual Studio
+
+
+6. Lägg till en klass i Models mappen som du döper CustomerModel (kan ex vara SuppliersModel, ProductModel (beroende på vad frågan handlar om))
+	
+	6.1 Lägg till properties i CustomerModel för det du vill ska synas i slutresultatet
+
+
+7. Lägg till en klass i DAL-mappen som du döper till DataAccess
+
+
+8. I DataAccess:
+
+	8.1 Lägg till en metod av returtyp BindingList<CustomerModel> (du måste lägga till namespace Component....)
+
+
+9. I form1.cs lägg till koden med messagebox (för att kunna testa resultatet är det vettigt att du i MessageBoxen väljer 
+   att visa informationen som var specifik för denna uppigift (customer.City)

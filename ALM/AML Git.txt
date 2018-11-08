@@ -1,0 +1,78 @@
+Getting started, Basics: Skumma igenom 2 första kapitlerna
+Imorn: branching & in
+
+FÅ IN FILER:
+KOmmandon för att initialiser:
+	- Init
+	- Clone
+
+Se status:
+	- Git status. VIlka filer som är nya (i jämförelse med det som är innan committat)
+	- Add: 
+
+VISUAL STUDIO:
+	- Commit: Har lista av ändrade filer, kan ta en och en eller ta alla
+		- Det man gör är att flytta in med stage
+
+		- Skapas en git commit fil som innehåller föregående commit
+		- Varje commit har en checksumma: Innehåller id på en idex fil
+			- Kan vara ett helt träd som återspeglar hela
+
+FÅ UT FILER:
+	1. CHECKOUT:
+		- Om man vill ha ut en specifik fil använder man git checkout: DÅ kan man da id på fil
+			man vill ha eller ta namnet på branchen
+
+VANLIGAST FÖR ATT FÅ IN OCH UT FRÅN GITDATABASEN:
+add
+commit
+checkout<branch>
+
+ÖVRIGA KOMMANDON:
+	1. git log: Talar om de senaste ändringarna
+		få ut lista av senaste commiten, om man råkat radera en branch elr ngt från databasen
+		Lista med seanste commiterna (om man hoppar mellan brancher och vill...)
+
+RITA UT HISTORIK:
+	- Varje ring motsvarar en commit, skapas alltid ny version av min arbetskatalog när man gör ny commit.
+	Tiden går i en riktiong. TIden börjar vi första pricken. När man lägger till filer i sitt projekt läggs en ny prick till.
+
+TIDSLINJE:
+	- Branchfil som pekat på senaste commiten (via att veta commitens id) så kan man se historiken
+	- När man skapar en annan branch(feture/startsida) och utgår ifrån en "större branch"
+		- När man är klar gör man en merge och för in anna ändringar in i den större gemensamma
+		MERGE: (pratar om imorgon)
+
+REMOTE (Nytt)
+	- När man clonar en ny så
+	- REMOTEDB: I vanliga fall har man en remotedb
+	VAD MAN HAR:
+		1. Om man har sin arbetskatalog och också sin lokala gitDb
+		2. Remote git
+
+		Hämtar hem och skickar upp: Första gången man hämtar hem från sin remote kör man GIT CLONE
+		o gör kopia av db (checkar nog ut masters senaste version)
+
+		Om man gör en förändring i db och vill sätta upp den (GIT PUSH). 
+		Man håller reda på alla filer som kommer från db (det som inte har flagga är nytt och det skickar man upp)
+		PROBLEM: Om det finns andra ändringar man inte har än, då säger det stopp. Får inte ha skett något med databasen. Annars har mantvå grenar på db
+			Får bara ha en branch från master
+
+		För att få upp i den delade db så gör man GIT PUSH (tar alla commitade ändringar från den lokala branhen som är aktiv, 
+		är man i master tar den alla de ändringarna och synkar tillbaka till...)
+		ORIGIN MASTER
+
+HÄMTA HEM ANDRAS FÖRÄNDRINGAR:
+	GIT PULL
+	är kommando som gör två saker:
+	1. Först en git fetch som inte ändriar ngt i arbetskatalogen
+	2. GIT MERGE För att få ut
+
+	Git pull = fetch + merge (man hämtar först hem o sen mergar in i arbetskatalogen)
+
+REBASE: (då görs rebase istället för merge)
+	Rebase minskar mängden öglor o krokar på tidlinjen när man är flera pers som jobbar samtidigt.
+	I vanliga fall finns krokar lite överallt, folk har gjort commits samtidigt etc... Varje gång man gör merge går två tidslinjer ihop
+	REBASE (motsats merge) man rätar ut tidslinjen, historie förfalsknnig, tar bort öglorna
+
+	ISSUES:

@@ -1,0 +1,17 @@
+﻿@model uppg1FormulärEFRep.Models.UserLogin
+
+<form asp-controller="User" asp-action="Create" method="post">
+    <input type="text" asp-for="Name" placeholder="Enter name" />
+    <br /><br />
+
+    <input type="text" asp-for="Email" placeholder="Enter email" />
+    <br /><br />
+
+    <input type="text" asp-for="City" placeholder="Enter city" />
+    <br /><br />
+
+    <input type="text" asp-for="Password" placeholder="Enter password" />
+    <br /><br />
+
+    <input type="submit" value="Register me" style="float: left;"
+</form>

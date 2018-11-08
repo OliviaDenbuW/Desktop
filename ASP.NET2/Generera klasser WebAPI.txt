@@ -1,0 +1,10 @@
+GENERERA KLASSER HTTP CLIENT:
+
+-	För serialisering har vi ett verktyg som heter JsonSharp
+-       Vi tar färdig jsonkod från ex Star Wars och lägger in i verktyget som gör om till klasser
+
+	VERKTYGET SOM OMVANDLAR
+		http://json2csharp.com/ 
+
+	STAR WARS JSON KOD
+		https://swapi.co/

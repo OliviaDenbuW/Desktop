@@ -1,0 +1,48 @@
+﻿<Window x:Class="TentamenWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TentamenWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="txtName" Grid.Column="0" Grid.Row="0" Text="Namn:" FontSize="20"/>
+        <TextBlock x:Name="txtTelephone" Grid.Column="0" Grid.Row="1" Text="Telefonnummer:" FontSize="20"/>
+        <TextBlock x:Name="txtEmail" Grid.Column="0" Grid.Row="2" Text="Epost:" FontSize="20"/>
+        <TextBox x:Name="inputName" Text="{Binding Path=NewName,UpdateSourceTrigger=PropertyChanged}" Height="30" Width="130" Grid.Column="1" Grid.Row="0"/>
+        <TextBox x:Name="inputPhone" Text="{Binding Path=NewPhone,UpdateSourceTrigger=PropertyChanged}" Height="30" Width="130" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="inputEmail" Text="{Binding Path=NewEmail,UpdateSourceTrigger=PropertyChanged}" Height="30" Width="130" Grid.Column="1" Grid.Row="2"/>
+        <StackPanel Grid.Column="2" Orientation="Horizontal">
+            <TextBlock x:Name="txtSearch" Text="Sök:" FontSize="20"/>
+            <TextBox x:Name="inputSearch" Height="30" Width="130" Text=""/>
+        </StackPanel>
+        <Button Command="{Binding Path=Search}" Height="20" Width="50" Content="Sök" Grid.Column="3" Grid.Row="0"/>
+        <ListBox ItemsSource="{Binding Path=Persons}" SelectedItem="{Binding Path=SelectedPerson}" Margin="15" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="{Binding Path=NewName}" FontSize="22"/>
+                        <TextBlock Text="{Binding Path=NewPhone}" FontSize="22" />
+                        <TextBlock Text="{Binding Path=NewEmail}" FontSize="22" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Command="{Binding Path=Save}" Height="20" Width="50" Content="Spara" Grid.Column="1" Grid.Row="3"/>
+        <Button Command="{Binding Path=Remove}" Height="20" Width="50" Content="Ta bort" Grid.Column="3" Grid.Row="4"/>
+    </Grid>
+</Window>

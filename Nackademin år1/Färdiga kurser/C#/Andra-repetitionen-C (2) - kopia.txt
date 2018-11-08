@@ -1,0 +1,17 @@
+- OOP
+  	Encapsulation: 1 video (19 min) - ca 25 min
+  	Inheritance: 1 video (22 min) - ca 30 min
+  	Abstraction: 1 video (10 min) - ca 10 min
+ 	Polymorphism: 1 video (14 min) - ca 20 min
+
+- LINQ
+	Lambda expressions: 1 video (12 min) - ca 20 min
+	Extension Methods: 1 video (17 min) - ca 25 min
+
+- Datetime: 2 videor (16 min + ?????) - ca 20 min
+
+
+
+GÖR UPPGIFTER SOM VIDEON GÖR DÄR DET BEHÖVS!
+
+* Skriv ner alla funderingar till Charbel

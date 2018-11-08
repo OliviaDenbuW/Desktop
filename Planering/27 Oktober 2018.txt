@@ -1,0 +1,38 @@
+************************************
+PLANERING LÖRDAG 27/10-2018 Skrapan
+************************************
+11.00 - 16.30 (5H 30min)
+
+************************************
+COLOR ATT GÖRA:
+************************************
+1. Testa få in en kod till stora rutan:
+	1.1 RGB.cs
+	1.2 VieModel
+	1.3 Koppla i windows
+
+2. CODE:
+	- Representerar sammanställningen av de tre andra textboxarna
+	- Hur sätts värdena på de tre boxarna?
+
+
+Text="{Binding Path=Code,Converter={StaticResource Converter}}"
+
+
+************************************
+ATT GÖRA:
+************************************
+1. Komma så lång som möjligt på Color
+2. Skriva ihop LIA-mail
+3. Maila ut:
+	- Polis
+	- Brandkåren
+	- Trygghansa
+4. Maila Håkan:
+	- Färdiga
+	- Ev. frågor
+
+
+************************************
+FÄRDIGT:
+************************************

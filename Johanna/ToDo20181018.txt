@@ -1,0 +1,45 @@
+
+To Do - Nackovski
+
+1. Göra klart omflyttningen av viewModels               (2 timmar)
+- Gå igenom varje metod-kedja i businesslayer och kolla 
+att de har rätt modell från start till vyn.
+-Gitta varje ändring
+
+2. Gå igenom kravlistan punkt för punkt och testa att det funkar. markera det som funkar
+med gult. strunta i resten.                             (1 timme)
+
+3. Fixa sortering                                       (1 timme)
+exempel: varje case innehåller en sorteringsmetod. Man skulle kunna göra en metod av
+varje sorteringsmetod och placera i en egen metod i controllern, och länka varje till en egen 
+knapp , tex "Sortera på datum"
+
+            switch (method)
+            {
+                case "endDate":
+                    sorted = auktioner.OrderBy(a => a.SlutDatum).ToList();
+                    break;
+                case "startDate":
+                    sorted = auktioner.OrderBy(a => a.StartDatum).ToList();
+                    break;
+                case "price":
+                    sorted = auktioner.OrderBy(a => a.Utropspris).ToList();
+                    break;
+                case "isOpen":
+                    var today = DateTime.Now;
+                    sorted = auktioner.Where(a => a.SlutDatum > today && a.StartDatum < today).ToList();
+                    break;
+                case "all":
+                    sorted = auktioner.OrderBy(a => a.Titel).ToList();
+                    break;
+            }
+            return sorted;
+
+
+
+	3.1 Skapa en knapp för varje sorterings-sätt.
+	3.2 Länka varje knapp till en egen metod i controllern, som sorterar och skickar tillbaka
+	sorterat resultat, till vyn.
+
+	- (Testa senare) Hålla sökresultatet (det är det som ska sorteras)
+

@@ -1,0 +1,289 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1053\deflangfe1053{\fonttbl{\f0\fswiss\fprq2\fcharset0 Verdana;}{\f1\fswiss\fprq2\fcharset0 Calibri;}}
+{\colortbl ;\red127\green127\blue127;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.16299}{\*\mmathPr\mnaryLim0\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\brdrb\brdrs\brdrw10\brdrcf2\brsp80 \nowidctlpar\fi-1418\li1418\sa300\tx1418\tqr\tx9072\cf1\expndtw5\kerning28\b\f0\fs28\par
+\cf0 Inl\'e4mning Tentamen - Frontend   \tab PROG 17 \cf1            \tab       \par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\cf0\expndtw0\kerning0\b0\f1\fs22\lang29\par
+Namn : Charbel Yakoub\par
+Personnummer: 1992-05-05 - 0678\par
+Datum: \tab 2017-12-14\par
+\par
+Skriv namn och personnummer. Klistra in koden f\'f6r varje fr\'e5ga. L\'e4mna in via inl\'e4mningsmappen p\'e5 kurswebben.\par
+\par
+1.\par
+\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">\par
+    <link href="fr\'e5ga1style.css"  type="text/css" rel="stylesheet">\par
+    <script src="fr\'e5ga1javascript.js" defer></script>\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+    <div id="minDiv" class="minDiv"></div>\par
+</body>\par
+</html>\par
+\par
+\par
+.minDiv \{\par
+    width: 500px;\par
+    height: 400px;\par
+    background-color: gray;\par
+    \par
+    position:absolute;\par
+    left:0; right:0;\par
+    top:0; bottom:0;\par
+    margin:auto;\par
+\}\par
+\par
+\par
+var divKnapp = document.getElementById("minDiv");\par
+\par
+divKnapp.addEventListener("click", function() \{\par
+    divKnapp.style.backgroundColor = "green";\par
+\})\par
+\par
+___________________________________________________________________________\par
+\par
+2.\par
+\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">\par
+    <link href="fr\'e5ga2style.css"  type="text/css" rel="stylesheet">\par
+    <script src="fr\'e5ga2javascript.js" defer></script>\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+    <div id="formul\'e4r" class="formul\'e4r">\par
+        <div class="labels">\par
+            <label>F\'f6rnamn</label>\par
+            <label>Efternamn</label>\par
+            <label>Adress</label>\par
+            <label>Postnummer</label>\par
+            <label>Ort</label>\par
+        </div>\par
+\par
+        <div class="textOchKnapp">\par
+            <input id="f\'f6rnamn" type="text">\par
+            <input id="efternamn" type="text">\par
+            <input id="adress" type="text">\par
+            <input id="postnummer" type="text">\par
+            <input id="ort" type="text">\par
+            <button id="knapp">Flytta</button>\par
+        </div>\par
+        \par
+    </div>\par
+\par
+    <div id="information" class="information">\par
+        <h3 id="rad1"></h3>\par
+        <h3 id="rad2"></h3>\par
+        <h3 id="rad3"></h3>\par
+    </div>\par
+</body>\par
+</html>\par
+\par
+\par
+.formul\'e4r \{\par
+    background-color: gray;\par
+    width: 400px;\par
+    height: 170px;\par
+    display: flex;\par
+    margin-bottom: 20px;\par
+\}\par
+\par
+.formul\'e4r label \{\par
+    float: left;\par
+    clear: both;\par
+    margin-bottom: 10px;\par
+\}\par
+\par
+.formul\'e4r .labels \{\par
+    margin-top: 5px;\par
+    width: 25%;\par
+    height: 100%;\par
+\}\par
+\par
+.formul\'e4r input\{\par
+    float: left;\par
+    clear: both;\par
+    margin-bottom: 5px;\par
+\}\par
+\par
+.formul\'e4r button\{\par
+    float: left;\par
+    clear: both;\par
+    margin-bottom: 5px;\par
+    width: 120px;\par
+\}\par
+\par
+.formul\'e4r .textOchKnapp \{\par
+    margin-top: 5px;\par
+    float:left;\par
+    width: 75%;\par
+    height: 100%;\par
+\}\par
+\par
+.information \{\par
+    background-color: gray;\par
+    width: 400px;\par
+    height: 150px;\par
+\}\par
+\par
+___________________________________________________________________________\par
+\par
+3. \par
+\par
+var minKnapp = document.getElementById("knapp");\par
+\par
+minKnapp.addEventListener("click", function() \{\par
+    let minaV\'e4rden = document.getElementsByTagName("input");\par
+\par
+    let rad1 = document.getElementById("rad1");\par
+    rad1.innerHTML = minaV\'e4rden[1].value + ' ' + minaV\'e4rden[0].value;\par
+\par
+    let rad2 = document.getElementById("rad2");\par
+    rad2.innerHTML = minaV\'e4rden[2].value;\par
+\par
+    let rad3 = document.getElementById("rad3");\par
+    rad3.innerHTML = minaV\'e4rden[3].value + ' ' + minaV\'e4rden[4].value;\par
+\});\par
+\par
+_______________________________________________________________________\par
+\par
+\par
+4.\par
+\par
+\par
+\par
+___________________________________________________________________________\par
+\par
+5.\par
+var tal = [8, 3, 4, 7, 2, 3, 1, 6, 9, 11, 10, 13];\par
+\par
+var nyaTal = tal.filter(function (nummer) \{\par
+        return (nummer % 2) === 1 && nummer > 3 && nummer < 11;\par
+\});\par
+\par
+console.log(nyaTal);\par
+\par
+___________________________________________________________________________\par
+\par
+6. \par
+\par
+var nameLabel = document.createElement("p");\par
+var textName = document.createTextNode("Namn");\par
+nameLabel.appendChild(textName);\par
+document.body.appendChild(nameLabel);\par
+\par
+var nameInput = document.createElement("input");\par
+nameInput.type = "text";\par
+nameInput.style.marginRight = "10px";\par
+document.body.appendChild(nameInput);\par
+\par
+var passwordLabel = document.createElement("p");\par
+var textPassword = document.createTextNode("L\'f6senord");\par
+passwordLabel.appendChild(textPassword);\par
+document.body.appendChild(passwordLabel);\par
+\par
+var password = document.createElement("input");\par
+password.type = "text";\par
+password.style.marginRight = "10px";\par
+document.body.appendChild(password);\par
+\par
+var btn = document.createElement("button");\par
+btn.innerHTML = "Logga in";\par
+document.body.appendChild(btn);\par
+btn.style.marginTop = "15px";\par
+btn.style.display = "block";\par
+\par
+___________________________________________________________________________\par
+\par
+7.\par
+\par
+\par
+___________________________________________________________________________\par
+\par
+8.\par
+\par
+<!DOCTYPE html>\par
+<html lang="en">\par
+<head>\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">\par
+    <link href="fr\'e5ga8style.css"  type="text/css" rel="stylesheet">\par
+    <title>Document</title>\par
+</head>\par
+<body>\par
+    <div class="centrerad">\par
+        <div class="bl\'e5"></div>\par
+        <div class="gul"></div>\par
+        <div class="gr\'f6n"></div>\par
+        <div class="svart"></div>\par
+        <div class="gr\'e5"></div>\par
+    </div>\par
+</body>\par
+</html>\par
+\par
+\par
+.centrerad \{\par
+    width: 600px;\par
+    height: 500px;\par
+    display: grid;\par
+    grid-template-columns: repeat(12 , 1fr 1fr);\par
+    grid-template-rows: repeat(10, 1fr 1fr);\par
+\par
+    position: absolute;\par
+    left:0; right:0;\par
+    top:0; bottom:0;\par
+    margin: auto;\par
+\}\par
+\par
+.bl\'e5 \{\par
+    background-color: blue;\par
+    grid-row: 1 / span 2;\par
+    grid-column: 1 / span 12;\par
+\}\par
+\par
+.gul \{\par
+    background-color: yellow;\par
+    grid-row: 3 / span 7;\par
+    grid-column: 1 / span 4;\par
+\}\par
+\par
+.gr\'f6n \{\par
+    background-color: green;\par
+    grid-row: 3 / span 7;\par
+    grid-column: 5 / span 4;\par
+\}\par
+\par
+.svart \{\par
+    background-color: black;\par
+    grid-row: 3 / span 7;\par
+    grid-column: 9 / span 4;\par
+\}\par
+\par
+.gr\'e5 \{\par
+    background-color: gray;\par
+    grid-row: 10 / span 1;\par
+    grid-column: 1 / span 12;\par
+\}\par
+\par
+___________________________________________________________________________\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

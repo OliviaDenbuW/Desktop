@@ -1,0 +1,18 @@
+GIT:
+
+Master: det som ligger pushat på github
+Git pull: Hämtar (om jag ligger i fas med master finns inget att hämta, up tp date)
+Git status: Då ser man om man ligger i synk. Man kan se om alla sina ändringar pushats/commitats till master  
+
+Repository: Ett per projekt
+
+1. Hem
+2. Changes
+3. Spara filen eller använd plusset för att staga
+4. Lägg till kommentar
+5. Commit staged and push (kan göras i två steg)
+6. Skriv in lösenord
+
+(Högerklicka på ex BussServ och väl Compare för att se ändringarna)
+
+TODO Vad jag ska göra

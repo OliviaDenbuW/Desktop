@@ -1,0 +1,162 @@
+************************************
+PLANERING ONSDAG 17/10-2018 Espresso
+************************************
+09.40 - 12.30 (2H, 50min)
+
+************************************
+ATT GÖRA:
+************************************
+1. BETA UT UPPGIFTEN
+	- I vilken ordning ska jag göra det?
+
+2. GÖRA ETT AV OMRÅDENA
+
+3. Struktuera datorn (10min)
+
+5. Mindfullness på övning på em
+
+4. SMSA:
+	- Petra Update
+	- Vivi
+	- Meya
+
+6. EVENTUELLT göra tillbaka koden där nere
+
+7. Maila:
+	- Eventuella frågor till Håkan
+	- Ove
+
+************************************
+VILKEN ORDNING JAG SKA GÖRA ALLT:
+************************************
+1. UTRÄKNING:
+	- byt content till "siffra"
+
+2. EVENTUELLT med flera siffror
+
+4. GENERELLT UTSEENDE:
+	- Minska bakgrunden av det vita
+	- Title="Calculator" Height="497.603" Width="901.157"> (Innan)
+
+************************************
+HITTADE OMRÅDEN:
+************************************
+1. LAYOUT:
+	1.1 INITIALT: Bestämma hur det ska se ut i displayen
+		- DISPLAY HÖGST UPP:
+			- Vad ska den bestå av?
+			- Ska den bestå av två komponenter eller en?
+			- ListBox/Textbox
+		- FÄRGER/STORLEK/PLATS PÅ SIFFROR ETC:
+			- Displayens bakgrundsfärg
+			- Färg på siffror/operationer som kommer upp där
+
+	1.2 EFTER RESP. EVENT: Bestämma var resultatet från resp. event ska hamna:
+		- btnNrX (Var ska den siffran hamna?)
+		- Operationstecken (+ - / *)
+		- Resultat från en uträkning
+
+2. CODE BEHIND:
+	2.1 SJÄLVA RÄKNEOPERATIONERNA:
+		- Vad för typ av kod(?) EX) Switch/If-satser
+	2.2.TA HAND OM RESULTATET FRÅN RESP. UTRÄKNING					
+	2.3 KNAPP-EVENT:
+		- Ska jag bryta ut det som repeteras?
+		- Ska jag göra en egen funktion under resp. click-event (jämf. adressboken)?
+
+
+************************************
+DET SKA TYCKER ÄR SVÅRT:
+************************************
+	
+
+************************************
+DET JAG FÖRSTÅR HUR JAG SKA GÖRA:
+************************************
+1. LAYOUT:
+	1.1 INITIALT: Bestämma hur det ska se ut i displayen
+		- FÄRGER/STORLEK/PLATS PÅ SIFFROR ETC:
+			- Displayens bakgrundsfärg
+			- Färg på siffror/operationer som kommer upp där
+
+2. CODE BEHIND:
+	2.1 SJÄLVA RÄKNEOPERATIONERNA:
+		- Vad för typ av kod(?) EX) Switch/If-satser
+	2.2.TA HAND OM RESULTATET FRÅN RESP. UTRÄKNING				
+	2.3 KNAPP-EVENT:
+		- Ska jag bryta ut det som repeteras?
+
+************************************
+FÄRDIGT:
+************************************
+1. BETA UT UPPGIFTEN
+	- Vad tycker jag är svårt?
+	- Vad förstår jag hur man gör?
+	- Vad har jag gjort?
+	- I vilken ordning ska jag göra det?
+		- Det jag börjar med
+
+2. CODE BEHIND:			
+	2.3 KNAPP-EVENT:
+		- Ska jag göra en egen funktion under resp. click-event (jämf. adressboken)?
+
+3. SATT UT KNAPPARNA
+
+4. DISPLAYEN:
+	1.1 Bestämma vad displayen ska bestå av:
+	1.2 Fixa så att det skrivs ut snyggt
+	1.3 Fixa så att Clear funkar: C
+
+5. LAYOUT:
+	1.1 INITIALT: Bestämma hur det ska se ut i displayen
+		- DISPLAY HÖGST UPP:
+			- Vad ska den bestå av?
+			- Ska den bestå av två komponenter eller en?
+			- ListBox/Textbox		
+
+	1.2 EFTER RESP. EVENT: Bestämma var resultatet från resp. event ska hamna:
+		- btnNrX (Var ska den siffran hamna?)
+		- Operationstecken (+ - / *)
+		- Resultat från en uträkning
+
+	1.3 KALKYLERINGAR:
+		- Testa att EN siffra kommer in
+		- Testa att TVÅ siffror kommer in
+		- Få siffrorna att bli horisontella
+		- Testa att OPERAND kommer in
+
+6. MINDFULLNESSÖVNING PÅ NÄSTA PAUS
+
+7. UTRÄKNING:
+	7.1 Fånga upp nr1 och nr2
+	7.2 Testa att man kan göra Add (utan att det är överdrivet snyggt):
+		- Med 2 siffror
+	7.3 Göra lika för resterande operander:
+		- Subtract
+		- Multiply
+		- Divide:
+			- Fixa decimal på kvoten
+	7.4 Swicth satsen
+	7.5 Egen metod
+
+8. Implementera i EqualsTo
+
+9. Fixa så divide kan bli med decimaler
+
+10. SKAPA ETT TESTPROJEKT
+
+11. Gör om det så att det är snyggt:
+	- Ta bort onödigt
+	- Storlek på siffror/operander i displayen
+	- Färger:
+		- Siffror/Operander
+		- Bakgrund på displayen
+
+12. GENERELLT UTSEENDE:
+	- Byt text i vänstra hörnet till Calculator
+
+13. UDDA BERÄKNINGAR:
+	3.1 DIVIDE MED NOLL
+		- Programmet krashar inte (/0 blir noll (fel))
+		- Fixa felmeddelande
+	3.2 AVRUNDA 0,333333333

@@ -1,0 +1,16 @@
+﻿@model uppg2FormulärModellEF.Models.UserLogin
+
+<form asp-controller="User" asp-action="UpdateUser" method="post">
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" />
+
+    <label asp-for="Email"></label>
+    <input type="text" asp-for="Email" />
+
+    <label asp-for="City"></label>
+    <input type="text" asp-for="City" />
+
+    <input type="hidden" asp-for="UserId" />
+
+    <input type="submit" value="Save changes" />
+</form>

@@ -1,0 +1,16 @@
+﻿@model OliviaDemoASPNETRepetitionMVC.ViewModels.PersonViewModel
+
+
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <label asp-for="CurrentPerson.Name"></label>
+    <input asp-for="CurrentPerson.Name" />
+
+    <br />
+    <br />
+
+    <label asp-for=CurrentPerson.Email></label>
+    <input asp-for="CurrentPerson.Email" />
+</form>
+
+<select asp-for="CurrentPerson.PersonType" asp-items="@Model.PersonTypes"></select>

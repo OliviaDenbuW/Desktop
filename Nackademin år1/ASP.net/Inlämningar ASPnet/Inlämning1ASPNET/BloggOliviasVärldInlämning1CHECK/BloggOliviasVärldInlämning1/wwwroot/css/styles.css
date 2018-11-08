@@ -1,0 +1,22 @@
+﻿body {
+}
+
+#layoutPicture {
+    height: 150px;
+    width: 1500px;
+}
+
+#paragraphTextFooter {
+    font-weight: bold;
+}
+
+#textboxForNewPost{
+    height: 400px;
+    width: 300px;
+}
+
+.nav navbar-nav{
+    background-color: lightblue;
+}
+
+

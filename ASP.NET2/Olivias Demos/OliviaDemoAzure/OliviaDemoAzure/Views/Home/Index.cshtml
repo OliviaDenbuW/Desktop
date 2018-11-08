@@ -1,0 +1,12 @@
+﻿@model List<OliviaDemoAzure.Models.Student>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul>
+    @foreach(var student in Model)
+    {
+        <li>@student.Namn</li>
+    }
+</ul>

@@ -1,0 +1,197 @@
+************************************
+PLANERING SÖNDAG 21/10-2018 
+************************************
+
+************************************
+ATT GÖRA:
+************************************
+1. CREATENEWAUCTION
+	- StartDatum är ByDefault idag(???????)
+
+2. DETAILS:
+	- Byt start/Lägg till currentHighest(???????)
+	- Visa buden med högsta budet högst upp i listan
+3. MAKEBID:
+	- GetAuctionHasBids()
+		- Byta viewModel????
+
+4. ADMIN CONTROLLER
+	- Ska man sätta Authorized(??????????????????)
+
+************************************
+VÄNTAR:
+************************************
+1. INDEX
+	- AUCTIONISOPEN:
+		- INDEXAUCTIONVIEWMODEL:
+			- Task (SENARE(om inte funkar))
+		- ENDDATE:
+			- Snygga till det som skrivs ut (ta bort T)
+		- GETOPENAUCTIONS():
+			- EV Fixa i hämtningen så att inte allt hämtas
+	
+2. GIT
+	- Hur sätter man upp ett nytt projekt i Git
+
+3. BUD:
+	3.1 OPEN AUCTION:
+		- Utloggad
+			- Selekteringen funkar inte för det som är open/closed
+				- Kolla om det funkar efter Task är fixat(alt. med en annan lösning)
+	3.2 CLOSED AUCTION:
+		- Få in högsta bud i vyn
+			- Kolla om det funkar efter Task är fixat(alt. med en annan lösning)
+	3.4 INTE INLOGGAD:
+		- Fixa rätt layout:
+			- Kolla om det funkar efter Task är fixat(alt. med en annan lösning)
+				- Closed
+				- Open
+	3.5 AUCTIONISOPEN
+		- Sätta det värdet:
+			- Task
+
+4. STRUKTUREA BUSSLAYER
+
+5. MAKEBID:
+	- Validera budet
+		- Tänka ut var det ska vara!
+		- Göra minsta värdet NOLL nu och sen lägga in kollen:
+			- Antingen i BussLayer(mindre bra)
+			- Få förklarat hur man gör det på clienten
+
+6. TA BORT I START UP (sevices som är registrerade)
+************************************
+FÄRDIGT:
+************************************
+1. INDEX:
+	1.1 AUCTIONISOPEN:
+		- INDEXAUCTIONVIEWMODEL:
+			- WHERE(auctionIsOpen == true)
+			- Sätt det värdet:
+				- Hårdkodat (true i bussLayer):
+					- Testa att den selekteringen funkar:
+						- TRUE
+						- FALSE
+		- DETAILSAUCTIONVIEWMODEL:
+			- Byt namnn på metoden som sätter de värderna
+			- Kolla om jag behöver sätta det värdet där
+	1.2 GENERELLT:
+		- Auktioner kommer upp
+		- Redirectas rätt när man trycker på HomeLänken
+		- ENDDATE:
+			- Visa EndDate (byt plats på Titel och slutdatum)
+		- GetAllAuctions(): Byt till GetOpenAuctions()
+2. BUD:
+	3.1 CLOSED AUCTION:
+		- Visa bara highestBid
+			- Lägga till den propertyn
+		- Skapa ClosedAuctionBidViewModel
+		- Kolla om man behöver AuctionId
+		- Kolla igenom DetailsAuctionViewModel
+		- Bryt ut koden till Partial
+		- Rensa
+			- Rensa texten högst upp
+	3.2 OPEN AUCTION:
+		- Kolla så man måste vara inloggad för att lägga bud
+		- Göra så man kan lägga bud
+		- Skapa metod för att hämta alla bud
+		- OpenAuctionViewModel:
+		- Fyll dens värden i bussLayer
+		- Fixa så buden syns
+		- Bryt ut koden till Partial
+			- Testa att den funkar:
+				- Inloggad
+		- Rensa:
+			- DetailsView
+			- Rensa texten högst upp
+		- Sätta det värdet:
+			- Hårdkodat
+	3.3 GENERELLT:
+		- Fixa DataLayer för Bids
+		- Separera Open och Closed
+		- Sätt BidIsOpen på Details i BussLayer:
+			- Sätt propertyn
+			- Skapa den metoden
+		- Testa så att det implementeras rätt i _Open/_Closed
+
+	3.4 MAKEBID:			
+		- AUCTIONMETHOD:
+			- GetBidder:
+				- Lägga in UserService
+				- Lägga till Mapp
+				- Koden
+				- Registrera i StartUp
+			- Kolla att man steppar in i den från vyn
+			- Det går att lägga bud
+		- BUSSLAYER:
+			- Budet måste sättas
+			- Göra så att budPriset följer med in i controllern
+		- INTE INLOGGAD:
+			- Man ska inte kunna lägga bud
+
+4. GETAUCTIONBYID():
+	- Fixa så man inte behöver hämta alla auctioner för att bara få en
+
+5. AUCTIONISOPEN:
+	- Sätta det värdet:
+		- Hårdkodat:
+			- IndexAucionViewModel
+			- DetailsAuctionViewModel
+
+6. CREATENEWAUCTION
+	6.1 GENERELLT
+		- CreateAuctionViewModel
+		- View:
+			- Knapp kommer upp
+			- Skapa View
+			- Navigering
+	6.2 SETCREATEAUCTIONVIEWMODEL
+		- BussLayer
+			- AuctionIsOpen
+		- Controller
+
+7. MAKEBID:
+	7.1 KAN GÖRA BUD
+	7.2 RENSA:
+		- Sätt in i IBussLayer
+		- Kolla igenom:
+			- GetBidIsValid()
+			- GetHighestBidForAuction()
+			- GetBidValues()
+			- GetBidViewModels()
+			- SetBidViewModel()
+			- MapBidModelToBidViewModel()
+			- MakeBidApiReady()
+			- MakeBid()
+		- Controller (response)
+			
+8. DELETEAUCTION:
+	- Utan bids
+	- Bara om man skapat den
+	- Med bids
+
+9. UPDATE:
+	- Skapa viewModel
+	- BussLAyer:
+		- SetUpdateViewModel
+		- Kunna uppdatera
+		- Få in värderna
+	- COntroller:
+		- Kunna uppdatera
+		- FÅ in värderna i nytt formulär
+
+10. SÖKA:
+	- LÄggs in sökfält i navbar
+	- Skapa viewModel
+
+**************************************
+FRÅGOR:
+**************************************
+1. Ska man bara ha de metoder man använder utanför bussLayer i IbussLayer(???????????)
+2. Validering av ex bud på klienten
+3. Lägga in nytt projekt i Git
+4. Borde fixa fråga på delete innan tas bort?
+5. TODO Ev. fixa så man inte först behöver hämta alla SearchResult och OpenAuctions
+
+
+

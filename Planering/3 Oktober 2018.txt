@@ -1,0 +1,37 @@
+************************************
+PLANERING ONSDAG 3/10-2018 Espresso House
+************************************
+16.50 - 20.00 (3H, 10 min)
+
+************************************
+ATT GÖRA:
+************************************
+1. Struktuera datorn (15min)
+2. Bowlinghall:
+	- Textuella (1H, 10min) 16.50-18.00
+	- Lyssna på det Ove sa om Verifiera medlemskap
+3. Klassdiagram:
+	- Läs på om det (1H)
+	- Ev. implementera:
+		- Bloggen
+		- Tomasos
+
+************************************
+FÄRDIGT:
+************************************
+1. Planera (10 min)
+2. Feedback:
+	- Tomasos
+	- Bloggen
+3. Bowlinghall:
+	- Hitta alla objekt
+
+
+
+
+
+
+Tillför
+UML.diagrram
+KOd som fungerar
+	- Finns exempelkod

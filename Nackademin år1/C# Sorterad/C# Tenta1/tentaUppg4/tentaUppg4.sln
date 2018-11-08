@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tentaUppg4", "tentaUppg4\tentaUppg4.csproj", "{C4C2C147-5B56-4C59-A6F0-786224AC5328}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4C2C147-5B56-4C59-A6F0-786224AC5328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C2C147-5B56-4C59-A6F0-786224AC5328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C2C147-5B56-4C59-A6F0-786224AC5328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C2C147-5B56-4C59-A6F0-786224AC5328}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B6BF6E6-F5C0-427C-84B5-61C738927859}
+	EndGlobalSection
+EndGlobal

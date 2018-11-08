@@ -1,0 +1,31 @@
+body{background-color: lightgreen;}
+h1{padding: 10px;}
+
+.container
+{
+    width: 900px;
+    height: 100vh;
+    background-color: pink;
+    margin: auto;
+}
+
+#img
+{
+    width: 900px;
+    height: 80px;
+}
+
+.navigationBar
+{
+    background-color: lightyellow;
+}
+
+.navigationLink
+{
+    color: red;
+    font-family: Arial;
+    text-decoration: right;
+    padding: 10px;
+}
+
+table{color: orange;}

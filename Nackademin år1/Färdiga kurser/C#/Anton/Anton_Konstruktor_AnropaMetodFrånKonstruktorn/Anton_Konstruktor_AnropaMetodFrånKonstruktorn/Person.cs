@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Anton_Konstruktor_AnropaMetodFrånKonstruktorn
+{
+    public class Person
+    {
+        private string name;
+        private int age;
+
+        public Person(string name, int age)
+        {
+            this.name = name;
+            SetAge(age);
+        }
+
+        public void SetAge(int age)
+        {
+            this.age = age;
+        }
+    }
+}

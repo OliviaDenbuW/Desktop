@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+
+    <!--Den länk som laddas ned sist overridar de tidigre länkarna om det finns "krockar"
+        I detta fall kommer våra egna klasser att overrida Bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--En header med en bild som visas för -->
+
+    <img src="~/images/logo.png" />
+
+    <!--Navigering med 3 länkar-->
+    <div class="container navbar">
+        <ul class="nav navbar-nav">
+            <li><a asp-controller="Home" asp-action="Index">Start</a></li>
+            <li><a asp-controller="Home" asp-action="About">Om företaget</a></li>
+            <li><a asp-controller="Home" asp-action="Contact">Kontakt</a></li>
+        </ul>
+    </div>
+
+   
+    <div class="container body-content">
+        <!--Här visas innehållet från den enskilda vyn som använder layout vyn-->
+        @RenderBody()
+
+        <footer>
+
+            Nackademin
+            Tomtebodavägen 3A
+            171 65 Solna
+
+            Tel: 08-466 60 00
+
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿@model OliviaDemoRepetitionMVC2.ViewModels.PersonViewModel
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <label asp-for="MinPerson.Namn"></label>
+    <input type="text" asp-for="MinPerson.Namn" />
+    <br /><br />
+
+    <label asp-for="MinPerson.Email"></label>
+    <input type="text" asp-for="MinPerson.Email" />
+    <br /><br />
+
+    <select asp-for="MinPerson.PersonTyp" asp-items="Model.PersonTyper"></select>
+    <br /><br />
+
+    <input type="submit" value="Spara" />
+    <br /><br />
+
+    <div asp-validation-summary="All"></div>
+</form>

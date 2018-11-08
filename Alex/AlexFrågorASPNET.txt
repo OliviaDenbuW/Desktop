@@ -1,0 +1,22 @@
+FRÅGOR ALEX:
+
+1. AccountCOntroller, varför async på post Register?
+
+2. await _signInManager.SignInAsync(newUser, isPersistent: false); Register
+
+3. Layout  @await Html.PartialAsync("_LoginPartial")
+
+4. _LoginPartial: Controller Manage?????
+	    <li>
+                <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">
+                    Hello @UserManager.GetUserName(User)!</a>
+            </li>
+
+5.  Login POST set true ???????????
+	Längre ner nameof(lockoput)
+	Authentication cookie????????????
+
+6. Seed.cs - Vart anropar jag den?
+ 	   - ServiceProvider - Vad är det?
+
+7. Har inte gjort migration

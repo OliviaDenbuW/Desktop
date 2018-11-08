@@ -1,0 +1,25 @@
+***************************************
+ATT GÖRA:
+***************************************
+1. KLASSDIAGRAM (30min):
+	- Kolla vad som är private/public
+	
+2. KODEN UTAN TEST:
+	- Bara klasserna
+	- Med klasser
+
+***************************************
+FÄRDIGT:
+***************************************
+1. KLASSDIAGRAM
+	- Member
+	- Transactions
+	- CurrentFee
+		- FeeType
+	- Competition
+	- Game
+		- GameSerie
+***************************************
+FRÅGOR:
+***************************************
+1. Enum är nog inte med i klassdiagram

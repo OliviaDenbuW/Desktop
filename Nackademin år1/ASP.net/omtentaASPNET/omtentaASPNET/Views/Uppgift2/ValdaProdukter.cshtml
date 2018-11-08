@@ -1,0 +1,12 @@
+﻿@model List<omtentaASPNET.Models.Products>
+
+<h3>Beställda produkter: </h3>
+    @foreach (var produkt in Model)
+    {        
+        @produkt.ProductName
+        <br />
+    }
+
+
+<h3> Total kostnad: @Model.Sum(p => p.UnitPrice) kr</h3>
+

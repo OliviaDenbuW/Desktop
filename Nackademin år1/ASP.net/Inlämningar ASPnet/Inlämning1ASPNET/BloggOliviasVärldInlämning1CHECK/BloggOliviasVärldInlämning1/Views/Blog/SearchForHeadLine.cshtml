@@ -1,0 +1,7 @@
+﻿@model List<BloggOliviasVärldInlämning1.Models.Posts>
+
+@foreach(var post in Model)
+{
+    <a asp-controller="Blog" asp-action="ReadSelectedPost" asp-route-id="@post.PostId">@post.HeadLine</a>
+    <br />
+}

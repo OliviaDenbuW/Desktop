@@ -1,0 +1,15 @@
+
+
+************************************
+FRÅGA:
+************************************
+1. Byta message när det inte är rätt: Javascript? Var?
+2. Vilken template vid PartialViex?
+3. Separera: ValidateInputValues för Update och Create? 
+4. Range på deciaml i Create och Update (Range (double.MaxValue - Hur gör man för decimal?))
+5. Göra all validering på inputs på klienten som går
+6. Hur hanterar man IdentityResult?
+7. Vilka delar av det jag har i min UserService ska jag ha i min UserRepository?
+8. Johanna Git:
+	- Refactored ViewAuctionDetails
+	- Refactored the partial views _OpenAuction and _ClosedAuction

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppg2Validering", "Uppg2Validering\Uppg2Validering.csproj", "{C6DAB886-A5A5-490A-B8B5-18DD0B4EB86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6DAB886-A5A5-490A-B8B5-18DD0B4EB86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DAB886-A5A5-490A-B8B5-18DD0B4EB86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DAB886-A5A5-490A-B8B5-18DD0B4EB86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DAB886-A5A5-490A-B8B5-18DD0B4EB86D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C03514E-0C99-4CE4-8724-1C1F41EF7F2E}
+	EndGlobalSection
+EndGlobal

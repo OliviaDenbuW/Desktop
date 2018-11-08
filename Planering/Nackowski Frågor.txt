@@ -1,0 +1,2 @@
+1. CreateNewAuction (om INTE status är Succeeded, blir det fel redirect?)
+2. Alla kanske borde ärva? från General?

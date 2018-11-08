@@ -1,0 +1,83 @@
+<MML>
+<!DefineTag Program>
+<!DefineChar å "<Character \\x8C >">
+<!DefineChar ä "<Character \\x8A >">
+<!DefineChar ö "<Character \\x9A >">
+<!DefineChar Å "<Character \\x81 >">
+<!DefineChar Ä "<Character \\x80 >">
+<!DefineChar Ö "<Character \\x85 >">
+<!DefineChar é "<Character \\x8E >">
+<!DefineMacro b "<bold>">
+<!DefineMacro p "<plain>">
+<Program>
+\ <b>using<p>\ System;\n
+<b>using<p>\ System.Collections.Generic;\n
+<b>using<p>\ System.ComponentModel;\n
+<b>using<p>\ System.Data;\n
+<b>using<p>\ System.Drawing;\n
+<b>using<p>\ System.Text;\n
+<b>using<p>\ System.Windows.Forms;<par>
+\ <b>namespace<p>\ TextEdit2\ {\n
+\ \ <b>public<p>\ <b>partial<p>\ <b>class<p>\ Form1\ :\ Form\ {<par>
+\ \ \ \ \ <b>public<p>\ Form1()\ {\n
+\ \ \ \ \ \ InitializeComponent();\n
+\ \ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ newMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ <b>if<p>\ (area.Modified)\n
+\ \ \ \ \ \ \ \ saveOldText();\n
+\ \ \ \ \ \ area.Text\ =\ "";\ \ \ \ \ \ \ //\ Töm\ arean\n
+\ \ \ \ \ \ Text\ =\ "";\ \ \ \ \ \ \ \ \ \ \ \ //\ Ta\ bort\ filnamn\ från\ fönsterramen\n
+\ \ \ \ \ \ area.Modified\ =\ <b>false<p>;\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ openMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ <b>if<p>\ (area.Modified)\n
+\ \ \ \ \ \ \ \ saveOldText();\n
+\ \ \ \ \ \ <b>if<p>\ (openDialog.ShowDialog()\ ==\ DialogResult.OK)\ {\n
+\ \ \ \ \ \ \ \ area.LoadFile(openDialog.FileName,\n
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RichTextBoxStreamType.PlainText);\n
+\ \ \ \ \ \ \ \ Text\ =\ openDialog.FileName;\ \ //\ Visa\ filnamn\ i\ fönsterramen\n
+\ \ \ \ \ \ \ \ area.Modified\ =\ <b>false<p>;\n
+\ \ \ \ \ \ }\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ saveAsMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ saveAsDialog.FileName\ =\ "";\n
+\ \ \ \ \ \ <b>if<p>\ (saveAsDialog.ShowDialog()\ ==\ DialogResult.OK)\ {\n
+\ \ \ \ \ \ \ \ area.SaveFile(saveAsDialog.FileName,\ RichTextBoxStreamType.PlainText);\n
+\ \ \ \ \ \ \ \ Text\ =\ saveAsDialog.FileName;\ //\ Visa\ filnamn\ i\ fönsterramen\n
+\ \ \ \ \ \ \ \ area.Modified\ =\ <b>false<p>;\n
+\ \ \ \ \ \ }\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ saveMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ <b>if<p>\ (Text\ !=\ "")\ \ \ \ \ \ \ //\ Finns\ filnamn\ i\ fönsterramen?\n
+\ \ \ \ \ \ \ \ area.SaveFile(Text,\ RichTextBoxStreamType.PlainText);\n
+\ \ \ \ \ \ <b>else<p>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Utför\ "Spara\ som"\ istället\n
+\ \ \ \ \ \ \ \ saveAsMenuItem_Click(<b>null<p>,\ <b>null<p>);\n
+\ \ \ \ \ \ area.Modified\ =\ <b>false<p>;\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ exitMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ <b>if<p>\ (area.Modified)\n
+\ \ \ \ \ \ \ \ saveOldText();\n
+\ \ \ \ \ \ Application.Exit();\n
+\ \ \ \ }<par>
+\ \ \ \ \ //\ Hjälpmetod\n
+\ \ \ \ <b>private<p>\ <b>void<p>\ saveOldText()\ {\n
+\ \ \ \ \ \ <b>string<p>\ s;\n
+\ \ \ \ \ \ <b>if<p>\ (Text\ !=\ "")\ \ \ \ //\ Finns\ filnamn\ i\ fönsterramen?\n
+\ \ \ \ \ \ \ \ s\ =\ "Skall\ ändringarna\ sparas\ i\ filen\ "\ +\ Text\ +"?";\n
+\ \ \ \ \ \ <b>else<p>\n
+\ \ \ \ \ \ \ \ s\ =\ "Skall\ texten\ sparas?";\n
+\ \ \ \ \ \ <b>if<p>\ (MessageBox.Show(s,\ "",\ MessageBoxButtons.YesNo)\ ==\ DialogResult.Yes)\n
+\ \ \ \ \ \ \ \ saveMenuItem_Click(<b>null<p>,\ <b>null<p>);\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ cutMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ area.Cut();\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ copyMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ area.Copy();\n
+\ \ \ \ }<par>
+\ \ \ \ \ <b>private<p>\ <b>void<p>\ pasteMenuItem_Click(<b>object<p>\ sender,\ EventArgs\ e)\ {\n
+\ \ \ \ \ \ area.Paste();\n
+\ \ \ \ }\n
+\ \ }\n
+}\n
+

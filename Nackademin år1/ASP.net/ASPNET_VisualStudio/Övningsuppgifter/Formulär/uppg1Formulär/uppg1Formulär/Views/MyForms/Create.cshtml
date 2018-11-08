@@ -1,0 +1,18 @@
+﻿@model uppg1Formulär.ViewModels.ViewModelPerson
+
+<form asp-controller="MyForms" asp-action="Create" method="post">
+    <label asp-for="CurrentPerson.FirstName"></label>
+    <input asp-for="CurrentPerson.FirstName" />
+
+    <br /><br />
+
+    <label asp-for="CurrentPerson.LastName"></label>
+    <input asp-for="CurrentPerson.LastName" />
+
+    <br /><br />
+
+    <select asp-for="CurrentPerson.Country" asp-items="@Model.Countries"></select>
+    <select asp-for="CurrentPerson.UserType" asp-items="@Model.UserTypes"></select>
+
+    <input type="submit" value="Registrera" />
+</form> 

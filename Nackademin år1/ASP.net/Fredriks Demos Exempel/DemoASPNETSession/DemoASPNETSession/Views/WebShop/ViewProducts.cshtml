@@ -1,0 +1,31 @@
+﻿@model List<DemoASPNETSession.Models.Product>
+
+
+<table>
+
+@foreach(var product in Model)
+{
+    <tr>
+        <td>
+            @product.Name
+        </td>
+        <td>
+            @product.Price
+        </td>
+        <td>
+            <a asp-controller="WebShop" asp-action="AddProduct" asp-route-id=@product.ID> Köp >> </a>
+        </td>
+
+    </tr>
+
+}
+
+<br /><br />
+
+    <a asp-controller="Webshop" asp-action="Checkout"> Gå till kassan</a>
+
+
+
+
+
+</table>

@@ -1,0 +1,10 @@
+   1. Sätt FÖRSTA till 1.
+   2. Upprepa följande tills FÖRSTA = N
+      2.1 Leta reda på positionsnumret för det minsta talet i den del
+          av tabellen som omfattar positionerna FÖRSTA t.o.m. N.
+          (Använd algoritmen i Övningsuppgift 2.3.)
+          Kalla det erhållna positionsnumret för K.
+      2.2 Om K inte är lika med FÖRSTA så låt talen med positionsnummer
+          K och FÖRSTA byta plats i tabellen.
+      2.3 Öka FÖRSTA med 1.
+

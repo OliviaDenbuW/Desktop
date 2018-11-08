@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <img id="layoutPicture" src="~/images/26942188_806786436198099_23574428_o.jpg" />
+
+ 
+            <div class="container navbar">
+            <ul class="nav navbar-nav">
+                <li><a asp-controller="Blog" asp-action="OliviasBubble">Olivias' Blog</a></li>
+                <li><a asp-controller="Blog" asp-action="CreateNewPost">Create new post</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <br /><br />
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+
+
+  
+    <footer>
+        <p id="paragraphTextFooter">
+            Email: Olivia.denbu@gmail.com <br />
+            Instagram: bechuchi
+        </p>
+    </footer>
+    </div>
+
+</body>
+</html>

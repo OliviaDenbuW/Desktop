@@ -1,0 +1,225 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SudokuEnklaPussel
+{
+    public class Sudoku
+    {
+        ///<summary>
+        ///kollar om nuvarande spelet är löst
+        ///</summary>
+        public bool IsGameSolved
+        {
+            get
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if (sudokuArray[i, j] == 0)
+                        {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+
+        public string BoardAsText
+        {
+            get
+            {
+                return GetFormatedBoard();
+            }
+        }
+
+        private int[,] sudokuArray = new int[9, 9];
+        private List<int> numbers = new List<int>();
+
+        ///<summary>
+        ///Konstruktor för spelet
+        ///</summary>
+        ///<param name="inputNumbers">Sudokuspelet i strängformat</param>
+
+        public Sudoku(string inputNumbers)
+        {
+            CreateBoard(inputNumbers);
+        }
+
+        ///<summary>
+        ///Lägger till siffrorna till listan
+        /// </summary>
+        private void AddNumbersToArray()
+        {
+            numbers.Clear();
+            numbers.AddRange(Enumerable.Range(1, 9));
+        }
+
+        ///<summary>
+        ///Löser hela sudokut
+        /// </summary>
+        public void Solve()
+        {
+            bool test = true;
+
+            bool runProgram = true;
+            //Håller koll på vilken rad vi är på i arrayen
+            while (runProgram)
+            {
+                runProgram = false;
+                for (int row = 0; row < 9; row++)
+                {
+                    //Håller koll på vilken col vi är på
+                    for (int col = 0; col < 9; col++)
+                    {
+                        AddNumbersToArray();
+
+                        //Kollar om det är nolla på cellplatsen
+                        if (sudokuArray[row, col] == 0)
+                        {
+                            test = true;
+                            //Kollar varje cell i raden
+                            for (int col2 = 0; col2 < 9; col2++)
+                            {
+                                if (numbers.Contains(sudokuArray[row, col2]))
+                                {
+                                    numbers.Remove(sudokuArray[row, col2]);
+                                }
+                            }
+                            //Kollar varje col cell
+                            for (int row2 = 0; row2 < 9; row2++)
+                            {
+                                if (numbers.Contains(sudokuArray[row2, col]))
+                                {
+                                    numbers.Remove(sudokuArray[row2, col]);
+                                }
+                            }
+                            //kollar boxen col
+                            while (test)
+                            {
+                                //sätter rowCheck och colCheck till där man är
+                                int rowCheck = row, colCheck = col;
+
+                                //sätter alltid rowMin och colMin till row för det är det lägsta om det är %3
+                                int rowMin = row, rowMax = 0, colMin = col, colMax = 0;
+
+                                //lägsta rad
+                                //Kollar lägsta rowMin om det inte redan är det
+                                while ((rowCheck % 3) != 0)
+                                {
+                                    rowCheck--;
+                                    rowMin = rowCheck;
+                                }
+
+                                //högsta rad
+                                //Kollar högsta row i boxen (för att starta den så startar den från lägsta som vi räknade ut innan +1, annars så är den automatiskt 0
+                                while (((rowCheck + 1) % 3) != 0)
+                                {
+                                    rowCheck++;
+                                    rowMax = rowCheck;
+                                }
+
+                                //lägsta col
+                                while ((colCheck % 3) != 0)
+                                {
+                                    colCheck--;
+                                    colMin = colCheck;
+                                }
+
+                                //högsta col
+                                while (((colCheck + 1) % 3) != 0)
+                                {
+                                    colCheck++;
+                                    colMax = colCheck;
+                                }
+
+                                //Håller koll på vilken rad vi är på i arrayen
+                                for (int y = rowMin; y < (rowMax + 1); y++)
+                                {
+                                    //Håller koll på vilken col vi är på
+                                    for (int x = 0; x < (colMax + 1); x++)
+                                    {
+                                        //Kollar om siffran finns i siffror
+                                        if (numbers.Contains(sudokuArray[y, x]))
+                                        {
+                                            numbers.Remove(sudokuArray[y, x]);
+                                        }
+                                    }
+                                }
+
+                                //Kollar om det är en kvar i siffror, för då är det den
+                                if (numbers.Count == 1)
+                                {
+                                    sudokuArray[row, col] = numbers[0];
+                                    runProgram = true;
+                                }
+
+                                //för att skriva ut på skärmen steg för steg
+                                test = false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ///<summary>
+        ///Formaterar brädan som en sträng
+        /// </summary>
+        ///<returns></returns>
+        private string GetFormatedBoard()
+        {
+            StringBuilder sb = new StringBuilder();
+            int cellCount = 0;
+
+            foreach (var value in sudokuArray)
+            {
+                if ((cellCount % 27) == 0)
+                {
+                    sb.AppendLine(string.Concat(Enumerable.Repeat("-", 22)));
+                }
+                if ((cellCount % 3) == 0)
+                {
+                    sb.Append("|");
+                }
+                sb.Append($"{value} ");
+                cellCount++;
+
+                if ((cellCount % 9) == 0)
+                {
+                    sb.Append("|");
+                    sb.AppendLine();
+                }
+
+                if (sudokuArray.Length == cellCount)
+                {
+                    sb.AppendLine(string.Concat(Enumerable.Repeat("-", 22)));
+                }
+            }
+            return sb.ToString();
+        }
+
+        ///<summary>
+        ///Skapar sudokumatrisen
+        /// </summary>
+        /// <param name="inputNumbers">Det råa formaten i sträng format</param>
+        private void CreateBoard(string inputNumbers)
+        {
+            int count = 0;
+
+            for (int row = 0; row < 9; row++)
+            {
+                for (int col = 0; col < 9; col++)
+                {
+                    sudokuArray[row, col] = (int)char.GetNumericValue(inputNumbers[count]);
+                    count++;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,37 @@
+.Huvudrubrik{
+    color: black;
+    text-align: center;
+}
+
+.navigationBar{
+    background-color: black;
+}
+
+.navigationLink{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+#kontaktInfo{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+body{
+    background-color: lightyellow; 
+}
+
+h2{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h4{
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 0;
+}

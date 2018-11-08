@@ -1,0 +1,3 @@
+KOPPLA DATABASEN TILL VISUAL STUDIO:
+
+Scaffold-DbContext "Server=localhost; Database=MyDB ;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models

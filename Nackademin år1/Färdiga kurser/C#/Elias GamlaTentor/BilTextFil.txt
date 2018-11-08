@@ -1,0 +1,1 @@
+{ Namn = Kurt, Adress = Bergsgatan 21, Postnummer = 11228, Ort = Stockholm }

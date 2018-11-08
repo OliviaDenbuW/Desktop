@@ -1,0 +1,62 @@
+**************************************
+ATT GÖRA:
+**************************************
+1. COLLABORATIING
+	1.1 SYNCING
+		- Fetch
+		- Push
+		- Pull
+	1.2 MAKING PULL REQUEST:
+		- How it works
+		- Example
+		- Where to go from here
+	1.4 COMPAING WORKFLOWS:
+		- Centralized workflows
+		- Feature Beanch Workflow
+		- Git Workflow
+		- Forking Workflow
+
+2. GETTING STARTED:
+	2.4 UNDOING CHANGES:
+		- git checkout
+		- git clean
+		- git reset
+		- git revert
+		- git rm
+	2.5 REWRITING HISTORY:
+		- git commit --amend
+		- git rebase
+		- git rebase -i
+		- git reflog
+
+3. Skriv till Felle
+
+
+
+**************************************
+FÄRDIGT:
+**************************************
+1. COLLABORATIING
+	1.1 SYNCING
+		- Remote
+		- git dif
+		- git stash
+2. GETTING STARTED:
+	2.1 SETTING UP A REPOSITORY:
+		- git init
+		- git clone
+		- git config
+		- git alias
+	2.2 SAVING CHANGES:
+		- git add
+		- git commit
+		- .gitignore
+	2.3 INSPECTING A REPOSITORY:
+		- git status
+		- git tag
+		- git blame
+
+**************************************
+FRÅGOR:
+**************************************
+1. Skillnad remote branch och local branch

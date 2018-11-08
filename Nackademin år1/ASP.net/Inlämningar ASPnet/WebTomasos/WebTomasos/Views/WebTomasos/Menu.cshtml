@@ -1,0 +1,25 @@
+﻿@model List<WebTomasos.Models.DishModel>
+
+<h1>Menu</h1>
+<table>
+    <tr>
+        <th>Dish</th>
+        <th>Price</th>
+        <th>Ingrediens</th>
+
+    </tr>
+
+    @foreach (var dish in Model)
+    {
+
+        <tr>
+            <td>@dish.Name</td>
+            <td>@dish.Price</td>
+            <td>@dish.Products</td>
+            <th><a asp-controller="WebTomasos" asp-action="AddDish" asp-route-id=@dish.Id> Add >></a></th>
+        </tr>
+    }
+
+</table>
+
+<a asp-controller="WebTomasos" asp-action="Checkout"> Checkout </a>

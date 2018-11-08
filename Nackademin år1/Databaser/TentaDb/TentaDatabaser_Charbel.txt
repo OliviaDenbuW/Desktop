@@ -1,0 +1,190 @@
+1.		
+create database BooksAndWriters
+
+use BooksAndWriters
+go
+
+create table Writer (
+    ID int NOT NULL primary key identity(1,1),
+    [Name] varchar(255) NOT NULL
+);
+
+create table Book (
+    ID int NOT NULL primary key identity(1,1),
+    [Name] varchar(255) NOT NULL
+);
+
+create table writer_book_junction
+(
+  writerId int,
+  BookId int,
+  CONSTRAINT writer_book_pk PRIMARY KEY (writerId, BookId),
+  CONSTRAINT FK_writer 
+      FOREIGN KEY (writerId) REFERENCES Writer (ID),
+  CONSTRAINT FK_category 
+      FOREIGN KEY (BookId) REFERENCES Book (ID)
+);
+
+
+
+
+
+
+2.
+use Northwind
+go
+
+select sum(UnitPrice) as TotalValue, convert(varchar, getdate(), 111) as TodaysDate
+from Products;
+
+
+
+
+
+3.
+use Northwind
+go
+
+Create proc SupplierSearch
+@Companyname nvarchar(100),
+@City nvarchar(100)
+as
+begin
+	select s.CompanyName, p.ProductName, c.CategoryName
+	from Suppliers s
+	inner join Products p
+	on s.SupplierID = p.SupplierID
+	inner join Categories c
+	on p.CategoryID = c.CategoryID
+	where s.CompanyName like  concat('%', @CompanyName, '%') or s.City like  concat('%', @City, '%')
+end;
+
+
+
+
+
+
+4.
+use Northwind
+go
+
+select c.CompanyName, o.ShippedDate, s.CompanyName as Shipper
+from Customers c
+inner join Orders o
+on c.CustomerID = o.CustomerID
+inner join Shippers s
+on o.ShipVia = s.ShipperID
+order by c.CompanyName;
+
+
+
+
+
+
+5.
+    class SuppliersModel
+    {
+        public string CompanyName { get; set; }
+
+        public int NumberOfProducts { get; set; }
+    }
+
+
+
+
+    class DataAccess
+    {
+        public BindingList<SuppliersModel> SuppliersWithMoreThan3()
+        {
+            BindingList<SuppliersModel> searchedContacts;
+
+            using (var dataContext = new NorthwndContext())
+            {
+                var query = from supplier in dataContext.Suppliers
+                            join product in dataContext.Products on supplier.SupplierID equals product.SupplierID
+                            where supplier.Products.Count() > 3
+                            select new SuppliersModel
+                            {
+                                CompanyName = supplier.CompanyName,
+                                NumberOfProducts = supplier.Products.Count()
+                            };
+
+                searchedContacts = new BindingList<SuppliersModel>(query.Distinct().ToList());
+            }
+
+            return searchedContacts;
+        }
+    }
+
+
+
+
+
+
+
+
+6.
+    class DataAccess
+    {
+        private SqlConnection conn = null;
+
+        public DataAccess()
+        {
+            var cs = "Data Source=desktop-ejr2oc2; Initial Catalog=Northwind; Integrated Security = True";
+            conn = new SqlConnection(cs);
+        }
+
+        public bool UpdatePrice()
+        {
+            SqlCommand cmd = null;
+            int res = 0;
+
+            cmd = conn.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE p SET p.UnitPrice = p.UnitPrice*1.1 from Products p inner join Categories c on p.CategoryID = c.CategoryID where c.CategoryName = 'Beverages';";
+
+            try
+            {
+                conn.Open();
+
+                res = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                cmd.Dispose();
+                cmd = null;
+                conn.Close();
+            }
+
+            if (res >= 1)
+            {
+                return true;
+            }
+
+            return false;
+        }
+    }
+
+
+
+
+
+8.
+use Northwind
+go
+
+
+select c.CompanyName, p.ProductName
+from Customers c
+inner join Orders o
+on c.CustomerID = o.CustomerID
+inner join [Order Details] od
+on o.OrderID = od.OrderID
+inner join Products p
+on od.ProductID = p.ProductID
+where c.City = 'Seattle' and c.Country = 'USA';

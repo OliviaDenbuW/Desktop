@@ -1,0 +1,18 @@
+﻿@model DemoASPNETFormulär.Models.UserInfo
+
+<!--Skapar ett formulär som kommer postas till Login metoden i User controllern-->
+<form asp-controller="User" asp-action="Login" method="post" >
+
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName" />
+
+    <br /> <br />
+
+    <label asp-for="Password"></label>
+    <input asp-for="Password" />
+
+    <br /><br />
+
+    <!--Submit knapp som postar formuläret till webbservern-->
+    <input type="submit" value="Login" />
+</form>

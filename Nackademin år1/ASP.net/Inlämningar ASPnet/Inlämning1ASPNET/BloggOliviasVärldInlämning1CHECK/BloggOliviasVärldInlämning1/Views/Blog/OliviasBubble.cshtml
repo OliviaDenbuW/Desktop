@@ -1,0 +1,21 @@
+﻿@model List<BloggOliviasVärldInlämning1.Models.Posts>
+
+<form asp-controller="Blog" asp-action="SearchForHeadLine" method="post">
+    <input type="text" name="inputSearchedHeadLine" placeholder="Search for headline" />
+    <input type="submit" value="Search" />
+</form>
+
+<br /><br />
+
+      <form asp-controller="Blog" asp-action="SearchForCategory" method="post">
+          <input type="text" name="inputSearchedCategory" placeholder="Search for category" />
+          <input type="submit" value="Search" />
+      </form>
+
+@foreach (var post in Model)
+{
+    <h4><a asp-controller="Blog" asp-action="ReadSelectedPost" asp-route-id="@post.PostId">@post.HeadLine</a></h4>
+    <p>@post.DatePosted</p>
+    <br /><br />
+}
+

@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using DemoASPNETIdentity.ModelsIdentity
+
+<!--Injectar identity tjänsten i vyn-->
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+
+<!--Om användaren är inloggad-->
+@if (signInManager.IsSignedIn(User))
+{
+<ul class="nav navbar-nav">
+    @if (User.IsInRole("Administrator"))
+    {
+        <li><a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
+    }
+
+    <li><a asp-area="" asp-controller="Account" asp-action="Logoff">LogOff</a></li>
+
+</ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav">
+
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Register">New User</a></li>
+    </ul>
+
+}

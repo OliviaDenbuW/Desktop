@@ -1,0 +1,76 @@
+﻿@model WebTomasos.Models.CustomerModel
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<form asp-controller="WebTomasos" asp-action="EditContactInformation" method="post">
+    <div class="wrapper" style="width: 60%;">
+        <div class="lables" style="float: left;">
+            @Html.AntiForgeryToken()
+
+            <label asp-for="Name"></label>
+            <br /><br />
+
+            <label asp-for="StreetAddress"></label>
+            <br /><br />
+
+            <label asp-for="PostalNumber"></label>
+            <br /><br />
+
+            <label asp-for="PostalArea"></label>
+            <br /><br />
+
+            <label asp-for="Email"></label>
+            <br /><br />
+
+            <label asp-for="PhoneNumber"></label>
+            <br /><br />
+
+            <label asp-for="UserName"></label>
+            <br /><br />
+
+            <label asp-for="Password"></label>
+            <br /><br />
+
+        </div>
+
+        <div class="inputBoxes" style="float: left;">
+            <input type="hidden" asp-for="Id" />
+
+            <input type="text" asp-for="Name" />
+            @*<span asp-validation-for="Namn"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="StreetAddress" />
+            @*<span asp-validation-for="Gatuadress"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="PostalNumber" />
+            @*<span asp-validation-for="Postnr"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="PostalArea" />
+            @*<span asp-validation-for="Postort"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="Email" />
+            @*<span asp-validation-for="Email"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="PhoneNumber" />
+            @*<span asp-validation-for="Telefon"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="UserName" />
+            @*<span asp-validation-for="AnvandarNamn"></span>*@
+            <br /><br />
+
+            <input type="text" asp-for="Password" />
+            @*<span asp-validation-for="Losenord"></span>*@
+            <br /><br />
+        </div>
+    </div>
+
+    <input type="submit" value="Save changes" />
+</form>

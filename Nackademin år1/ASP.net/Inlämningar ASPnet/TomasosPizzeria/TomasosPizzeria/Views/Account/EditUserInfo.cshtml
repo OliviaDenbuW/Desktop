@@ -1,0 +1,53 @@
+﻿@model TomasosPizzeria.Models.Kund
+@Html.ValidationSummary()
+
+<h2>Kontaktuppgifter</h2>
+
+<form method="post" asp-controller="Account" asp-action="EditUserInfo">
+
+    <label asp-for="Namn"></label>
+    <input type="text" asp-for="Namn" value=@Model.Namn>
+
+    <br><br>
+
+    <label asp-for="Gatuadress"></label>
+    <input type="text" asp-for="Gatuadress" value=@Model.Gatuadress>
+
+    <br /><br />
+
+    <label asp-for="Postnr"></label>
+    <input type="text" asp-for="Postnr" value=@Model.Postnr>
+
+    <br /><br />
+
+    <label asp-for="Postort"></label>
+    <input type="text" asp-for="Postort" value=@Model.Postort>
+
+    <br /><br />
+
+    <label asp-for="Email"></label>
+    <input type="text" asp-for="Email" value=@Model.Email>
+
+    <br /><br />
+
+    <label asp-for="Telefon"></label>
+    <input type="text" asp-for="Telefon" value=@Model.Telefon>
+
+    <br /><br />
+
+    <label asp-for="AnvandarNamn"></label>
+    <input type="text" asp-for="AnvandarNamn" value=@Model.AnvandarNamn>
+
+    <br /><br />
+
+    <label asp-for="Losenord"></label>
+    <input type="text" asp-for="Losenord" value=@Model.Losenord>
+
+    <br /><br />
+    
+    <input type="hidden" asp-for="KundId" value=@Model.KundId />
+
+
+    <input type="submit" value="Spara ändringar" />
+
+</form>

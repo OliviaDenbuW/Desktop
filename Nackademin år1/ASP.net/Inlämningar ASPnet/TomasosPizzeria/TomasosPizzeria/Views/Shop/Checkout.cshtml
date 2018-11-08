@@ -1,0 +1,17 @@
+﻿@model List<TomasosPizzeria.Models.Matratt>
+
+<h3>Din beställning</h3>
+
+<table>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MatrattNamn</td>
+            <td>@item.Pris</td>
+        </tr>
+    }
+
+</table>
+
+<h3> Total kostnad: @Model.Sum(p => p.Pris) kr</h3>

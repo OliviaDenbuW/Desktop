@@ -1,0 +1,73 @@
+info:
+inlämningsuppgift2: Senast inlämningsdatum 29/10. Muntlig redovisning 30/10
+
+
+(Om du är osäker på hur något fungerar, kolla länkarna och kursplaneringen nedan)
+
+må:
+
+-testa det som han går igenom på lektionen
+
+-gör klart miniräknare, (om du inte är klar vid ca 14 fråga läraren om hjälp).
+
+-gör lektion 2 övningsuppgift 1 (ligger på studentportalen)
+
+-om du vill gör lektion 2 övningsuppgift 2, annars börja med inlämningsuppg 2
+
+-läs igenom inlämningsuppgift 2 (om du hinner)
+
+
+ti:
+innan skolan:
+
+-skumma igenom  föreläsningen på kursportalen från måndagsföreläsningen (10 min)
+i skolan: -jobba med inlämningsuppgift 2
+
+on:
+
+-skumma igenom  föreläsningen på kursportalen från måndagsföreläsningen (10 min)
+i skolan: -jobba med inlämningsuppgift 2
+
+to:
+
+-skumma igenom  föreläsningen på kursportalen från måndagsföreläsningen (10 min)
+i skolan: -jobba med inlämningsuppgift 2
+
+
+
+
+
+/////////////////////////////////////////////////kursplanering och länkar
+
+tutorial på microsoft hemsida som går igenom mycket av det vi ska göra:
+https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application
+
+startsida
+https://www.tutorialspoint.com/wpf/
+https://www.youtube.com/watch?v=G-BRSwClK_4
+https://www.youtube.com/watch?v=SD3yVqpu4e4
+
+
+
+
+Punkterna som finns i kursplanen:
+
+-• Historik
+ • Grunderna i XAML 
+https://www.tutorialspoint.com/wpf/wpf_overview.htm
+
+- UI-kontroller
+https://www.tutorialspoint.com/wpf/wpf_controls.htm
+
+• Layout
+https://www.tutorialspoint.com/wpf/wpf_layouts.htm
+
+- Databinding
+https://www.tutorialspoint.com/wpf/wpf_data_binding.htm
+
+• Stilmallar
+https://www.tutorialspoint.com/wpf/wpf_styles.htm
+
+• DataTemplate
+https://www.tutorialspoint.com/wpf/wpf_templates.htm
+https://docs.microsoft.com/en-us/dotnet/framework/wpf/data/data-templating-overview

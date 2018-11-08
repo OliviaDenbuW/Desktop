@@ -1,0 +1,37 @@
+************************************
+PLANERING TISDAG 2/19-2018 - ALEX
+************************************
+17.00 - 20.00 (3H)
+
+************************************
+ATT GÖRA:
+************************************
+2. Läs igenom alla PP (2H): 17.20-18.20
+	- LEKTION 4:
+		* Lektion 4 - UML Fil
+
+Kolla Helenas skickade
+3. Use Cases (textuella) (1H)
+	- Bloggen (30min)
+	- Tomasos (30min)
+
+************************************
+FÄRDIGT:
+************************************
+1. Planera ((15min): 17.05-17.20
+2. Läs igenom alla PP (2H): 17.20-18.20
+	- LEKTION 1:
+		* Presentation från Lek1
+	- LEKTION 2:
+		* OOAD 2 Projektstyrning Fil
+		* OOAD 2 SCRUM Fil 
+		* OOAD 2 ScrumVsKanban Fil
+		* Scrum Guide Fil
+	- LEKTION 3:
+		* OOAD 3 Kravhantering Fil
+		* OOAD 3 User Stories And agile planning
+
+Tillför
+UML.diagrram
+KOd som fungerar
+	- Finns exempelkod

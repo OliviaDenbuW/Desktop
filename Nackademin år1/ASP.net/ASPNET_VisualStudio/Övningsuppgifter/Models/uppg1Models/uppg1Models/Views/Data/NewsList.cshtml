@@ -1,0 +1,14 @@
+﻿@model List<uppg1Models.Models.News>
+
+<h1>Nyheter - Kultur&Nöje</h1>
+@foreach(var nyhet in Model)
+{
+    <tr>
+        <td><h3><a asp-controller="Data" asp-action="NewsDetails">@nyhet.HeadLine</a></h3></td>
+    </tr>
+    <tr>
+        <td><p>@nyhet.NewsText</p></td>
+    </tr>
+}
+    
+

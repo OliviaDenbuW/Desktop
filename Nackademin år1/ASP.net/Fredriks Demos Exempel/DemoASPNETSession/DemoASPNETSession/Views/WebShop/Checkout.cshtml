@@ -1,0 +1,18 @@
+﻿@model List<DemoASPNETSession.Models.Product>
+
+
+<h3>Du har beställt följande</h3>
+
+<table>
+
+    @foreach(var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+        </tr>
+    }
+
+</table>
+
+<h3> Total kostnad: @Model.Sum( p => p.Price) kr</h3>

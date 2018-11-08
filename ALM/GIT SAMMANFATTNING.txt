@@ -1,0 +1,131 @@
+*****************************************
+GETTING STARTED:
+*****************************************
+1. SETTING UP A REPOSITORY:
+	1.1 TVÅ SÄTT:
+		- git init
+		- git clone
+	1.2 KONCEPT SOM NÄMNDES:
+		- git add
+		- git commit
+		- git push
+		- git remote
+
+2. SAVING CHANGES:
+	***********************
+	GIT ADD:
+	***********************
+	COMMANDS:
+		- git add:
+			Första steget i att spara ändringar
+		- git status
+			Används för att se vad the current state of the repository
+			Kan konfirmera en git add promotion
+		- git reset
+			Ogör en git add
+		- git commit
+			Commitar en snapshot av the staging directory till repositories commit history
+	STEG:
+		- Working Directory (där jag jobbar)
+		- Staging Directory (mellan steget (WD och SLUTRESULTAT)
+		- Repositories commit history
+
+	***********************
+	GIT COMMIT:
+	***********************
+
+	***********************
+	GIT DIFF:
+	***********************
+	COMMANDS:
+		- git diff
+		- git log
+		- git checkout
+
+	***********************
+	GIT STASH:
+	***********************
+	COMMANDS:
+		- git stash
+		- git stash pop
+		- git stash apply
+		- git stash -u (också det som är untracked)
+		- git stash -a / --all (också det som är untracked + ignored)
+		- git stash list
+		- git stash save "message"
+		- git stash show (view summary of stashes)
+		- git stash branch (skapar ny branch med stashen)
+		- git stash clear (rensar alla stashes)
+		- git stash drop @stash (specifik stash rensning)
+
+	***********************
+	.GITIGNORE:
+	***********************
+	FILES:
+		1. Tracked (staged elr commited)
+		2. Untracked
+		3. Ignored (git har explicit blivit tillsagd att ignorera)
+
+3. INSPECTING A REPOSITORY:
+	***********************
+	git status
+	***********************
+		- Inspect the working directoruy och staged area (jämför git log)
+		- Vad är unstaged, staged och untracked
+
+		1. UNTRACKED FILES:
+			- TVÅ UPPDELNINGAR:
+				- Har inte blivit committed
+				- Compiled binaries....(????)
+
+		2. KOLLA ALLTID STATUS INNAN DU COMMITAR
+
+	***********************
+	git log
+	***********************
+		Only operates on the committed history (jämför git status)
+		CheckSum = Unik identifiering av commit
+		HEAD refererar alltid till den Current commit
+		~ (tilda) refererar till parent av commiten (den commit som var innan)
+		HEAD~3 (tredje commit bakåt från Current commit)
+
+		COMMANDS:
+			- git log -n 3 		   (Loggar 3 st commits)
+			- git log --oneline 	   (bra för overview (varje commit som en line))
+			- git log -p 		   (visar det mest möjligt detaljerade av ens project history)
+			- git log <since>..<until> (visar inom ett span av commits)
+
+		JÄMFÖRA 2 BRANCHER:
+			git log --oneline master..some-feature
+
+	***********************
+	git tag
+	***********************
+		- Fångar ett moment in the project history
+		- Annotated tags (best practice, jämför med lightweight)
+		- Lightweight tags
+
+		COMMANDS:
+			- git tag (listar alla tags i repositoryt)
+
+	***********************
+	git blame
+	***********************
+		- Man kan undersöka projektet och se vem som har modifierat en line (lite lig git log, men har olikheter)
+
+4. REWRITING HISTORY
+	***********************
+	git checkout
+	***********************
+		- Om man valt ut vilken commit man vill gå bakåt till och inspektera kan man använda git checkout för att få ner det momentet på sin dator
+		- DETATCHED HEAD = När man inte pekar på en branch utan pekar på en commit bakåt (på en fil bakåt i historien)
+
+				- GARBAGE COLLECTOR + ORPHANED COMMITS
+				När man är på ett dettched head (kollar en specifik commit är man inte längre på ngn branch. 
+				Alla commit man gör vid detached head = orphaned commits (kan tas ut av garbage collector)
+
+				EFTER (För att skapa ny branch för att kunna gå bakåt till gamla commiten)
+				git checkout -b new_branch_without_crazy_commit.
+				Man måste därför confirmera att man är på en branch när man gör commit
+				Garbage collector rensar regelbundet
+		

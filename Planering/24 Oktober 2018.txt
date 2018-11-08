@@ -1,0 +1,92 @@
+*****************************
+ATT GÖRA:
+*****************************
+1. KOPPLA FÄRGEN TILL REKTANGELN:
+	- Fånga färg för:
+		- R
+		- G
+		- B
+	- Slå ihop de
+	- Binda ihop allt
+
+2. AddCommand.cs
+
+3. RemoveCommand.cs
+
+4. ViewModel.cs
+	4.1 GENERELLT:
+		- Metod som noterar när propertyn ändrats
+			- Koppla till Add:
+				- Getter/Setter
+				- I AddCommand.sc
+					- För att få värdet "NewItem"
+	4.2 ADD:
+		- PrivatFält
+	4.3 LISTBOX:
+		- Koppla till items
+	
+
+5.1 LISTBOX:
+	- WINDOWS:
+		- Binding till items:
+			- ItemsSource
+			- SelectedItem
+
+5.2 BUTTON ADD:
+	- Binding (Add)
+		- Hur vet den vad Add står för?
+
+6. RGB:
+	6.1 Skapa klasserna
+		- RGBCode.cs:
+			- Properties
+			- OnChange
+		- ViewModel.cs
+*****************************	
+KLART:
+*****************************
+1. SLIDERS:
+	- Plotta ut alla tre
+	- Span 255
+	- Koppla till textBloc
+2. KNAPPAR:
+	2.1 ADD:
+		- Lägga ut knappen
+	2.2 REMOVE:
+		- Lägga ut knappen
+3. REKTANGEL:
+	- Lägga ut den
+
+4. LISTBOX:
+	- ITEMS:
+		- Skapa prop i ViewModel.cs som representerar alla items som finns i listboxen
+	- VIEWMODEL:
+		- Måste lägga till items i konstruktorn (behövs ej onPropertyChanged)
+	- WINDOWS:
+		- Binding till items:
+			- ItemSource
+
+5. ADD:
+	- Binding till Add (HUR KOPPLAR DEN?)
+
+6. RGB:
+	6.1 Skapa klasserna
+		- RGBCode:
+			- Fält
+
+
+*****************************	
+FRÅGOR:
+*****************************
+1. RowDefinition Height=Auto
+2. Lägga in R G B framför varje slider
+3. Få bort svarta rutan
+4. TextWrapping(???)
+5. Vad är rektangeln för typ av ruta?
+6. Hur får man rektangeln att stretcha ut vald kolumn?
+7. Ev. placera knappen mer åt höger
+8. VIEWMODEL:
+	- Lyssna igenom demon för att fatta sammankopplingen
+9. AddCommand:
+	- _vm.NewColor = String.Empty; (???????)
+10. IValueConverter

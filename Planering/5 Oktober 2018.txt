@@ -1,0 +1,22 @@
+************************************
+PLANERING FREDAG 5/10-2018 Skolan
+************************************
+13.00 - 16.00 (3H)
+
+************************************
+ATT GÖRA SJÄLV:
+************************************
+1. Struktuera datorn (10min)	
+3. Use case diagram
+	- Testa rita
+	- Feedback
+4. Lyssna på design patterns
+
+
+************************************
+FÄRDIGT:
+************************************
+1. Planera
+2. Use cases (textuella)
+	- Skriva färdigt
+	- Feedback

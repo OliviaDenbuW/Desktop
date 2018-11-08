@@ -1,0 +1,15 @@
+#rubriker
+{
+    float: left;
+}
+#inmatningar
+{
+    float: left;
+}
+
+#sammanfattning
+{
+    background-color: yellow;
+    width: 400px;
+    height: 200px;
+}

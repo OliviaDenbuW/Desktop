@@ -1,0 +1,59 @@
+﻿@model uppg6Formulär.ViewModels.PersonViewModel
+
+<h2>CV uppgifter</h2>
+<hr>
+<form asp-controller="Cv" asp-action="SkapaFormulär" method="post">
+    <div class="wrapper1" style="width: 40%;">
+        <div style="float: left;">
+            <label asp-for="MinPerson.Namn"></label><br />
+            <input type="text" asp-for="MinPerson.Namn" />
+            <br /><br />
+
+            <label asp-for="MinPerson.Adress"></label><br />
+            <input type="text" asp-for="MinPerson.Adress" />
+            <br /><br />
+
+            <label asp-for="MinPerson.Postort"></label><br />
+            <input type="text" asp-for="MinPerson.Postort" />
+            <br /><br />
+        </div>
+
+        <div style="float: right;">
+            <label asp-for="MinPerson.Postnummer"></label><br />
+            <input type="text" asp-for="MinPerson.Postnummer" />
+            <br /><br />
+
+            <label asp-for="MinPerson.Mobiltelefon"></label><br />
+            <input type="text" asp-for="MinPerson.Mobiltelefon" />
+            <br /><br />
+
+            <label asp-for="MinPerson.Email"></label><br />
+            <input type="text" asp-for="MinPerson.Email" />
+            <br /><br />
+        </div>
+    </div>
+    <br /><br />
+
+
+    <label>Beskrivning av utbildningen</label><br /><br />
+    <select multiple="multiple" asp-for="MinPerson.Utbildningsbeskrivning" asp-items="Model.Utbildningsbeskrivningar"></select>
+
+    <br /><br />
+    @foreach (var region in Model.Regioner)
+    {
+        <input type="radio" asp-for="MinPerson.Region" value="@region.Status" />
+        @region.Status
+    }
+
+    <br /><br />
+
+    @foreach (var status in Model.KörkortStatusar)
+    {
+        @*<input type="checkbox" name="körtkortsstatus" value="@status.Status" />*@
+        <input type="checkbox" asp-for="MinPerson.Körkort" value="@status.Status" />
+        @status.Status
+    }
+    <br /><br />
+
+    <input type="submit" value="Spara" />
+</form>

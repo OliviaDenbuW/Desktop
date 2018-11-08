@@ -1,0 +1,21 @@
+﻿@model List<OliviaDemoASPNETSessionAnton.Models.Product>
+
+<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td><a asp-controller="WebShop" asp-action="AddProduct" asp-route-id="@product.ID">Buy product</a></td>
+        </tr>    
+    }
+    
+</table>
+
+<a asp-controller="WebShop" asp-action="Checkout">Check out</a>
+

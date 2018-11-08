@@ -1,0 +1,15 @@
+body{background-color:lightgray;}
+h1{padding:10px; }
+p{padding:10px;}
+
+.container{
+    width:900px;
+    height:100vh;
+    background-color:white;
+    margin:auto;
+}
+
+.navigationBar{background-color: grey;}
+
+.navigationLink{color:white; font-family: Arial; 
+    text-decoration: none; padding:5px;}

@@ -1,0 +1,29 @@
+﻿
+<a>asp-controller=""</a>
+<script>
+
+    function ViewCookieValue() {
+
+        var x = readCookie("Test");
+
+        alert(x);
+    }
+
+    //H�mtar inneh�llet i en speciell cookie
+    function readCookie(name)
+    {
+        name = name + "=";
+        var cookieArray = document.cookie.split(';');
+
+        for (var i = 0; i < cookieArray.length; i++) {
+            var currentCookie = cookieArray[i];
+
+            while (currentCookie.charAt(0) == ' ') currentCookie = currentCookie.substring(1, currentCookie.length);
+            if (currentCookie.indexOf(name) == 0) return currentCookie.substring(name.length, currentCookie.length);
+        }
+        return null;
+    }
+
+
+
+</script>

@@ -1,0 +1,96 @@
+﻿@model List<TomasosPizzeria.ViewModels.OrderViewModels>
+
+@ViewBag.Message
+
+<h3>Pizza</h3>
+<table>
+    <tr>
+        <th>Maträtt</th>
+        <th>Beskrivning</th>
+        <th>Ingredienser</th>
+        <th>Pris</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Matratt.MatrattTyp == 1)
+        {
+            <tr>
+                <td>@item.Matratt.MatrattNamn</td>
+                <td>@item.Matratt.Beskrivning</td>
+                <td>
+                    @foreach (var ing in item.ProduktLista)
+                    {
+                        <span>@ing.ProduktNamn </span>
+                    }
+                </td>
+                <td>@item.Matratt.Pris Kr</td>
+                <td><a asp-controller="Shop" asp-action="Add" asp-route-id=@item.Matratt.MatrattId>Lägg till i varukorgen</a></td>
+            </tr>
+        }
+    }
+
+</table>
+<br />
+
+
+<h3>Pasta</h3>
+<table>
+    <tr>
+        <th>Maträtt</th>
+        <th>Beskrivning</th>
+        <th>Pris</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.Matratt.MatrattTyp == 2)
+        {
+            <tr>
+                <td>@item.Matratt.MatrattNamn</td>
+                <td>@item.Matratt.Beskrivning</td>
+                <td>
+                    @foreach (var ing in item.ProduktLista)
+                    {
+                        <span>@ing.ProduktNamn </span>
+                    }
+                </td>
+                <td>@item.Matratt.Pris Kr</td>
+                <td><a asp-controller="Shop" asp-action="Add" asp-route-id=@item.Matratt.MatrattId> Lägg till i varukorgen </a></td>
+            </tr>
+        }
+    }
+
+</table>
+<br />
+
+<h3>Sallad</h3>
+<table>
+    <tr>
+        <th>Maträtt</th>
+        <th>Beskrivning</th>
+        <th>Pris</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.Matratt.MatrattTyp == 3)
+        {
+            <tr>
+                <td>@item.Matratt.MatrattNamn</td>
+                <td>@item.Matratt.Beskrivning</td>
+                <td>
+                    @foreach (var ing in item.ProduktLista)
+                    {
+                        <span>@ing.ProduktNamn </span>
+                    }
+                </td>
+                <td>@item.Matratt.Pris Kr</td>
+                <td><a asp-controller="Shop" asp-action="Add" asp-route-id=@item.Matratt.MatrattId> Lägg till i varukorgen </a></td>
+            </tr>
+        }
+    }
+
+</table>
+<br />
+<a asp-controller="Shop" asp-action="Checkout"> Gå till kassan</a>
+
+<br />

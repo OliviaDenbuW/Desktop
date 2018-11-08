@@ -1,0 +1,33 @@
+﻿@model omtentaASPNET.ViewModels.PersonViewModel
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<h1>Vilken är din favorit?</h1>
+
+<form asp-controller="Uppgift1" asp-action="SkapaFormulär" method="post">
+    <label asp-for="MinPerson.Namn"></label>
+    <input type="text" asp-for="MinPerson.Namn" />
+    <br /><br />
+
+    <label asp-for="MinPerson.Ålder"></label>
+    <input type="text" asp-for="MinPerson.Ålder" />
+    <br /><br />
+
+    @foreach (var godis in Model.FavoritGodisar)
+    {
+        <input type="radio" asp-for="MinPerson.Favoritgodis" value="@godis.Namn" />
+        @godis.Namn
+    }
+    <br /><br />
+
+    <label asp-for="MinPerson.Favoritårstid"></label><br />
+    <select asp-for="MinPerson.Favoritårstid" asp-items="Model.FavoritÅrstider"></select>
+    <br /><br />
+
+    <input type="submit" value="Skicka" />
+    <br /><br />
+
+    <div asp-validation-summary="All"></div>
+</form>

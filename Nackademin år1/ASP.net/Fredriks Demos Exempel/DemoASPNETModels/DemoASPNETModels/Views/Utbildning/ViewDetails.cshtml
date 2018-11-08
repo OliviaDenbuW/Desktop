@@ -1,0 +1,36 @@
+﻿@model DemoASPNETModels.Models.Utbildning
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewDetails</title>
+
+   
+</head>
+<body>
+
+    <table>
+
+        <tr>
+            <td><h3>@Model.Namn</h3></td>
+
+        </tr>
+        <tr>
+            <td><p>@Model.Beskrivning </p></td>
+
+        </tr>
+        <tr>
+            <td><p>Utbildningen går i  @Model.Stad </p></td>
+        </tr>
+
+
+    </table>
+    
+</body>
+</html>

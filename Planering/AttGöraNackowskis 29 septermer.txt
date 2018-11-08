@@ -1,0 +1,56 @@
+*********************************************************************************
+ATT GÖRA:
+*********************************************************************************
+1. BUD:
+	- Kan bara lägga bud på öppna auktioner
+
+2. SÖKNING:
+	- Skapa sökningsfält i sökresultat
+	- Göra dropdown på vad för typ av sökning Titel/Beskrivning
+
+3. AUKTIONER
+	- Skapa sortering på ex. slutdatum
+	- Gör funktion som säger om auktionen är öppen/stängd (datum)
+	- Gör rätt med datumen
+
+4. STÄNGD AUKTION:
+	- Om auktionen är stängd visas bara vinnande budet
+
+5. GENERELLT:
+	- Fixa så man kan komma redirectToAction till viewPartialAuction
+	- Bryt ut till Partial, ex. formulär
+	- Lägga till felmeddelanden där det behövs
+
+6. DATUM
+	- DateTime.Now.VILKET-FORMAT??
+
+*********************************************************************************
+KLART:
+*********************************************************************************
+
+1. BUD:
+	- Ta bort bara om inga bud
+	- Validering: Bud måste vara högre än högsta bud sen innan
+	- Validering att bud är större än noll alernativt kolla om det är första budet
+	- Negativa bud
+	- Gör så att budlistan är sorterad på högsta bud högst upp
+	- Ska inte kunna lägga bud utan att vara inloggad
+
+2. GENERELLT:
+	- RepsonseMessage ska inte returneras ut, skicka till bra vy
+	- Index har bara aktuella auktioner
+
+3. SERVICE:
+	- SKapat mapp med User
+
+*********************************************************************************
+EV. FÖRBÄTTRA
+*********************************************************************************
+1. BUD:
+	- ErrorMessage om det inte går att ta bort
+
+2. ÖVERKURS:
+	- Byt till switch-satser i BidIsValid()
+
+3. OPEN AUCTION
+	- Ienumerable i metoden GetOpenAuctions()

@@ -1,0 +1,16 @@
+﻿@model List<DemoASPNETEntityFramework.Models.Person>
+
+
+@{
+    Layout = null;
+}
+
+<ul>
+
+    @foreach (var person in Model)
+    {
+        <li>@person.PersonName</li>
+
+    }
+
+</ul>

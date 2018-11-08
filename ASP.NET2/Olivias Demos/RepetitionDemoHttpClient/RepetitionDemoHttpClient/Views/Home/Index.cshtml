@@ -1,0 +1,8 @@
+﻿@model List<RepetitionDemoHttpClient.Models.Person>
+
+<ul>
+    @foreach(var person in Model)
+    {
+        @person.Name @person.Email
+    }
+</ul>

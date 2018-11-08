@@ -1,0 +1,41 @@
+﻿@model Uppg2Validering.Models.Person
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<form asp-controller="Person" asp-action="Create" method="post">
+
+    <label asp-for="Anvandarnamn"></label>
+    <input asp-for="Anvandarnamn" />
+
+    <br /><br />
+
+    <label asp-for="Losenord"></label>
+    <input asp-for="Losenord" />
+
+    <br /><br />
+
+    <label asp-for="VerifieraLosenord"></label>
+    <input asp-for="VerifieraLosenord" />
+
+    <br /><br />
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+
+    <br /><br />
+
+    <label asp-for="Personnummer"></label>
+    <input asp-for="Personnummer" />
+
+    <br /><br /l>
+
+    <input type="submit" value="Skapa" />
+
+    <br /><br />
+
+    <div asp-validation-summary="All">
+
+    </div>
+</form>

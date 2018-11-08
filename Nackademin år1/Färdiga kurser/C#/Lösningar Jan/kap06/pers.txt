@@ -1,0 +1,8 @@
+Kalle Andersson
+25 180 85
+Nisse Lång
+30 200 95
+Ylva Kort
+50 160 55
+Lillen Ek
+60 201 120

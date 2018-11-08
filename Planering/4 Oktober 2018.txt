@@ -1,0 +1,41 @@
+************************************
+PLANERING TORSDAG 4/10-2018 Innan Anton
+************************************
+09.50 - 13.00 (3H, 10 min)
+
+************************************
+ATT GÖRA SJÄLV:
+************************************
+1. Struktuera datorn (10min)
+2. Kolla upp:
+	- Use case diagram
+	- Klassdiagram med klasserna i systemet (indelade i logisk paketstruktur)
+	- Workflow diagram
+	- Sekvenskdiagram
+
+4. Försöka snabbt göra Use cases färdiga
+
+************************************
+ATT GÖRA MED ANTON:
+************************************
+1. Kolla igenom Use cases: Hjälpa färdigställa
+2. Hitta alla objekt
+	
+
+************************************
+FÄRDIGT:
+************************************
+1. Planera (10 min)
+2. Lyssna:
+	- Use case diagram ca 10min (20min sammanlagt)
+	- Klassdiagram ca 15min (30min sammanlagt)
+
+
+
+
+
+
+Tillför
+UML.diagrram
+KOd som fungerar
+	- Finns exempelkod

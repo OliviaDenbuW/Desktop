@@ -1,0 +1,22 @@
+************************************
+PLANERING TORSDAG 18/10-2018 Skolan
+************************************
+13.30 - 16.00 (2H, 30min)
+
+************************************
+ATT GÖRA:
+************************************
+1. ÖVNINGSUPPGIFT 1:
+	- Fråga: Hur skriver man text i resp. item i listbox?
+
+4. INLÄMNING 1 - KALKYLATOR
+************************************
+FÄRDIGT:
+************************************
+1. Övningsuppgift 1:
+	- ListBox:
+		- COMMON:
+			- ListBoxItems
+2. ÖVNINGSUPPGIFT 2:
+
+3. ÖVNINGSUPPGIFT 3:

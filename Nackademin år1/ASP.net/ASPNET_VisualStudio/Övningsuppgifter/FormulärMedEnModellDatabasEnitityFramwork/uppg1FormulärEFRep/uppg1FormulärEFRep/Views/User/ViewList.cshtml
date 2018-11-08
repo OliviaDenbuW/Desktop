@@ -1,0 +1,9 @@
+﻿@model List<uppg1FormulärEFRep.Models.UserLogin>
+
+@foreach(var user in Model)
+{
+    @user.Name
+    <a href="Update" name="@user.UserId">Update >></a>
+    <br /><br />
+
+}

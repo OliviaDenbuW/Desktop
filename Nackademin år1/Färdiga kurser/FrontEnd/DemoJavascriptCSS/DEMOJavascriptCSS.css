@@ -1,0 +1,13 @@
+.markGrey{
+    background-color: grey;
+    color: white;
+    font-style: normal;
+
+}
+
+.markBlue{
+    background-color: lightblue;
+    color: black;
+    font-style: bold;
+    font-size: 18px;
+}

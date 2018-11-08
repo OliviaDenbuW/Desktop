@@ -1,0 +1,58 @@
+SKELETT:
+
+1. Ändrar navbar
+2. Rensa Index: Skriv bara ut index
+3. Ta bort: About, Contact i Home
+
+LAYOUT:
+	- Ta bort allt och gå till bootstarp
+	- KOmponenter:
+		BRAND: Skriver man Nackowskis och ger den klassen brand så får den en stil
+
+
+NAVBAR: Ska vara med på varje sida
+
+LINK: Ha kvar och ändra till min egna
+
+SEARCH BAR: Ha kvar
+
+Kan ta bort dropdown/ha kvar
+
+TÄNKA PÅ: @RenderBOdy skriver först ut index och sen det jag byter till
+	- Ha kvar html strukturen
+
+1. Fixa layout i nytt projekt
+	- Ta bort autogenererat
+
+2. Bygg skelett:
+	- Navigering: Kolla uppgiften och kolla vad för nav som behövs
+
+3. Fyll data i views: Strunta i hur det ser ut, bara fyll det
+	- Bygg API-anropen
+	- 1 i taget
+	- Testa hela kedjan
+	- Ta de jag har färdiga först (se till att de kommer ut i vyn)
+
+------------------
+TÄNK PÅ
+------------------
+1. Viewn vill ha en alla auctioner, och för varje auktion ska alla bud visas
+	- Controllers har en metod Index som har ett anrop till buss _buss.GetAuctionsAndBids
+	- I buss skapar jag GetAuctionsAndBids()
+	- I den metoden anropar jag två andra metoder: GetAuctions() och GetBids()
+	- När jag hämtat listan med alla auctioner, itererar jag genom den med en foreach(item in auctionLIst)
+		och använder Idt till mitt andra apiAnrop där jag hämtar alla bud på den
+		och skapar en ny VIewModel och returnar den till controllern
+	- COntrollern säger ge mig alla auctioner och bud tack. Det har vi redan fixat innan
+
+2. DataLager hämtar bara på en lista. 
+	- OM det är med db kan man göra linq och selektera lite innan buss
+	- Men nu i API så blir hela selekteringen i business
+
+-----------------
+STRUKTUR:
+-----------------
+1. Alla apianrop kommer från samma
+	- Om vi haft olika apier skulle han brutit ut
+
+2. Business gör allt jobb

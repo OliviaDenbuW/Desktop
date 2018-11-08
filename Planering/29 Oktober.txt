@@ -1,0 +1,54 @@
+************************************
+PLANERING 
+************************************
+
+************************************
+ATT GÖRA:
+************************************
+1. AUCTIONVIEWMODEL:
+	1.1 INDEX:
+		- Ta bort setIndex och testa om det blir snabbare
+
+	1.2 SEARCH:
+		- Testa om det går att koppla med sortering
+
+2. RENSA:
+	2.1 Databasen
+	2.2 Interfaces:
+		- Kommentera ut det som inte verkar behövas
+		- Ta bort det helt när jag är säker på att det inte behövs
+
+3. SORTERA:
+	- Testa om jag kan få tag i sökResultatet
+
+4. ÖPPEN AUCTION:
+	- Försök bryta ut
+	- DetailsAuction
+
+************************************
+FÄRDIGT:
+************************************
+1. ADD NEW ADMIN:
+	1.1 byt namn till AddNewAdmin ViewModel
+	1.2 Testa:
+		- Lades till
+		- Går att logga in 
+		- Kan skapa
+		- Update
+		- Bara den kan göra det
+
+2. RENSA:
+	2.1 Interfaces:
+		- Kommentera ut det som inte verkar behövas
+3. DB:
+	- Testa att users kommer in i MyIdentityDb
+
+4. AUCTIONVIEWMODEL:
+	4.1 INDEX:
+		- Satt i controllern (men utan syfte)
+		- Fixa så att bara öppna syns
+		- Kolla om index följer med i AuctionViewModel
+			- FÖLJER INTE MED SOM DET ÄR NU
+
+5.ÖPPEN AUCTION:
+	- DetailsAuction

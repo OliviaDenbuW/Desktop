@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<form method="post">
+
+    <label>Name</label>
+    @* BInder värdet i prop till vår textbox, name="Name" *@
+    <input type="text" name="Name" />
+    <br />
+    <label>Email</label>
+    <input type="text" name="Email" />
+    <br />
+    <button type="submit">Skicka</button>
+
+    <label>@Model.Message</label>
+</form>

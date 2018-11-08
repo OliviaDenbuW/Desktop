@@ -1,0 +1,36 @@
+﻿
+<a asp-controller="Cookies" asp-action="ReadCookies">Läs cookie på webbservern</a>
+
+
+<br />
+<br />
+
+<input type="button" onclick="ViewCookieValue()" value="Läs cookie på klienten" />
+
+<script>
+
+    function ViewCookieValue() {
+
+        var valueCookie = readCookie("Test");
+
+        alert(valueCookie);
+    }
+
+    //Hämtar innehållet i en speciell cookie
+    function readCookie(name)
+    {
+        name = name + "=";
+        var cookieArray = document.cookie.split(';');
+
+        for (var i = 0; i < cookieArray.length; i++) {
+            var currentCookie = cookieArray[i];
+
+            while (currentCookie.charAt(0) == ' ') currentCookie = currentCookie.substring(1, currentCookie.length);
+            if (currentCookie.indexOf(name) == 0) return currentCookie.substring(name.length, currentCookie.length);
+        }
+        return null;
+    }
+
+
+
+</script>

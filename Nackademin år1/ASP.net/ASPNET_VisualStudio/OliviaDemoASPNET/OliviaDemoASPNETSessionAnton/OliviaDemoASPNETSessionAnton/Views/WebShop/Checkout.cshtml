@@ -1,0 +1,19 @@
+﻿@model List<OliviaDemoASPNETSessionAnton.Models.Product>
+
+<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+        </tr>
+    }
+
+</table>
+
+@Model.Sum(p => p.Price)

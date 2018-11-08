@@ -1,0 +1,2 @@
+DESKTOP-E3CLIPS
+Data Source=DESKTOP-E3CLIPS;Initial Catalog=Northwind;Integrated Security=True;

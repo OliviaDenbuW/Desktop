@@ -1,0 +1,33 @@
+************************************
+PLANERING MÅNDAG 15/10-2018 Hemma
+************************************
+14.20 - 16.20 (2H)
+
+************************************
+ATT GÖRA:
+************************************
+	1. CREATE NEW AUCTION:
+		- CreatedBy = CurrentUser
+		- Istället för att ha _adminKey till allt, byt till CurrentUser
+	
+	2. ADMIN KAN LÄGGA TILL NYA ADMINS:
+		- Lägga till roll som Admin på varje som blir tillagd
+		- Response istället för void
+		- Ska inte kunna lägga till två med samma namn
+
+	4. SORTERA:
+		- Koppla till TestAuctionViewModel
+		- Sortera:
+			- Slutdatum
+			- Utropspris
+
+	7. VÄRDEN SOM INTE GÅR ATT SÄTTA I AUCTIONVIEWMODEL:
+		currentAuction.AuctionIsOpen = _businessService.GetAuctionIsOpen(auctionId);
+            	currentAuction.HighestBidForAuction = _businessService.GetHighestBidForAuction(auctionId);
+		MinValidBid
+
+3. Struktuera datorn (10min)
+
+************************************
+FÄRDIGT:
+************************************

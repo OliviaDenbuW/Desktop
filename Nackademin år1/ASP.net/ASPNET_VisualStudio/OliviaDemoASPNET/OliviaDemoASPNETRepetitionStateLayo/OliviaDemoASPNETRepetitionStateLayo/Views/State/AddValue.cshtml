@@ -1,0 +1,23 @@
+﻿@model OliviaDemoASPNETRepetitionStateLayo.Models.Person
+@{
+    ViewData["Title"] = "AddValue";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddValue</h2>
+
+<form asp-controller="State" asp-action="AddValue" method="post">
+
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" />
+
+    <br /><br />
+
+    <label asp-for="Email"></label>
+    <input type="text" asp-for="Email" />
+
+    <br /><br />
+    <input type="submit" value="Lägg till" />
+
+</form>
+

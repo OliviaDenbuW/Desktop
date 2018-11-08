@@ -1,0 +1,26 @@
+************************************
+PLANERING LÖRDAG 6/10-2018 Skolan
+************************************
+11.20 - 15.00 (3H 40min)
+
+************************************
+ATT GÖRA:
+************************************
+1. Struktuera datorn (10min)	
+
+************************************
+FÄRDIGT:
+************************************
+1. Planera
+2. Use case diagram:
+	- Rita diagrammet
+	- Feedback av Maria
+3. Lyssna på design patterns:
+		- Intro 10min
+		- Creational 6min
+		- FACADE: 10min
+4. Lyssna på design patterns: (2H)
+	- Oves PP:
+		- FACTORY: 10min
+		- ADAPTER: 15min
+		- STRATEGY: ca 15min

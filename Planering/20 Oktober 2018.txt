@@ -1,0 +1,137 @@
+************************************
+PLANERING LÖRDAG 20/10-2018 Espresso
+************************************
+09.25 - 11.30 (2H, 5min)
+
+************************************
+ATT GÖRA:
+************************************
+1. Index:
+	- Läsa information:
+		- CreateAuctionViewModel:
+			- SearchResult:
+				- Fixa metoden som selekterar i bussLayer
+				- ViewSearchResult
+				- _Display
+	- Bara aktuella syns
+		- FIXA SÅ MAN KAN SÄTTA AuctionIsOpen i BussLayer
+			- TestGetAllOpenAuctions() byt sen till == true
+
+2. CREATE:
+	- //TODO Kolla om man blir directad till Getten av Create??
+
+3. NAMNBYTEN:
+	- Mappar
+	- AuctionViewModel/Test...
+
+4. EVENTUELLT IQUERYABLE
+
+5. KOLLA UPP:
+	- BYT NAMN: GeneralAuctionViewModel
+	- STARTPRICE: negativaInput - Vad händer då? På create/Update etc
+        - IEnumerable<TestAuctionViewModel> SetGeneralAuctionViewModelList(IEnumerable<AuctionModel> auctions)
+		- CreatedBy ska inte vara _admin
+     
+
+
+************************************
+FÄRDIGT:
+************************************
+1. Index:
+	- OrderBy
+	- GetAucttionById()
+
+2. KOLLA UPP:
+	- public AuctionViewModel CreateAuctionViewModel(AuctionModel model)
+
+3. AUCTIONISOPEN() FUNKAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************
+ATT GÖRA:
+************************************
+1. CREATE NEW AUCTION:
+	- Istället för att ha _adminKey till allt, byt till CurrentUser
+
+2. GENERALAUCTIONVIEWMODEL:
+	- Byt till GetAuctionById():
+		- BUSSINESSLAYER:
+			- Interface
+			- Byt ut metoden
+			- Skapa TestConvertViewModel(GeneralAuctionViewModel currentAuction)
+			- Skapa CreateAuctionViewModel() med GeneralAuctionViewModel:
+				- HighestBid
+
+3. GETAUCTIONISOPEN:
+	- Rensa kod
+	- Kunna lägga bud om öppen
+
+		- UPDATE AUCTION:
+			- GetAuctionById()
+			- Fixa viewAuctionDetails
+
+5. VIEWAUCTIONDETAILS:
+	- CreatedBy
+	- AuctionIsOpen
+	- CurrentHighestBid
+	- GetHighestBid:
+		- Buden sysns inte på _Open
+		- Sätta Bids på GeneralAuctionViewModel
+
+4. SORTERA:
+	- Koppla till TestAuctionViewModel
+	- Sortera:
+		- Slutdatum
+		- Utropspris
+
+7. VÄRDEN SOM INTE GÅR ATT SÄTTA I AUCTIONVIEWMODEL:
+	currentAuction.AuctionIsOpen = _businessService.GetAuctionIsOpen(auctionId);
+      	currentAuction.HighestBidForAuction = _businessService.GetHighestBidForAuction(auctionId);
+	MinValidBid
+
+6. CURRENT USER:
+	- Ta bort
+
+9. Struktuera datorn (10min)
+
+10. Rensa TestAuctionViewModel VS AuctionViewModel:
+	- TestGetAuctionById:
+		- AuctionIsOpen
+	- TA BORT UTKOMMENTERAT:
+		- Create
+		- Update
+
+11. Kolla om man kan bryta ut ngt i MakeAuctionApiReady
+
+12. Ringa om seg dator
+
+16. Svara mail:
+	- Petra Update
+	- Vivi
+	- Jenny
+	- Gustav söndag?
+
+17. Göra valideringar på klienten(????????????????????)
+18. Stega igenom varje steg
+
+19. STRUKTURERA DATORN!
+************************************
+FÄRDIGT:
+************************************

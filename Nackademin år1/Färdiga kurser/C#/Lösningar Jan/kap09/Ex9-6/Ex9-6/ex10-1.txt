@@ -1,0 +1,75 @@
+// Filen Student.java
+
+import java.util.*;
+
+class Person {
+  protected String namn, adress;   
+  protected int född;             
+
+  public Person(String na, String adr, int föddÅr) {
+    namn = na;
+    adress = adr;
+    född = föddÅr;
+  }
+
+  public String heter() {
+    return namn;
+  }
+
+  public String bor() {
+    return adress;
+  }
+
+  public int  födelseår() {
+    return född;
+  }
+}
+
+public class Student extends Person {
+  private List<Kurs> kurser = new LinkedList<Kurs>();
+
+  public Student(String na, String adr, int föddÅr) {
+    super(na, adr, föddÅr);
+  }
+
+  public void nyKurs(Kurs k) {
+    if (!kurser.contains(k))  // Finns kursen tidigare?
+      kurser.add(k);   // Nej, lägg in den sist i vektorn   
+  }
+
+  public void lämnaKurs(Kurs k) {
+    int i = kurser.indexOf(k);
+    if (i >= 0)                   // Finns kursen?
+      kurser.remove(i);  // Ja, ta bort den
+  } 
+}
+
+class Kurs {
+  private String namn;
+  List<Student> studenter = new LinkedList<Student> ();
+ 
+  public Kurs(String na) {
+    namn = na;
+  }
+
+  public String kursnamn() {
+    return namn;
+  }
+
+  public void nyStudent(Student s) {
+    if (!studenter.contains(s))  // Finns studenten tidigare?
+      studenter.add(s);   // Nej, lägg in den sist i vektorn   
+
+  }
+
+  public void lämnaKurs(Student s) {
+    int i = studenter.indexOf(s);
+    if (i >= 0)                      // Finns studenten?
+      studenter.remove(i);  // Ja, ta bort den
+  }  
+}
+
+  
+
+
+

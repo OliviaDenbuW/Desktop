@@ -1,0 +1,20 @@
+﻿@model TomasosPizzeria.Models.Kund
+    
+@ViewBag.Message
+
+<!--Skapar ett formulär som kommer postas till Login metoden i User controllern-->
+<form asp-controller="Account" asp-action="Login" method="post">
+
+    <label asp-for="AnvandarNamn"></label>
+    <input asp-for="AnvandarNamn" />
+
+    <br /> <br />
+
+    <label asp-for="Losenord"></label>
+    <input type="password" asp-for="Losenord" />
+
+    <br /><br />
+
+    <!--Submit knapp som postar formuläret till webbservern-->
+    <input type="submit" value="Logga in" />
+</form>

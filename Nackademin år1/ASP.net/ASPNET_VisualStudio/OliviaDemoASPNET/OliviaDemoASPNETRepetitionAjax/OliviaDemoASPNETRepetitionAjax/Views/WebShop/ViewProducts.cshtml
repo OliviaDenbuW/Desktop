@@ -1,0 +1,41 @@
+﻿@model List<OliviaDemoASPNETRepetitionAjax.Models.Product>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.ajax.unobtrusive/3.2.4/jquery.unobtrusive-ajax.min.js"></script>
+
+<div style="width:300px; background-color:lightblue; float:left;">
+    <table>
+        @foreach (var product in Model)
+        {
+            //Lägga ut en rad i tabell tr, kolumner <td>
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>
+                    <a asp-controller="WebShop"
+                       asp-action="ViewProductDetails"
+                       asp-route-id=@product.ID
+                       data-ajax="true"
+                       data-ajax-method="GET"
+                       data-ajax-mode="replace"
+                       data-ajax-update="#ProductDetails">
+                        Visa produkt beskrivning >>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div id="ProductDetails" style="width:300px; background-color:lightgray; float:left;">
+
+</div>
+
+
+
+
+
+
+
+
+

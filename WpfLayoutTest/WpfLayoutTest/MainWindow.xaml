@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfLayoutTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLayoutTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="375.783" Width="412.004">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Label Content="Namn" Grid.Column="0" Grid.Row="0"/>
+		<TextBox x:Name="txtName" Width="150" Height="20" Grid.Column="1" Grid.Row="0" />
+		<Label Content="Jag söker jobb på" Grid.Column="0" Grid.Row="1"/>
+		<WrapPanel VerticalAlignment="Center" Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+			<RadioButton x:Name="rdoFullTime" Content="Heltid" />
+			<RadioButton Content="Halvtid"/>
+		</WrapPanel>
+		<Label Content="Jag kan" Grid.Column="0" Grid.Row="2"/>
+		<WrapPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+			<CheckBox x:Name="chkCSharp" Content="C#" Margin="0,0,20,0"/>
+			<CheckBox x:Name="chkCplusPlus" Content="C++" Margin="0,0,20,0"/>
+			<CheckBox x:Name="chkJavaScript" Content="JavaScript"/>
+		</WrapPanel>
+		<Label Content="Jag vill arbeta som" Grid.Column="0" Grid.Row="3"/>
+		<ComboBox x:Name="cboRole" Grid.Column="1" Grid.Row="3" Width="150">
+			<ComboBoxItem Content="Lead developer"/>
+			<ComboBoxItem Content="Junior developer"/>
+		</ComboBox>
+		<Label Content="Jag kan tidigast börja" Grid.Column="0" Grid.Row="4"/>
+		<Calendar x:Name="calender" Grid.Column="1" Grid.Row="4"></Calendar>
+		<Button Grid.Column="1" Grid.Row="5" Height="22" Width="120" HorizontalAlignment="Right" Margin="10" Content="Spara" Click="Button_Click"/>
+	</Grid>
+</Window>

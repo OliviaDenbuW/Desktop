@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <ul>
+        <!--Lägger ut hela listan på sidan-->
+        @foreach (var namn in ViewBag.Names)
+        {
+            <li>@namn</li>
+        }
+
+    </ul>
+
+ 
+    <!--Razor syntax som styr vad som skrivs på sidan -->
+    @if (ViewBag.State == 1)
+    {
+        <h2>Siffran är 1</h2>
+
+        <p>Detta är text på sidan</p>
+
+    }
+    else
+    {
+        <h2>Siffran är inte 1</h2>
+
+    }
+
+
+
+</body>
+</html>

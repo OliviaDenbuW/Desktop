@@ -1,0 +1,14 @@
+﻿@model uppg1Formulär.Models.Question
+
+Please fill in the following information
+<form asp-controller="MyForms" asp-action="SendQuestion" method="post">
+    <input asp-for="Email" placeholder="Enter email"/>
+
+    <br /><br />
+
+    <textarea asp-for="Text" placeholder="I am asking a question on this community"></textarea>
+
+    <br /><br />
+
+    <input type="submit" value="Post" />
+</form>

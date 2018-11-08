@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Övning1Klasser", "Övning1Klasser\Övning1Klasser.csproj", "{211B4C13-6B58-4EEC-8C0C-D7518217209E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Övning2Klasser", "..\Övning2Klasser\Övning2Klasser.csproj", "{64F5E6B7-9975-40D5-94E2-D4B4C4CEA8DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{211B4C13-6B58-4EEC-8C0C-D7518217209E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211B4C13-6B58-4EEC-8C0C-D7518217209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211B4C13-6B58-4EEC-8C0C-D7518217209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211B4C13-6B58-4EEC-8C0C-D7518217209E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F5E6B7-9975-40D5-94E2-D4B4C4CEA8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F5E6B7-9975-40D5-94E2-D4B4C4CEA8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F5E6B7-9975-40D5-94E2-D4B4C4CEA8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F5E6B7-9975-40D5-94E2-D4B4C4CEA8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F7233D9-C831-48B8-AA8C-4A0CD9AED5B5}
+	EndGlobalSection
+EndGlobal

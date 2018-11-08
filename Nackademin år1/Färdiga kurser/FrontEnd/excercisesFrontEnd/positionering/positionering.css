@@ -1,0 +1,38 @@
+#div1
+{
+    height: 500px;
+    width: 500px;
+    background-color: pink;
+    /* float: right;
+    margin-top: 10px;
+    margin: 100px; */
+}
+
+#div2
+{
+    height: 500px;
+    width: 500px;
+    background-color: yellow;
+    margin-right: auto;
+    margin-left: auto;
+    /* float: left; 
+    margin-top: 50px;
+    margin: 1px; */
+}
+
+#div3
+{
+    height: 500px;
+    width: 500px;
+    background-color: orange;
+}
+
+.changeBackgroundColor{
+    background-color: black;
+}
+
+
+#div2:hover
+{
+    background-color:black;
+}

@@ -1,0 +1,1 @@
+alert('Nu körs javascript kod som ligger i en egen fil');

@@ -1,0 +1,40 @@
+1.DESIGN PATTERN:
+
+2. INTEGRATIONS:
+	- Tanken med den var fortknox
+
+1. skapar nytt projkec
+
+	Tester i menuys: TestRUn och Test
+Test
+RUn
+AllTests
+	Alla funkar = gröna
+
+
+
+*************************************
+ATT GÖRA:
+*************************************
+1. Ett test till:
+	- "CalculateYearWinner" (den vi redan har är för WinnerCompetition)
+
+	- Sammanfattning:
+		Vi börjar med alla... Som vi gör för winnerCOmpentiion utgår vi från game, går igenom alla games som hör till den competition  och plockar ut players
+		sen så går vi igeboom varje player
+
+NU: Börjar vi ute på memebr: Gå igenom alla memeber, alla dens memebers competitions, gå igenom varje enskild compettiiopn o kolla om den vunnit
+--- Loopa alla members
+	- För varje memeber-loopa competitiopn
+		För competition
+		(Ta matcher som member är med i OCH är under året )(kolla timestamp i game och om det är rätt så ta med)
+		Blir sen lika som i startegy patters (allt ovan är nytt och under är likadant)
+			- Lägg dessa i lista (för sen så kan vi räkna antal vunna och count på lista)
+
+2. FIxa use cases (gör de grejer vi gjort)
+3. Sekvensdiagram
+
+
+	
+ 
+	

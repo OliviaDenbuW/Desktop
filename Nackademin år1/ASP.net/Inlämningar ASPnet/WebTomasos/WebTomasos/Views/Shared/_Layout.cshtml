@@ -1,0 +1,25 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="navigation"><h1>TOMASOS</h1></div>
+
+    <div class="header">
+        <div>
+            <p><a asp-controller="WebTomasos" asp-action="Login">Login</a></p>
+            <p><a asp-controller="WebTomasos" asp-action="EditContactInformation">Edit contactinfo</a></p>
+            <p><a asp-controller="WebTomasos" asp-action="Menu">Menu</a></p>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

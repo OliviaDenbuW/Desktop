@@ -1,0 +1,158 @@
+1. Sätta upp modeller med data-binding: AuctionViewModel.cs & BidViewModel.cs (EN mapp ActionViewModels med de två vm i)
+2. Skapa mapp-struktur med interface/implementation av Datalager och BusinessLayer
+3. Skapa ActionMetoder och API-anropen (Tips CreateAuction först)
+4. Rensa ut ASP.NET html (_Layout och Index)
+5. Koppla vyer
+
+--------------------------------------------------------------------------------
+Skapa mapp-struktur med interface/implementation av Datalager och BusinessLayer
+--------------------------------------------------------------------------------
+
+1. Skapa upp 2 mappar: Buss & DataLayer: CHECK
+	- I finns interface och implementation (bussServ ärver av IBussService) CHECK
+	- Börja med BUssServiv CHECK
+		VILKA GREJER BEHÖVER FINNAS (Admin ska kunna 3 övre)
+			- CreateAuction
+			- TaBort
+			- Update
+			
+			- CreateBid (Regular + Admin (tolkning))
+
+2. Site behöver kunna få tillgång till alla auktioner och få en specifik: Kolla Kalles för API förklaring förklarar hur alla API går till
+		GETAUCTION LIST: Få alla auktioner från min list och då ska jag skicka det anropet plus min gruppkod
+		GET SPECIFIK: + id
+		
+	Headers behövs för vissa... Kolla headers (finns genomgång: När man sätter upp api så finns headers)
+
+3. KOLLA KALLES DOKUMENATION OCH SE HUR DET SKA SÄTTAS UPP OCH KOLLA UPP HEADERS GENOMGÅNG (för att hantera api)
+
+		Task HttpMessageRespons (asyn
+		Task<List<Auktioner>> (Behövs ibland så beroende på vad vi gör)
+
+4. Sätta upp modellerna med data-bind (Är överst i hans lista av vad som ska göras)
+	- 2 modeller (auktion & bids)
+	- ViewModels beroende på hur jag använder de
+	- Ex AuctionViewModel 
+	- Data-contract, Data-bind (Bindings till modellerna) KRÄVS FÖR ATT HÄMTA
+	
+	TÄNK PÅ: JSON har aldrig datetime, är string, så måste ha 2 prop för datum med DateTime
+		 Hämtas in som en string men för att kunna sortera på siten så är det DateTime
+	- BidViewModel
+
+----------------------
+SAMMANFATTNING:
+----------------------
+
+1. MAPPSTRUKTUR
+
+2. SKAPA ACTION METODER (kopplat till API-anrop GET POST DELETE) MEN FYLL INTE I DEM
+
+3. RENSA UT ASP.NET html (_Layout och Index)
+
+3. KOPPLA VYER
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+1. Har skapat mappstrukturen: BusinessLayer(Metoderna), ex om vill göra lista
+	- Om senare kommer på att vilja kunna söka på en auktion så kan jag lägga till det senare
+	- Gå in i implementationen och lägg in där också
+
+2. GET: POST: Bökigt, men får kolla på google, fråga, etc.
+
+3. Ska spara min nyckel egentligen. App.Config App-settings (kanske för 2 proj????)
+	- Ska egentligen spara min nyckel här och hämta in varje gång
+	- apiNakowskiKey
+
+-------------------------------------------------------
+HTML RENSNING:
+-------------------------------------------------------
+
+1. RENSA HTML: Hur jag än skapar ett nytt proj så kommer det ändå i
+	- Gå in i _Layout (Viktigast av alla vyer för körs hela tiden, ex länkar till saker)
+		- Bootstrap
+		- CSS (egen css, hur jag vill den ska se ut)
+		- Länkar till mina...??
+		- RenderBody skriver nu ut HomeIndex, får gå in i Index och ändra där, ta bort allt och skriva sitt egna
+
+2. Ev. Skapa navigering (tänka ut hur man vill, trycker på en auktion). Start alla auktioner, trycker på aution kommer till den.. ex
+
+----------------------
+SAMMANFATTNING:
+----------------------
+
+1. Nu har jag min layout klar, rollerna klara, har metoderna klara
+	- Har bara skapat ActionMetoderna men har inte fyllt i de än
+	- Implementera interface
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+1. Fyll i ActionMetoderna
+
+2. Som Admin, ex kunna CreateAuction
+	- Börja med CreateAuction (för den är lätt testa)
+
+	POSTMAN TIPS:
+	- Först testa kan jag skapa
+	- Och sen kunna läsa det man fått
+
+3. Skapa en mapp att lägga i (Postman, ex Nackowski)
+	- Create så väljer jag post
+
+----------------------
+SAMMANFATTNING:
+----------------------
+
+1. FOKUSERA PÅ ETT OMRÅDE OCH BETA AV DE
+
+2. När jag gjort hit är nästan hela uppgiften kvar
+
+3. Sen också deploya till Azure
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+1. Sätta upp projektet: Roller, Identity, Azure, Koppla db till projekt, Första migration
+
+2. När det är gjort känner man ett lugn. Har grejerna färdigt etc
+
+3. Ex. Om användare sparat vilka aktioner han budat på kan man använda Extension (men typ extra grej)
+
+
+----------------------
+SAMMANFATTNING:
+----------------------
+1. När jag satt upp rollerna ska jag testa de
+
+2. EX AdminControllern
+	- Kan sätta Authorize (Ex säga att Roll måste vara Admin)
+	- Är man inte Admin kan man inte anropa dessa metoder
+	- Är man inte Admin kan man inte ens se (I viewn så bestämmer man det också)
+	- If(User.HasClaim()): Kollar om den har en viss roll
+
+3. Kan inte lägga bud om man inte är inloggar (If(User.IsSignedIn))
+
+4. Kan se alla auktioner om man inte är inloggar Ex
+
+5. Testa att saker funkar, ex en knapp som kan bli osynlig beroende på vilken roll man har
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+--------------------------
+DET SOM INTE ÄR GJORT OVAN:
+--------------------------
+
+1. Bootstrap
+	- Välj i bootstrap: Man kan kopiera saker därifrån
+	- Alex har Bloggen som mall på Nackowskis
+	- EX. Ska ha en dropdownMeny: Så kan man välja det från Bootstrap
+
+2. Kan kolla bootstrap lite översikligt bara
+
+3. Kan skita i Google-konto att logga in med (Krångligt tillsammans med Identity)
+
+-------------------------------------------------------
+-------------------------------------------------------
+	

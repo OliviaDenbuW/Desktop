@@ -1,0 +1,18 @@
+﻿@model DemoASPNETIdentity.Models.RegisterUser
+
+<form asp-controller="Account" asp-action="Login" method="post">
+
+
+
+    <label asp-for="Username"></label>
+    <input type="text" asp-for="Username" />
+
+    <br />
+    <br />
+
+    <label asp-for="Password"></label>
+    <input type="text" asp-for="Password" />
+
+    <input type="submit" value="Login" />
+
+</form>

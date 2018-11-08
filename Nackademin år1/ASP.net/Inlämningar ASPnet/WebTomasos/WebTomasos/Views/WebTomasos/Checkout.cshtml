@@ -1,0 +1,18 @@
+﻿@model List<WebTomasos.Models.DishModel>
+
+
+<h3>You have ordered the following</h3>
+
+<table>
+    @foreach (var dish in Model)
+    {
+        <tr>
+            <td>@dish.Name</td>
+            <td>@dish.Price</td>
+        </tr>
+    }
+
+</table>
+
+<h3> Total cost: @Model.Sum(dish => dish.Price) kr</h3>
+<a asp-controller="WebTomasos" asp-action="CompleteOrder"> Order </a>

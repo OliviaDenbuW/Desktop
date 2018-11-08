@@ -1,0 +1,52 @@
+
+WEBSHOP
+
+
+1.	För att kunna skapa en webbshop så måste man ha produkter (jämfört med ett formulär där användare fyller i information själva så måste man "ha personer").
+	Alltså måste vi skapa en klass som heter Products.
+
+2.	Varje produkt har x-antal egenskaper, som är likadana för respektive produkt. Dessa egenskaper blir properties i Product.cs	
+
+
+3. 
+	Skapa en "vanlig metod" som heter ViewProducts som är till för att kunna få se alla produkter som finns. För att man ska kunna se dem, så måste man också skapa en metod GetData().
+	I return View() på ViewProducts-metoden så skriver du GetData(), och på så sätt kommer datan in i ViewProducts metoden.
+
+4.	Skapa metoden GetData() och lägg in alla produkter som du senare vill ska synas på skärmen, likt en meny.
+
+
+_______________________________________________________________________________________________________________________________________________
+
+
+1.	Skapa metoden AddProduct() som är till för att kunna lägga utvalda produkter (av användaren) i varukorgen
+	Det är i den här metoden vi kommer börja använda sessionsvariabler
+
+2.	Vi måste ha en lista som samlar på alla produkter som användaren väljer att lägga i sin varukorg (klickar på). Man vill samla ihop dessa och inte ha dem utspridda (därför EN lista med 
+	FLERA valda produkter).
+
+3.	Det finns två olika möjligheter:
+
+	3.1 Det är första gången som användaren väljer en produkt, alltså fanns ingen "varukorg"/lista sen innan
+
+	3.2 Användaren har redan valt minst 1 produkt sen innan och varukorgen/listan finns redan
+
+
+4.
+	Namespace måste importeraras för att GetString ska kunna skrivas
+
+	using Microsoft.AspNetCore.Mvc; 
+
+
+	FALL 1 (3.1)
+	Listan fanns inte sen innan. Vi skapar den
+
+	FALL 2 (3.2)
+	Serialiseringen etc.
+
+	För JsonConvert måste namespace importeras
+
+	using Newtonsoft.Json;
+
+
+5.	
+

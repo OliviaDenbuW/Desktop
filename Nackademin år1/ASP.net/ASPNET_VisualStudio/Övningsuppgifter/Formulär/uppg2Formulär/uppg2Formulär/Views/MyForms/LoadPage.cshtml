@@ -1,0 +1,18 @@
+﻿@model uppg2Formulär.Models.Message
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoadPage</title>
+</head>
+<body>
+    <form asp-controller="MyForms" asp-action="LoadPage" method="post">
+        <input type="text" asp-for="@Model.Text" placeholder="Write your message here" />
+        <br />
+        <br />
+        <input type="submit" value="Post message" />
+    </form>
+</body>
+</html>

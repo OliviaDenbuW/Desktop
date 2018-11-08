@@ -1,0 +1,333 @@
+ALM: Application Lifecycle Mangement
+DevOps => Governance + Development + Operations
+
+AGENDA:
+1. Rep.Git
+2. Git i Visual Studio
+3. Brancher
+4. Branchstrategier
+5. Inlämning1
+
+NÄSTA:
+1. Bygg konfiguration (automatisera driftsättning)
+2. Unit Testing
+
+IGÅR:
+1. GitDb hålls i en folder: .git skapr foldern på två kommandon:
+	1. SKapa ny databas git init: Stå mani den folder man vill ska vara arbetskatalogen o så skapas gitdb där
+	2. git Clone. anger en source och en targetkatalgog. Kan också stå i tagetkatalogen om den är tom
+		(lyssna Db)
+
+2 Ställa in git (konfikgi)
+	1. Git config
+	2. Lista allt git config -l (får ut allt)
+	3. git config --globel user.name="fredrik" : då sätter man 
+	4. FÖrsta gången man ställer in: email o password
+	
+	VIKTIGA INSTÄLLNINGAR:
+	1. OLIKA PLATTFORMAR har olika linefield (radmatningar)
+		Linux: 10 för ny rad
+		Windows: r...
+		Git kan ställa in detta automatiskt
+		Bättre använda en edit som förstår sig på linux linefield
+
+	NIVÅR 3:
+	1. Användarnivå: Global betyder den är globa för varje repo
+	2. För varje repo(gäller bara för det repo man är i)
+	3. 
+
+	SAMMANFATTNING:
+	1. Kan tala om vilken editor som ska poppa upp (annars VI eller ngn annan kponstig textediotr/notepad)
+	2. Kan ställa in vilket mergevertyg man vill använda
+
+
+--system (istället för global, för maskinen) --local (för det git repo man står i) 
+Allt lagras i filer
+Git help: Om man vill ha hjälp
+
+3. GITDB: 2 st
+	CLONE
+	Innehåller dels själva historiekn men också vad jag har i min arbteskatalog
+	så  såfort vi gör en localdb så... men på gitservern: b (lyssna Git db 8,40)
+
+	När jag gör en git clone: lagrar jag info i db med var upstream finns
+	URL: Anger en url (git remote som man kan i HELloWorld)
+		- Då kommer orgigin (original db (det normala är att det finns en origin))
+			något med open sourceprojekt
+		- För att titta på kopplingen: GIT REMOTE
+
+		- GIT HELP REMOTE: Då kommer massa olika flaggor
+		- GIT HELP + DET ORD MAN ÄR INTRESSERAD AV: Kommer man få hjälp med et man vill
+		- GIT REMOTE -v 
+
+	4. GIT ADD: (fortfarande på remote)
+	GIT REMOTE ADD ORIGIN + url
+	GIT PUSH: SKicka min db ngn annanstans (man talar om VART man vill pusha)
+		git push -u origin -all (ta allt)
+
+4. HUR FÅR MAN IN FÖRÄNDRINGAR I DB?? HUR SPARAR MAN?
+	- Vi har en arbetskatalor (working dir)
+		- .git
+		- HelloWeb
+			- HelloWeb.csproj
+			- HellOWebCOntroller
+		- README.md (Markdown filer: Vad är det?)
+			- Är ett språk för att formatera text: FET STIL ** (kan läsa i notepad, men om man visar i markdown viewr kan man få rubriker/fet)
+
+		WORKING DIR:	
+		GIT DB: I git db finns ngt som heter stage(förbereder vår commit lyssna 20)
+			- Stage innehåller 2st:
+				1. filer (blobbar, binary large object, betyder stort objekt) För att kopiera in readMe i git db så måste man göra ett komando 
+				   för att kopiera in det: GIT ADD<file/path> och så blir det en commit(????)
+					VI VILL BARA HA EN BLOB PER VERION AV FILEN, mn tar då till ett trick där man tar in hash (hash algoritmer)
+					SOA1: Man räknar ut en checksumma, varje bit i... som räknar ut ett unikt tal för commiten
+						(lyssna fil kopieras in) FInns en innehållsförteckning som ..alla directories blir en fil
+
+					TREKANT (treefil som innehåller när jag gör add vet jag att jag har filer
+						treefilen är innehållet i katalogen (working dir(???)) Kallar trekanten för INDEX
+						treefilerna får också blobbar:
+
+					BLOB TREKANT:
+					      fyrkant ab1234....README.tct
+					      fyrkant 12344....Liecence.txt
+
+					BLOB: LÄNGRE NER(????) fyrkant ab1234
+					      fyrkant 12344
+
+					Så länge man har en helgren som är helt oförandrad får alla filer samma blobsumma (tar lite plats)
+					- Bara de filer som ändrar sig som tar plats
+
+
+
+	1. GIT ADD<file/path> (första steget i att spara o då kopieras filen(??) in i db)
+
+
+	STAGE/ARBETSKATALOG SKILLNBAD:
+	- KOmmando för att visa status: Det som man inte spårar, kommer upp en lista av Untracked files: Två val: Ta bort eller adda för att de ska ver
+	versionshanteras, eller temporärt (vill inte ta bort men inte spara, då kan min IGNORERA dem (talar om för git att inte lägga in filerna)
+	
+	GIT IGNORE: Finns speciell fil:
+		- .gitignore: akn skriva in alla filer man vill den ska strunta i: Standrard är att allt visas som finns i working dir som inte
+			LYSSNA .vs IGNORE 31: RIsk man checkar in tempfiler som ger problem till andra.. om
+
+	GIT STATUS: Talar om saker som skiljer:
+		- ngt som inte är addat (untracked) LYSSNA 32min
+		- Tar man bort ngt lokalt (work dir, talas det ändå om att det finns i stage)
+		- Status talar om skilnad mellan working dir och stage (motsvarar change....)
+
+	GIT RM <file/path (det man vill ta bort)>
+	- BYta namn på filer och ta bort dem
+	- Tar man bort från working dir (manuellt, tas det inte bort i stage)
+		Vill man ta bort den helt måste man också tala om för gitdb att den ska bort där med. Man måste göra det lokalt och tas bort i treefilen
+		eller i gitdb
+	- I VISUAL (34 58 LYSSNA)
+		Om man tar bort den där försvinner den också....(?????)
+
+	GIT MV<from><to> betyder move (om man vill flytta på den)
+		Byta namn på fil eller flytta till en annan katalog
+		Gör man ingen move, LYSSNA 36
+
+NU HAR VI PRATAT OM STAGE AREAN DÄR VI FÖRBEREDER EN COMMIT: Så som det ser ut i STAGE kommer vår commit bli --> LEDER OSS TILL GIT COMMIT
+
+1. GIT COMMIT
+	VAd händer?
+		Vi skapar en commitfil (varje commitfil är en snapshot av verkligenhet) 
+		Vi skapar en fil som innehåller: tree 1234... (talar om att den här oindex filen med hela den här stagen hhamnar som en kopia
+		under commiten. Vu får sm en fryst kopia av stagen. Tree pekar (LYSSNA 38.30)
+		Talar också in:
+			- Author där det står namn o mailadress(se vem som gjort commiten)
+			- Om det inte är den första commiten finns det en parent som talar SAA1 summan på förra
+			- Blie unik summa för just den här commiten
+			- Varje commit pekar ut på den gamla kedjan som gör man alltid har vägen tillbaka till första commiten
+				även om man tar bort... så finns det kvar i den gamla commiten
+			- PARENT: Den som pekar på föregående
+			- SKapas ny indexfil varje commit LYSSNA Sammanf comm 42,10
+
+		Det skapas filer när jag gör git add, ändras när jag gör remove eller.. git commit sparar själva förändringen o är som det som finns i stage
+
+
+VISUAL STUDIO:
+1. Asp net core app
+2. Lägg rätt plats
+3. Kryssa ut create dir soultion och inte create new  git repo
+4. MVC, SKit i https, ingen autoomat
+5. Gå in i mappen
+.vs vill man inte ha med 
+Om man gör VS projekt använd VS för att göra initialiseringen. Högeklicka på min soulution Add soulution to SOurce controle:
+	- Det den gör: Lägger till .git katal (gjprt git init själva)
+	git ingore och git attrib har vs lagt till
+	Han brukar lägga in Add + Exisitingitems o kan marbera attr o ignore så läggs de in i soulienitems)
+
+		FInns mall för i visual stduio. VS skapar attr o ignore sjölv. Om jag själva ansvarar för git init så måste jag själva lägga in
+		ignore o attr (klippa klistar)
+
+	GIT IGNORE: ALlt inte vill git ska tracka
+		Vad den ignorerar:
+
+			[Bb]in : bin... något (WIndows o mac spelar ingen roll på stora o småbokstäver, Linux är känslog för stora o små)
+
+	GIT STATUS: Finns nu inget att commita (vs skapar den första commiten själv) När jag ... LYSSNA 51 GIT STATUS
+
+	HAN ÄNDRAR NGT EX LÄGGER TILL EN README.md fil:
+		- Stage o work skiljer sig: et finns untracked files om man gör git statusVARNING: Arbets kalata innehåller ändringar som inte är
+		cimmitade
+		
+		Om man går in i VS på changes så visar ändringar: Ett sätt ...
+		* FARLIGT (om man gör status så kommer den inte synas pga den är osparad, men om man gör spara i VS så kommer den komma in också i git status)
+		
+	Om man gör en commit LYSSNA VS STaged CHan/Chn 54,50
+	LYSSNA 56,30
+
+LYSSNA SAMMAN COMMIT 58,20
+
+******************************************************************************
+
+VAD HÄNDER OM MAN ÅNGRAR SIG/GÖR FEL???????????
+
+1. FÖRTSA ÅNGRA SÄTT
+	- SÅ länge man bara är lokalt så har ingen annan commiten, o då kan man ändra historien men OM MAN SYNKAT är det för sent (ändirngarn är permanenta)
+	- Om man ska ändra i ngt man synkat / git push (kan man gå bakåt, men då måste alla utv. i proj gå bakåt...STORT PROJEKT)
+
+	COMMIT ALL AND PUSH/SYNC (om man fått in ngt man inte vill ha ut kmr det aldrig försvinna)
+
+	VILKA MOJLIGHETER ATT ÄNDRA SIG FINNS???:
+		1. Ammend: Kan ändra senaste incheckeningen
+
+		* Han har gjort en ändring i ReadMe..
+		* Stagar manuellt (högerklicka på filem o ta stage)
+		* COmmitar det med en kommerntar
+		* KOmmer på vill ha enhgelska istället
+			- Kan skapa ny commit, då finns anvdra ändirngen ändå kvar - Vill ädnra befintiliga commiten
+			- Action: Revert, ammend message, reset etc...
+			- Så länge det bara är lokalt kan man ändra: Reset(flyttar vad som är senaste incheckningen, keepchanges (då försvann incheckningen på svenska????)) LYSSNA lokalt rader1 1,04,30
+				/Revert(ändrar inte i historien, ändrar genom att göra en till commit 
+
+			- FINNS NÖDKOMMANDO för lost commit: GIT REFLOG (räddaren i nöden: bra veta finns, men måste inte veta hur exakt)
+				genom att göra som det var innan.. tvärtom)
+
+			KOlla mixed
+
+SAMMANFATTNING:
+git log
+git reflog: räddnings
+git reset: För att nollställe/ta bort en commit
+
+2. ANDRAS SÄTT ÅNGRA: LYSSNA Andra sätt ändra 1,12,10
+	- Revert (Vill ta bort Add stuff som vi hade i mitten av 3 commits (men inte pushat än))
+	- Håll koll vad man gjorde själva reverten på 
+
+RESET Backa till given punkt i hirotsie (hard(försvinner också..från soultion)..kolla)) Var försiktig med reset
+REVERT: Baklängescommit LYSSNA Rep double rainbox 00.00: Tror revert är bättre
+
+3. TREDJE SÄTT ÅNGRA GIT CKECKOUT + id på specifik commit (hämtar ut filerna som den var precis då) eller + NamnetPåBranch
+	- iden med vershantering är att kunna kolla bakåt
+	- Kan välj att ta versionen som var bakot
+	- Betyder flytta ut viss version ur arbetskatalogen
+	- ALla filer blir precis som  de var i det stadiet
+	- Historoieken ändrar sig inte
+	- Git status...ngt
+	EX Git chekot master (
+	- Man kan hämta valdri version från db (av projeketet o lägga i arbetskatalogen(????)) Vet ej
+
+SAMMANFATTNING:
+NU KOLLAT: LYSSNA samman 9.15
+reset
+revert
+checkout
+
+Hittils bara en rak tidslinje. Vi får kedjan rak. Men i verklignheten får man ögglor hela tiden (man jobbar med samma commit)
+	EX 2 pers utgår från samma commit
+	- Tidslinjen har delat sig i två delar
+	- 1a som synkar tillbaka till origin får inga problem, den andra måste göra så man MERGAR ihop de två tidslinjerna
+
+	B
+         A-A-B
+	AA matchar 
+
+	C
+	 A-A-C
+	C får problem
+	1. Gör fetch
+	2. Ta sina egna ändringar o andras o föra ihop i en ny commit som innehåller både B och C s förändringar i den nya commiten 
+		sen kan man pusha upp det till origin
+		- Person C är ansvarig för att föra ihop
+	    B
+	A-A-C-C (plus c och plus b)
+
+	UNDVIKA ÖGGLORNA (förfalska)
+	- Man kan göra ammen innan man pushat (men om man pushat kan man inte ändra, isf måste man gå in i allas db o göra hjärtkirurgi)
+	- Gör inte git reset efter man o publiserat
+		
+	MERGE (Vid två parents, tror det är det vi ovan beskrivit)
+
+4. REBASE ANNAT SÄTT ATT ÅNGRA
+	- Ovan är merge (slå ihop b + c), men alternativ man tar dif mellan A och C och applicerar den ovanför origin, låtsas man gjort ändringarna 
+	LYSSNA REBASE 16.40
+	- En typ av enklare historieförfalskning för att minska antalet ögglor
+
+	    B-C
+	A-A-(C-C (kryssas över, tas bort)) 
+
+	ALLTSÅ:
+	    B-C
+	A-A-
+
+SAMMANFATTNING MERGE & REBASE (lyssna sammanf. 19.10)
+
+******************************************************************************
+1 SYNKA: Pratat om remote innan /Lyssna SYNKA 21)
+	- OM jag inte har en remote och går in i sync
+	- FInns pusblishTo GItHub
+
+	GIT REMOTE -v
+	- Allt som ligger i locala db pushas upp i .git(db) (via push)
+	- Synk kör massa avancerade kommandon utan att jag behöver göra för hand
+
+	PÅ GIT MANUELLT (krångligare):
+	1. NEW REPO (skapar manuellt)
+	2. Ge repo name + create (kan lägga till ignore o license men gör inte)
+		Då kan man manuellt  git innit add readMe commit -m"firstcommit" remore add origin git@githut... push -u origin master
+
+
+2. EFTER PUBLICWRING:
+	- FInns remotes/orgin(heter egentligen remotes/origin/master)
+		- Master
+	Det är github
+	Varjr branch jag har kommer finnas som två exemplar
+
+
+WORKING DIR till LOCAL GIT LYSSNA Bild efter pub 28.10
+
+1 WORKING DIR
+	- add
+	- loacl git
+2. STAGE
+	- commit
+3. MASTER
+	- rak knögglar
+
+Lägger till en remote har vi fått en pekare till db. O borta i remote finns oclså en branch som pekar på master (med den näst sista commiten)
+, men den senaste ögglan finns inte med.
+- När jag gör en PUSH så måste man först förbereda lokalt via REMOTES/ORIGIN/MASTER (där har vi en kopia på där vi senaste pratade med vår remote)
+- När vigör en push är det första vi gör att vi för in ändringarna: Vi flyttar över ändringarna vi ghort från MASRER --> REMOTES/OR/MASTER-->MASTER
+
+	1. FÖrst uppdatera lokala kopian av master branchen
+	2. Trycker sen upp den (/har ngn annan ändrat branchen på severn måste man först göra en merge (visar att problem finns o sen gör man merge)
+
+	PULL 2 STEG:
+		1. Fetch: Häntar hem master branch o lägger i remoite LYSSNA hämta hem annans äädnring 34.20
+		2. MERGE: Om hisotrik är samma blir det lätt, annars tar den och ändrar lite..
+			REBASE (alt på merge) Gör jag rebase försöker den lägga mina ändringar på 
+
+	PULL = FETCH + MERGE SAMMANSLAGEN
+
+	LYSSNA (Samamnf 37.30) SYNC är en sammansalagning av pull och push
+
+
+
+
+
+5. PUSH/FETCH: (för att hämta repo skicka(???)
+	Kan ställa in att man hämtar från ett ställe o pushar till ett annat
+
+

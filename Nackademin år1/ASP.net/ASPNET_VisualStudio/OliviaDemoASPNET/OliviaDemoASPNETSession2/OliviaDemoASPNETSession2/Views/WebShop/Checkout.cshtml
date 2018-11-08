@@ -1,0 +1,10 @@
+﻿@model List<OliviaDemoASPNETSession2.Models.Product>
+
+<h3>Items You have selected:</h3>
+
+@foreach(var product in Model)
+{
+    @product.Name
+}
+
+<h3>Total sum: @Model.Sum(p => p.Price)</h3>

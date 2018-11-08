@@ -1,0 +1,1 @@
+Server=tcp:oliviaprog17.database.windows.net,1433;Initial Catalog=OliviaTestDB;Persist Security Info=False;User ID={oliviaprog17};Password={1OrangeStege234};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;

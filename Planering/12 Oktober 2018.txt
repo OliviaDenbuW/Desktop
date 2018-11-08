@@ -1,0 +1,65 @@
+************************************
+PLANERING FREDAG 12/10-2018 Charbel, Maria
+************************************
+11.00 - 16.30 (5H 30min)
+
+************************************
+ATT GÖRA:
+************************************
+	1. CREATE NEW AUCTION:
+		- Om det kommer en bokstav som utropspris blir det noll
+
+	2. MAKE BID:
+		- Om man inte lagt ngt bud men trycker på MakeBid
+		- GetMinValidBid() - CreateReturnAuctionList()
+
+	4. SÖKA PÅ NY SIDA:
+		- Typ av sökning:
+			- Titel
+			- Beskrivning
+		- Sortera:
+			- Slutdatum
+			- Utropspris
+	5. DATUM:
+		- Rensa bort string/time
+		- Måste man fylla i klockslag?
+		- Klockslag följer inte med i CreateNewAuction()
+
+	6. UTROPSPRIS:
+		- Ta bort onödig kod
+		- Byt namn på CheckIfUtropsprisÄrStörreÄnNoll()
+
+	7. VÄRDEN SOM INTE GÅR ATT SÄTTA I AUCTIONVIEWMODEL:
+		currentAuction.AuctionIsOpen = _businessService.GetAuctionIsOpen(auctionId);
+            	currentAuction.HighestBidForAuction = _businessService.GetHighestBidForAuction(auctionId);
+		MinValidBid
+
+3. Struktuera datorn (10min)
+
+
+************************************
+FRÅGA:
+************************************
+1. Byta message när det inte är rätt: Javascript? Var?
+2. Vilken template vid PartialViex?
+
+************************************
+FÄRDIGT:
+************************************
+1. Planera
+2. Fixa redirect på Delete med bud
+3. MAKE BID:
+	- SKa inte kunna göra negativa bud (måste vara större än noll)
+		(= Går inte göra mindre än utropspris)
+	- Man ska inte kunna lägga samma som utropspriset
+4  SÖKA PÅ AUKTION NAVBAR:
+		- Kunna söka på blank
+5. CREATE NEW AUCTION:
+	- Fixa message att den successfullt skapats
+	- Redirect till rätt plats
+	- If.ModelStateIsValid
+	- Lägga till "röd validering" på formulär
+6. UPDATE AUCTION:
+	- Lägga till "röd validering" på formulär
+	- Byt till Update på knapp
+7. Slå ihop formulär för Update och Create

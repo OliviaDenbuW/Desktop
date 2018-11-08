@@ -1,0 +1,37 @@
+1. KOMPONENTER:
+	1.1 BOWLINGHALLEN
+
+	1.2 SPELARE/MEDLEMMAR
+		- Kontaktuppgifter
+
+	1.3 ANLÄGGNING:
+		- Antal banor
+
+	1.4 TÄVLINGAR:
+		- Matcher
+
+	1.5 MATCH:
+		- 2 spelare
+		- 3 serier
+
+	1.6 VINNARE:
+		- Tävling
+		- Årets vinnare
+
+2. TESTER:
+	2.1 LAGRA:
+		- Medlemmar
+		- Tävlingsinformation
+	2.2 GENERERA:
+		- Medlemmar
+		- Tävlingsinformation
+	2.3 HÄMTA:
+		- Medlemmar
+		- Tävlingsinformation
+	2.4 VINNARE AV MATCH:
+		- Simulera en match
+		- Rätt vinnare utses
+	2.5 VINNARE AV CUP:
+		- Högst andel matcher i competition blir årets champion
+			
+				

@@ -1,0 +1,71 @@
+************************************
+PLANERING TISDAG 16/10-2018 Espresso
+************************************
+09.20 - 11.00 (1H, 40min) : GÅ 11.10
+
+************************************
+ATT GÖRA:
+************************************
+	1. CREATE NEW AUCTION:
+		- Istället för att ha _adminKey till allt, byt till CurrentUser
+
+	4. SORTERA:
+		- Koppla till TestAuctionViewModel
+		- Sortera:
+			- Slutdatum
+			- Utropspris
+
+	7. VÄRDEN SOM INTE GÅR ATT SÄTTA I AUCTIONVIEWMODEL:
+		currentAuction.AuctionIsOpen = _businessService.GetAuctionIsOpen(auctionId);
+            	currentAuction.HighestBidForAuction = _businessService.GetHighestBidForAuction(auctionId);
+		MinValidBid
+6. CURRENT USER:
+	- Ta bort
+	
+8. UPDATE AUCTION:
+	- Bara den admin som skapat auctionen ska kunna ändra i den
+
+9. Struktuera datorn (10min)
+
+10. Rensa TestAuctionViewModel VS AuctionViewModel:
+	- GetAuctionById
+	- TA BORT UTKOMMENTERAT:
+		- Create
+		- Update
+
+11. Kolla om man kan bryta ut ngt i MakeAuctionApiReady
+
+12. Ringa om seg dator
+
+13. TESTAUCTIONVIEWMODEL:
+	- Skapa en generell prop i den klassen
+
+************************************
+FÄRDIGT:
+************************************
+1. ADMIN LÄGGER TILL NYA ADMIN:
+		- Ska inte kunna lägga till två med samma namn
+		- Lägga till roll som Admin på varje som blir tillagd
+		- Få in de i db	
+
+2. CREATE NEW AUCTION:
+		- CreatedBy = CurrentUser
+
+3. FRÅGA JOHANNA
+
+4. VANLIG ADMIN KAN LÄGGA TILL EN ANNAN:	
+	- Response istället för void
+	- Se att response kommer i Url
+	- Strukturera upp det bra: Ta bort onödig kod	
+
+5. NY ADMIN KAN GÖRA:
+	- Testa att ny admin kan ex update
+	- Testa att ny admin kan ex lägga till	
+
+6. CURRENT USER:
+	- CreateAuction tar in den som skapat den
+	- Update sparar rätt person som uppdaterat
+
+10. Rensa TestAuctionViewModel VS AuctionViewModel:
+	- Update:
+	- Create:

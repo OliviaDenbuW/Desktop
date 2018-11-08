@@ -1,0 +1,42 @@
+﻿@model List<uppg2FormulärModellEF.Models.UserLogin>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewList</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+        </tr>
+        @foreach(var user in Model)
+        {
+            <tr>
+                <td>@user.UserId</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.City</td>
+                <td><a asp-controller="User" asp-action="UpdateUser" asp-route-id="@user.UserId">Update</a></td>
+                <td><a asp-controller="User" asp-action="DeleteUser" asp-route-id="@user.UserId">Delete</a></td>
+            </tr>
+
+        }
+    </table>
+    <br /><br />
+
+    <form asp-controller="User" asp-action="SearchForUser" method="get">
+
+        <input type="text" id="searchInput" name="searchInput" placeholder="Search for user" />
+        <input asp-action="SearchForUser" type="submit" value="Search" />
+
+    </form>
+    
+</body>
+</html>

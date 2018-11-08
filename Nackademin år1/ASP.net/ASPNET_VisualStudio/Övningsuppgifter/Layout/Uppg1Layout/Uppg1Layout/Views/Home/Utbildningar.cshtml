@@ -1,0 +1,25 @@
+﻿@model List<Uppg1Layout.Models.Utbildningar>
+
+@{
+    Layout = null;
+}
+
+<h1>Våra utbildningar</h1>
+
+<p>
+    <ul>
+        <li>Programmerare .NET</li>
+        <li>Java</li>
+        <li>Marknadsföring</li>
+        <li>Byggarbetare</li>
+    </ul>
+</p>
+
+<ul>
+    @foreach (var utbildning in Model)
+    {
+        <li>@utbildning.Namn</li>
+        <li>@utbildning.Beskrivning</li>
+    }
+</ul>
+

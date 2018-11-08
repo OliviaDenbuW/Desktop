@@ -1,0 +1,38 @@
+USER STORIES:
+
+1. ToDo
+2. Doing
+3. Done
+
+1. Simple stories taht describe what the users world must look like
+
+As a:
+	registrered user
+	admin user
+
+I want to:
+	change my password
+	disable a user
+
+So I can:
+	keep my account secure
+	prevent unauthorized logins by past employees
+
+WHO
+WHAT
+WHY
+
+USER PERSPEKTIV I FOKUS
+	- wE ARE GOINIG TO DEFINE OUR PROGRESS  BASES ON GIVING THE USER THE ABILITY TO DO SOMETHING VALUBLE WITH THE SOFTWARE
+vILL INTE GÖRA STORIES SOM INTE SKAPAR VÄRDWE FÖR USER
+
+DÅLIG STORY PGA ALLT ANNAT I APPLI BEROR PÅ ATT DEN BLIR KLAR FÖRST
+AS A:
+	Developer
+I want a:
+	Database with all the tbales to model the data
+So I can:
+	Store info thr application needs
+
+
+

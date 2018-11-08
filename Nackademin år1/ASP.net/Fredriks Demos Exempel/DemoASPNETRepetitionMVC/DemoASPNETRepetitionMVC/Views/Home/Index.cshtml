@@ -1,0 +1,27 @@
+﻿@model DemoASPNETRepetitionMVC.ViewModels.PersonViewModel
+
+@using DemoASPNETRepetitionMVC
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<label asp-for="MyPerson.Name"></label>
+<input asp-for="MyPerson.Name" type="text" />
+
+<br />
+<br />
+
+<label asp-for="MyPerson.Email"></label>
+<input asp-for="MyPerson.Email" type="text" />
+
+<br /><br />
+
+<select asp-for="MyPerson.Category" asp-items="MyPerson.Categories">
+
+</select>
+
+
+
+
+
+
+

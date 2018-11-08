@@ -1,0 +1,31 @@
+﻿@model DemoASPNETFormulärForts.ViewModels.ViewModelPerson
+
+<form asp-action="Create" asp-controller="MyPerson" method="post">
+
+    <label asp-for="CurrentPerson.Name"></label>
+    <br />
+    <input type="text" asp-for="CurrentPerson.Name" />
+
+    <br />
+    <br />
+    <label asp-for="CurrentPerson.PersonTypeID"></label>
+    <br />
+    <select multiple="multiple" asp-items=Model.PersonTypes asp-for="CurrentPerson.PersonTypeID"></select>
+
+    <br />
+    <br />
+    <label asp-for="CurrentPerson.CountryID"></label>
+    <br />
+    @foreach (var country in Model.Countries)
+    {
+        <input type="radio" asp-for="CurrentPerson.CountryID" value=@country.ID />
+        @country.Name
+
+    }
+
+    <br />
+    <br />
+
+    <input type="submit" value="Spara" />
+
+</form>

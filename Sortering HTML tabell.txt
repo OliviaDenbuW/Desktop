@@ -1,0 +1,4 @@
+https://www.itworld.com/article/2956575/development/how-to-sort-search-and-paginate-tables-in-asp-net-mvc-5.html
+https://datatables.net/
+https://stackoverflow.com/questions/46737834/sort-table-in-asp-net-mvc
+https://www.codeproject.com/Tips/890083/Table-Sorting-and-Paging-in-an-ASP-NET-MVC

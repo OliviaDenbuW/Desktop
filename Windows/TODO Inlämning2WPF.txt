@@ -1,0 +1,96 @@
+*****************************
+ATT GÖRA:
+*****************************
+09.10-09.30
+
+1. LÄS UPPGIFTEN
+	- TorTalk
+	
+2. BETA UT DEN
+	2.1 KOLLA UPP:
+		- RGBparametrar
+			- De sparade värdena i listan ska visa de tre RGB:värdena(???)
+		- Vilka är de tre RGB:värdena(???)
+	2.2 OMRÅDEN:
+		- ÄNDRA FÄRG:
+			- Sliders
+			- Color
+		- REKTANGELN:
+			- Ändrar färg beroende på (inmatning):
+				- Sliders
+				- Textbox:
+					- Kontroll att talen är mellan 0 & 255
+		- KNAPP: ADD
+			- Sparar undan den aktuella färgen i en lista
+		- LISTAN FÖR KNAPPEN ADD:
+			- Man ska kunna välja en av de sparade items för att byta tillbaka till den färgen
+		- KNAPP REMOVE:
+			- När man valt en färg i listan ska knappen remove bli akriv
+			- Trycker man på knappen tas färgen bort
+		- FÖNSTER ÄNDRAR STORLEK:
+			- Vad ska hända när man ändrar storlek på fönstret?
+
+*****************************	
+UPPDELNING:
+*****************************
+1. SÄTTA UT ALLA ITEMS:
+	- Vart ska allt läggas?
+	- Rader/Kolumner(???)
+	- Grid/StackPanel/WrapPanel(???)
+2. OMRÅDEN:
+	2.1 RGBparametrar
+		- Kolla upp vad det är(???)
+			- Vilka är de tre RGBvärdena(???)
+		- De sparade värdena i listan ska visa de tre RGB:värdena(???)
+	2.2 KUNNA ÄNDRA FÄRG:
+		- KOMPONENTER:
+			- VISA RESULTAT:
+				- Rektangeln
+			- GÖRA ÄNDRINGEN:
+				- Sliders
+				- Textbox:
+					- Göra kontroll att talen är mellan 0-255
+			- KOPPLA SAMMAN ÄNDRING MED RESULTAT:
+				- DataBinding:
+					- Reklangel + (Slider/Textbox)
+	2.3 FÄRGER I LISTAN:
+		- ADD (Lägga till ny färg):
+			- VAD DEN GÖR:
+				- Sparar undan den aktuella färgen i en lista
+			- KOMPONENTER:
+				- KNAPPEN ADD
+					- Skapa knappen
+					- Databinding:
+						- Med vad(???)
+							- Aktuella färgen(den nya)
+							- Listan:
+								- Vilken plats i listan
+				- GÖRA KNAPPEN AKTIV
+				- KLASSER:
+					- AddComponent.cs
+					- ViewModel(???)
+		- BYTA TILLBAKA REKTANGELNS FÄRG TILL VALD ITEM I LISTAN:
+			- KOMPONENTER:
+				- DATABINDING:
+					- Listan:
+						- Vald item
+					- Rektangeln
+		- REMOVE (Ta bort vald färg från listan):
+			- VAD DEN GÖR:
+				- När man valt en färg i listan ska knappen remove bli akriv
+				- Trycker man på knappen tas färgen bort
+			- KOMPONENTER:
+				- KNAPPEN REMOVE:
+					- Skapa knappen
+					- Databinding:
+						- Med vad(???)
+							- Aktuella färgen(den nya)
+							- Listan:
+								- Vilken plats i listan
+				- GÖRA KNAPPEN AKTIV
+				- KLASSER:
+					- RemoveComponent.cs
+					- ViewModel(???)
+
+	2.3 FÖNSTER ÄNDRAR STORLEK:
+		- Vad ska hända när man ändrar storlek på fönstret?

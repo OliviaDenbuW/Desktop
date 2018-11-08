@@ -1,0 +1,27 @@
+#div1
+{
+    width: 100px;
+    height: 10px; 
+    background-color: yellow;
+    float: left;
+}
+
+#div2
+{
+    width: 100px;
+    height: 40px;
+    background-color: yellow;
+}
+
+#div3
+{
+    width: 100px; 
+    height: 80px; 
+    background-color: yellow;
+}
+
+.divClass
+{
+    background-color: pink;
+    height: 80px;
+}

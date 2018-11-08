@@ -1,0 +1,28 @@
+NACKOWSKIS:
+
+- Skapa databas:
+	Databasnamn: NackowskisDb
+	Resursgrupp: NackowskisRerursgrupp
+
+- Skapa server:
+	Servernamn: nackowskisolivia
+	Inloggning för serveradministratör: olivia 
+	Password: Nackowskis1!
+
+whitelista
+
+- ConnectionSträng:
+	Klicka på anslutningssträngar:
+	Server=tcp:nackowskisolivia.database.windows.net,1433;Initial Catalog=NackowskisDb;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+	
+		BYT UT ID TILL OVANSTÅENDE FRÅN SKAPA SERVER (Ta bort måsvingarna)
+
+- Brandväg:
+	För att kunna komma åt vårt azure konto måste vi öppna branvägen/tillåta ip adresset vi kommer ifrån
+	Nu kan vi koppla upp från management studio upp till Azure
+
+- SQL Sevrver Manangment:
+	Kopiera servernamn: nackowskisolivia.database.windows.net
+	Byt ut istället för localhost
+	Byt till SQL Authentication
+	Logga in med usernamn & password från Azure

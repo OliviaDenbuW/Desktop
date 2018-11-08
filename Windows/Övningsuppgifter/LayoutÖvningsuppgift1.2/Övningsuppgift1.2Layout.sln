@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Övningsuppgift1.2Layout", "Övningsuppgift1.2Layout\Övningsuppgift1.2Layout.csproj", "{A7E68B83-2E1D-4B17-8331-7CF5F4E40E13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E68B83-2E1D-4B17-8331-7CF5F4E40E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E68B83-2E1D-4B17-8331-7CF5F4E40E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E68B83-2E1D-4B17-8331-7CF5F4E40E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E68B83-2E1D-4B17-8331-7CF5F4E40E13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF398200-2090-4814-B196-3E0C74EBCB85}
+	EndGlobalSection
+EndGlobal

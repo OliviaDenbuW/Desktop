@@ -1,0 +1,19 @@
+﻿@model uppg1FormulärModellEF.Models.UserLogin
+
+
+<form asp-controller="User" asp-action="Login" method="post">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+
+    <label asp-for="Password"></label>
+    <input asp-for="Password" />
+
+    <input type="submit" value="Logga in" />
+
+</form>
+@*@using (Html.BeginForm("Login", "User", FormMethod.Post))
+{
+    @Html.TextBoxFor(Model => Model.Email)
+    @Html.TextBoxFor(Model => Model.Password)
+    <button type="submit">Logga in</button>
+}*@

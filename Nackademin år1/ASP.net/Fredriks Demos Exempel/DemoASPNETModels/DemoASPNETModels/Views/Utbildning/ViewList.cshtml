@@ -1,0 +1,43 @@
+﻿<!--Modell binding dvs en modell kopplas till vyn-->
+
+@model List<DemoASPNETModels.Models.Utbildning>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewList</title>
+</head>
+<body>
+
+    <table>
+
+        @foreach (var utbildning in Model)
+    {
+
+        <tr>
+            <td><h1>@utbildning.Namn</h1></td>
+
+        </tr>
+        <tr>
+            <td>@utbildning.Beskrivning</td>
+            <td>Stad: @utbildning.Stad Längd: @utbildning.Langd år</td>
+        </tr>
+        <tr>
+            <td><a asp-controller="Utbildning" asp-action="ViewDetails"> Läs mer om utbildningen »</a> </td>
+            
+        </tr>
+
+        
+}
+
+    </table>
+
+
+</body>
+</html>

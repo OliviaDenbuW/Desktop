@@ -1,0 +1,27 @@
+﻿@model uppg1FormulärEFRep.Models.UserLogin
+
+<form asp-controller="User" asp-action="Login" method="post">
+    <div class="wrapper" style="width: 30%;">
+        <div style="float: left;">
+            <label asp-for="Email"></label>
+            <br /><br />
+
+            <label asp-for="Password"></label>
+            <br /><br />
+        </div>
+
+        <div style="float: right;">
+            <input type="text" asp-for="Email" />
+            <br /><br />
+
+            <input type="text" asp-for="Password" />
+            <br /><br />
+        </div>
+
+        <br /><br /><br /><br />
+
+
+        <input type="submit" value="Login" />
+
+    </div>
+</form>

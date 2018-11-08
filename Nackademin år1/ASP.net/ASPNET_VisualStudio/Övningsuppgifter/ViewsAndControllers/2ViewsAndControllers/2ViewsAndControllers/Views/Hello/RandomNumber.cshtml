@@ -1,0 +1,12 @@
+﻿@if (ViewBag.Value > 0 && ViewBag.Value < 4)
+{
+    <h1>Talet är mellan 1 och 3: @ViewBag.Value</h1>
+}
+else if (ViewBag.Value > 3 && ViewBag.Value < 7)
+{
+    <h1>Talet är mellan 4 och 6: @ViewBag.Value</h1>
+}
+else
+{
+    <h1>Talet är mellan 7 och 10: @ViewBag.Value</h1>
+};

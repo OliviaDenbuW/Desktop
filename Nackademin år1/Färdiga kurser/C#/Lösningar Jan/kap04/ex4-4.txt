@@ -1,0 +1,8 @@
+   Sätt HITTILLS_MINSTA till det första talet i tabellen.
+   Sätt POSITION till 1.
+   Gå igenom talen nr 2 till N i tabellen
+   och gör så här för varje tal:
+      Om det aktuella talet är mindre än HITTILLS_MINSTA så
+      ändra HITTILLS_MINSTA så att den kommer att innehålla det aktuella talet
+      och ändra POSITION så att den kommer att innehålla den aktuella positionen
+   Nu finns det sökta positionsnumret i POSITION.

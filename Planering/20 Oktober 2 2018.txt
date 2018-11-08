@@ -1,0 +1,46 @@
+************************************
+PLANERING LÖRDAG 20/10-2018 Espresso
+************************************
+17.40 - 19.00 (1H, 10min)
+
+************************************
+ATT GÖRA:
+************************************
+1. Kolla upp vad jag har kvar:
+	- RENSA:
+		- KOMMENTARER:
+		- BYT NAMN:
+			- TestAuctionViewModel
+			- GeneralAuctionViewModel
+			- CreateAuctionViewModel 
+			- UpdateAuctionViewModel
+			- SortAuctionViewModel
+			- SearchAuctionViewModel
+	- SORTERA:
+		- Göra så att sökresultatet följer med
+
+	- UPDATE:
+		- Ta reda på varför den inte fungerar
+
+	- GÖRA OMVÄNT PÅ VIEWMODELS(???????)
+
+	- VIEWAUCTIONDETAILS AuctionController
+
+2. Tänka ut vad jag tycker är svårt/lätt
+	- SVÅRT:
+		- SORTERA: Få med sökresultatet
+		- UPDATE
+	
+	- LÄTT:
+		- Rensa kommentarer
+		- Byta namn
+
+************************************
+FÄRDIGT:
+************************************
+1. RENSA:
+	- _SortByParam
+
+2. SORTERA:
+	- ENDDATE
+	- STARTPRICE

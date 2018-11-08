@@ -1,0 +1,56 @@
+SKAPA EN DROP DOWN LIST FÖR PERSONTYP
+
+1.
+	Skapa i Models mappen en klass som heter User. Här i skriver du alla properties som Usern ska ha (Ex: Namn, Email (om det var en situation UTAN dropdown)).
+	Om det ska finnas en dropdown, då lägger du också till en property som är av datatyp INT och som heter USERTYPE (singular!!!!!)
+
+
+2.
+	Skapa mappen ViewModels för att sedan skapa klassen ViewModelUser (det är i den här klassen som man kan koppla ihop till andra klasser via ex properties med datatyp av annan klass
+
+	EX)
+	public USER (datatypen klasssen User) CurrentUser { get; set; }
+
+
+3. 	
+	I ViewModelUser lägger du också till propertyn (pluralis på UserTypes)
+
+	public List<SelectListItem> UserTypes { get; set; }
+
+
+4.	
+	Gå in i controllern och lägg in följande i din actionmetod Create(). Man ska ha en model.....????
+
+		4.1 Först så måste man skapa en model för ViewModelUser-klassen		
+			ViewModelPerson model = new ViewModelPerson();
+
+
+		4.2 Skriva in värdena man vill ha i sin dropdown. Admin, Standard, Premium
+
+			 List<SelectListItem> userTypes = new List<SelectListItem>
+            		{
+                		new SelectListItem{ Value = "1", Text = "Standard"},
+                		new SelectListItem{ Value = "2", Text = "Admin"},
+                		new SelectListItem{ Value = "3", Text = "Premium"}
+            		};
+
+
+		4.3 Nu ska man koppla ihop model från 4.1 med userTypes-listan från 4.2 .... Vi skriver över lisan userTypes till modellens usertypes-lista
+
+			model.UserTypes = userTypes;
+
+
+		4.4 Skicka med modellen till vyn "View(model)"
+
+
+5.
+		Gå till vyn Create och lägg in @model uppg1Formulär.ViewModels.ViewModelPerson
+
+
+6.
+		I den vyn, Create, så lägger du in:
+
+		<select asp-for="CurrentPerson.UserType" asp-items="@Model.UserTypes"></select>
+
+
+			

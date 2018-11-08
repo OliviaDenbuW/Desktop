@@ -1,0 +1,25 @@
+﻿@model BloggOliviasVärldInlämning1.ViewModel.ViewModelPost
+
+<form asp-controller="Blog" asp-action="CreateNewPost" method="post">
+
+    <label asp-for="CurrentPost.HeadLine"></label>
+    <br />
+    <input type="text" asp-for="CurrentPost.HeadLine" />
+
+    <br />
+
+    <label asp-for="CurrentPost.BreadText"></label>
+    <br />
+    <textarea asp-for="CurrentPost.BreadText" id="textboxForNewPost"></textarea>
+
+    <br />
+    
+    <label asp-for="CurrentPost.Category"></label>
+    <select asp-items="Model.Categories" asp-for="CurrentPost.CategoryId"></select>
+    <br />
+    
+    <br />
+    <br />
+
+    <input type="submit" value="Save post" />
+</form>

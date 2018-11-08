@@ -1,0 +1,4 @@
+gg gångjärn 100 5,50
+sk skruv 500 0,75
+mu mutter 500 1,25
+pl plugg 1000 2

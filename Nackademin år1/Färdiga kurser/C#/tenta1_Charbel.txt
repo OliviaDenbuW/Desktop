@@ -1,0 +1,329 @@
+Skapa en konsolapplikation som frågar användaren efter ett förfallodatum (ett datum då en räkning ska betalas).
+Programmet ska sedan skriva ut en text beroende på det inmatade datumet: Räkningen ska betalas om 12345 dagar
+Naturligtvis ska  det inte stå 12345 utan ett antal dagar som beror på det datum användaren skrivit in.
+OBS! Koden skall fungera för alla datum och den skall fungera även om programmet körs en annan dag (dvs det skall gå att köra när som helst och ändå ge rätt svar). 
+Visa via kod hur detta görs.
+
+using System;
+
+namespace Uppgift1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ange förfallodatum: ");
+            string angivenDatum = Console.ReadLine();
+String.Format(angivenDatum, "{0:dd,MM,yyyy}");
+
+            if (DateTime.TryParse(angivenDatum, out ))
+            {
+                int antalDagar = (int)(förfalloDatum - DateTime.Now.Date).TotalDays;
+
+Console.WriteLine("Räkningen ska betalas om " + antalDagar + " dagar.");
+            }
+            else
+            {
+                Console.WriteLine("Ogiltigt input");
+            }
+
+        }
+    }
+}
+Question 2
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Du har två värden som är strängar. 
+sökvärde = "a"
+mening = "Jag har en mening som jag skall göra en sökning i"
+Skapa kod som räknar ut hur många ord i meningen som innehåller sökvärdet. I ovanstående exempel är svaret talet 5 då fem av orden i meningen innehåller sökvärdet.
+Koden skall vara skriven så att den även fungera om man byter värden på mening och sökvillkor.
+Uppgiften ska lösas utan LINQ eller Lamdba-uttryck.
+
+
+            string sökvärde = "a";
+            string mening = "Jag har en mening som jag skall göra en sökning i";
+
+
+            string[] textArray = mening.Split(' ');
+            int antal = 0;
+            for (int i = 0; i < textArray.Length; i++)
+            {
+                if (textArray[i].ToLower().Contains((char.Parse(sökvärde))))
+                {
+                    antal++;
+                }
+            }
+            Console.WriteLine(antal);
+
+            Console.ReadLine();
+Question 3
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Skapa en metod som skall ta emot tre tal som parametrar.
+Metoden ska returnera två värden till den som anropar den. Det första värdet ska vara det högsta av de tre talen. Det andra värdet ska vara medlevärdet av de tre talen.
+Du får inte använda arrayer eller listor för att lösa uppgiften.
+OBS! De värden som metoden returnerar skall kunna tas emot där metoden anropas dvs returnera innebär INTE att skriva ut något på skärmen direkt i metoden.
+
+
+        public static Tuple<int, int> MinstaStörsta(int tal1, int tal2, int tal3)
+        {
+            int highest = 0;
+            int sum = 0;
+
+            int[] talen = { tal1, tal2, tal3 };
+
+            for (int i = 0; i < talen.Length; i++)
+            {
+                sum += talen[i];
+
+                if (highest < talen[i])
+                {
+                    highest = talen[i];
+                }
+            }
+            int avarage = sum / 3;
+
+            return Tuple.Create(highest, avarage);
+        }
+
+        static void Main(string[] args)
+        {
+
+            var högstaOchMedel = MinstaStörsta(2, 8, 5);
+
+            Console.WriteLine("Högsta värdet = " + högstaOchMedel.Item1);
+            Console.WriteLine("Medelvärdet = " + högstaOchMedel.Item2);
+
+
+            Console.ReadLine();
+        }
+Question 4
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Skapa en klass Klubb som har egenskaperna (properties) Namn, Adress, Ort och Webbadress. 
+Skapa ytterligare en klass Medlem med egenskaperna Personnummer, Förnamn samt Efternamn. 
+Lägg sedan till ytterligare en egenskap (property) som du döper till Ordförande, i din Klubb-klass, som är av typen Medlem. 
+Skapa slutligen kod som instansierar en ny Klubb och en ny Person samt lägger till Personen som ordförande av Klubben.
+Klistra in all kod för klasserna samt koden som skapar instanserna i textrutan nedan.
+
+    public class Klubb
+    {
+        public string Namn { get; set; }
+        public string Adress { get; set; }
+        public string Ort { get; set; }
+        public string Webadress { get; set; }
+        public Medlem Ordförande { get; set; }
+    }
+
+    public class Medlem
+    {
+        public string Personnummer { get; set; }
+        public string Förnamn { get; set; }
+        public string Efternamn { get; set; }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Klubb klubben = new Klubb();
+
+            Medlem person = new Medlem();
+
+            klubben.Ordförande = person;
+        }
+    }
+Question 5
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Utgå från lösningen i Uppgift 4.
+Skapa en konstruktor i din Klubb-klass. Den skall ta emot inparametrar och sätta värden på klassens egenskaper (properties) vid instansiering. 
+Lägg sedan till en ny egenskap som heter Medlemmar som är en lista av medlemmar som är med i klubben. 
+Skapa också en metod NyMedlem på klubb-klassen, för att skapa och lägga till en ny Medlem i listan med medlemmar. 
+Skapa dessutom en metod AntalMedlemmar, som returnerar en siffra på antalet medlemmar i klubben. AntalMedlemmar ska returnera ett relevant resultat även om klubben inte har några medlemmar ännu.
+Ändra slutligen koden från uppgift 4 som skapar en klubb och en ordförande och komplettera med kod som lägger till två medlemmar i klubben och sedan skriver ut antalet medlemmar med hjälp av de nya metoderna.
+
+ 
+
+
+    public class Klubb
+    {
+        public string Namn { get; set; }
+        public string Adress { get; set; }
+        public string Ort { get; set; }
+        public string Webadress { get; set; }
+        public Medlem Ordförande { get; set; }
+        public List<Medlem> Medlemmar { get; set; }
+        public static int antal = 0;
+
+        public Klubb(string namn, string adress, string ort, string webadress, Medlem ordförande)
+        {
+            this.Namn = namn;
+            this.Adress = adress;
+            this.Ort = ort;
+            this.Webadress = webadress;
+            this.Ordförande = ordförande;
+        }
+
+        public void NyMedlem()
+        {
+            antal++;
+            Medlemmar.Add(new Medlem());
+        }
+
+        public int AntalMedlemmar()
+        {
+            return antal;
+        }
+
+    }
+
+    public class Medlem
+    {
+        public string Personnummer { get; set; }
+        public string Förnamn { get; set; }
+        public string Efternamn { get; set; }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Medlem person1 = new Medlem();
+            person1.Förnamn = "Johan";
+            Medlem person2 = new Medlem();
+            person2.Förnamn = "Fredrik";
+
+            Klubb klubben = new Klubb("Charbels klubb", "vänstergatan", "Solna", "HelloWorld.com", person1);
+
+            klubben.NyMedlem();
+            klubben.NyMedlem();
+
+            Console.WriteLine("Antal medlemmar: " + klubben.AntalMedlemmar());
+
+            Console.ReadLine();
+        }
+    }
+Question 6
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Gör en Fest-klass till en klass som bara kan ärvas. Lägg till egenskaper (property) för Namn, Datum och Lokalkostnad med lämpliga datatyper. Lägg till en abstrakt metod Inträde. 
+Skapa sedan två subklasser som ärver från din Fest: Halloweenfest (som har egenskapen Utklädnad sant/falskt) ) och Förfest (som har egenskapen MedtagEgenDryck (sant/falskt)).
+Implementera metoden Inträde i respektive subklass som skall räkna ut hur mycket man totalt behöver ta in i inträde. För Halloweenfest skall inträdet vara 15 % pålägg på lokalkostnaden och för Förfest skall det vara 10 % mindre än lokalkostnaden.
+Skapa slutligen kod som instansierar en Halloweenfest och en Förfest. Skapa även kod som sätter lokalkostnaden och skriver ut inträdesavgiften för respektive fest.
+
+
+    public abstract class Fest
+    {
+        public string Namn { get; set; }
+        public DateTime Datum { get; set; }
+        public decimal Lokalkostnad { get; set; }
+
+        public abstract void Inträde();
+    }
+
+    public class Halloweenfest : Fest
+    {
+        public bool Utklädnad { get; set; }
+
+        public override void Inträde()
+        {
+            Lokalkostnad = Lokalkostnad * (1.15m);
+        }
+    }
+
+    public class Förfest : Fest
+    {
+        public bool MedTagEgenDryck { get; set; }
+
+        public override void Inträde()
+        {
+            Lokalkostnad = Lokalkostnad * (0.90m);
+        }
+    }
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Förfest minFörfest = new Förfest();
+            minFörfest.Lokalkostnad = 100;
+            minFörfest.Inträde();
+            Console.WriteLine(minFörfest.Lokalkostnad);
+
+            Halloweenfest minHalloweenfest = new Halloweenfest();
+            minHalloweenfest.Lokalkostnad = 100;
+            minHalloweenfest.Inträde();
+            Console.WriteLine(minHalloweenfest.Lokalkostnad);
+
+
+            Console.ReadLine();
+        }
+    }
+Question 7
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Utgå från följande lista.
+List<int> tal = { 3, 7, 5, 8, 9, 1, 4, 11, 10, 12, 16, 13, 40, 28};
+Ta fram en ny lista med alla ojämna tal mellan 2 och 12. Sortera listan med de lägsta talen först. 
+Du MÅSTE använda LINQ och/eller LAMBDA-uttryck i din lösning.
+
+
+            int[] tal = { 3, 7, 5, 8, 9, 1, 4, 11, 10, 12, 16, 13, 40, 28 };
+          
+            List<int> lista = new List<int>();
+            foreach (var item in tal)
+            {
+                lista.Add(item);
+            }
+
+            List<int> nyLista = lista.Where(x => x > 1 && x < 13).OrderBy(x => x).ToList();
+
+
+            List<int> nyareLista = new List<int>();
+            foreach (var item in nyLista)
+            {
+                if((item % 2) != 0)
+                {
+                    nyareLista.Add(item);
+                }
+            }
+
+            Console.ReadLine();
+Question 8
+Complete
+Marked out of 1.00
+Not flaggedFlag question
+Question text
+Utgå från följande array:
+double[] housePricesInDollars = { 3.4, 5.2, 1.2, 0.7, 2.6, 2.7, 3.0 };
+Arrayen visar huspriserna i miljoner dollar på en gata i Brooklyn. 
+Ta nu med hjälp av LINQ eller LAMBDA-uttryck (inga loopar är tillåtna!) fram en ny array som du döper till housePricesInSEK där du konverterar alla priser över en miljon dollar till kronor.
+Vi utgår i uppgiften från en växelkurs på 1 dollar mot 8 kronor. 
+Här får du början på vad den nya arrayen ska innehålla som lite hjälp på traven att du har gjort rätt: {27.2, 41.6, osv...
+
+
+            double[] housePricesInDollars = { 3.4, 5.2, 1.2, 0.7, 2.6, 2.7, 3.0 };
+
+            double[] housePricesInSEK = Array.ConvertAll(housePricesInDollars, x => x * 8);
+
+            foreach (var item in housePricesInSEK)
+            {
+                Console.WriteLine(item);
+            }
+Finish review

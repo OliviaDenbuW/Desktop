@@ -1,0 +1,103 @@
+************************************
+PLANERING ONSDAG 17/10-2018 Espresso
+************************************
+10.25 - 16.15 (4H, 50min)
+
+************************************
+ATT GÖRA:
+************************************
+1. CREATE NEW AUCTION:
+	- Istället för att ha _adminKey till allt, byt till CurrentUser
+
+2. GENERALAUCTIONVIEWMODEL:
+	- Byt till GetAuctionById():
+		- BUSSINESSLAYER:
+			- Interface
+			- Byt ut metoden
+			- Skapa TestConvertViewModel(GeneralAuctionViewModel currentAuction)
+			- Skapa CreateAuctionViewModel() med GeneralAuctionViewModel:
+				- HighestBid
+
+3. GETAUCTIONISOPEN:
+	- Rensa kod
+	- Kunna lägga bud om öppen
+
+		- UPDATE AUCTION:
+			- GetAuctionById()
+			- Fixa viewAuctionDetails
+
+5. VIEWAUCTIONDETAILS:
+	- CreatedBy
+	- AuctionIsOpen
+	- CurrentHighestBid
+	- GetHighestBid:
+		- Buden sysns inte på _Open
+		- Sätta Bids på GeneralAuctionViewModel
+
+4. SORTERA:
+	- Koppla till TestAuctionViewModel
+	- Sortera:
+		- Slutdatum
+		- Utropspris
+
+7. VÄRDEN SOM INTE GÅR ATT SÄTTA I AUCTIONVIEWMODEL:
+	currentAuction.AuctionIsOpen = _businessService.GetAuctionIsOpen(auctionId);
+      	currentAuction.HighestBidForAuction = _businessService.GetHighestBidForAuction(auctionId);
+	MinValidBid
+
+6. CURRENT USER:
+	- Ta bort
+
+9. Struktuera datorn (10min)
+
+10. Rensa TestAuctionViewModel VS AuctionViewModel:
+	- TestGetAuctionById:
+		- AuctionIsOpen
+	- TA BORT UTKOMMENTERAT:
+		- Create
+		- Update
+
+11. Kolla om man kan bryta ut ngt i MakeAuctionApiReady
+
+12. Ringa om seg dator
+
+16. Svara mail:
+	- Petra Update
+	- Vivi
+	- Jenny
+	- Gustav söndag?
+
+17. Göra valideringar på klienten(????????????????????)
+18. Stega igenom varje steg
+************************************
+FÄRDIGT:
+************************************
+1. GENERALAUCTIONVIEWMODEL:
+	- Skapa klassen:
+	- Byt till TestGetAuctionById():
+		- BUSSINESSLAYER:
+			- Interface
+			- GetAuctionIsOpen()
+
+2. Skapa CreateAuctionViewModel() med GeneralAuctionViewModel:
+				- CreatedBy
+
+3. UPDATE AUCTION:
+	- Bara den admin som skapat auctionen ska kunna ändra i den
+	- Knappar visas bara om man var den som skapade den
+
+4. VIEWAUCTIONDETAILS:
+	- _Open
+	- _Closed
+
+5. TESTAUCTIONVIEWMODEL:
+	- Skapa en generell prop i den klassen: GeneralAuctionViewModel
+
+6. GETAUCTIONISOPEN:
+	- Byt till General
+
+7. GÖR GIT COMMIT
+
+8. MAIL:
+	- Åsa
+	- Programmering på fb

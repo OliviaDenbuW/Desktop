@@ -1,0 +1,28 @@
+﻿@model List<OliviaDemoASPNETAjax.Models.Product>
+<div style="float:left; width: 300px; background-color: lightgray;">
+
+    <table>
+        @foreach(var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>
+                    <a asp-controller="Home"
+                       asp-action="ViewDetails"
+                       asp-route-id=@product.ID
+                       data-ajax="true"
+                       data-ajax-method="get"
+                       data-ajax-mode="replace"
+                       data-ajax-update="#ProductDetails"
+
+                </td>
+            </tr>
+
+        }
+
+        <div id="ProductDetails" style="height:300px; background-color:lightblue; float: left;">
+
+        </div>
+    </table>
+</div>

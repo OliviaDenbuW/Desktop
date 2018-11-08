@@ -1,0 +1,23 @@
+IDENTITY - GUSTAV:
+https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tektutorialshub.com%2Fasp-net-core-identity-tutorial%2F&h=AT37j4c8jGVq2ieQadZLmCv64VATmsh6lNo6PJ_5hQ1hHEX8bD2mgXpiYatb82mt1xWS64LpzqtdI2padiAWcqXJPdbzm4imbDuvOMLRKV5qQCk4AbgLkTeILb72peSpZIjAMQ
+
+USER ROLES - MARIA:
+https://social.technet.microsoft.com/wiki/contents/articles/51333.asp-net-core-2-0-getting-started-with-identity-and-role-management.aspx
+
+SEED IDENTITY DATA (Roles and Users):
+http://www.binaryintellect.net/articles/5e180dfa-4438-45d8-ac78-c7cc11735791.aspx
+
+GIT - ANTON:
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+VIEWMODELS - STRUKTUR:
+https://www.youtube.com/watch?v=kLLBDsPUoyY
+
+DISPLAYFOR(m => m.model)
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/crud?view=aspnetcore-2.0
+
+WEB API - KALLE (Nackowskis)
+https://documenter.getpostman.com/view/1720142/RWaHwoVP?fbclid=IwAR1hpRMzRqYPjNMd5DAeCRQEZ2_qf_1nANuFyGn5XI3CZmy2YcGej2UjAMk
+
+REPOSITORY - FREDRIK DAHL
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/repository-pattern?view=aspnetcore-2.1

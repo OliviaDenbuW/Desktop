@@ -1,0 +1,16 @@
+﻿<Window x:Class="Övningsuppgift1Databinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Övningsuppgift1Databinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="65,219,0,0" TextWrapping="Wrap" Text="{Binding Text, ElementName=txtInput1}" VerticalAlignment="Top" Height="60" Width="176" FontSize="36"/>
+        <TextBox x:Name="txtInput1" HorizontalAlignment="Left" Height="58" Margin="65,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140" FontSize="36"/>
+        <TextBox x:Name="txtInput2" Text="{Binding Path=Value, ElementName=slider, Mode=OneWay}" HorizontalAlignment="Left" Height="58" Margin="327,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontSize="36"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="327,245,0,0" VerticalAlignment="Top" Height="34" Width="134"/>
+
+    </Grid>
+</Window>
